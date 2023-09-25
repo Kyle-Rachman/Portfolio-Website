@@ -3,9 +3,9 @@ import styles from './Navbar.module.css'
 
 const Navbar = () => {
     return (
-        <>
-            <h1>Hi, I'm a navbar</h1>
-        </>
+        <nav>
+            <img src="../../public/placeholder-logo-1.png" alt="logo placeholder" id={styles.logo}/>
+        </nav>
     )
 }
 

@@ -1,0 +1,13 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav {
+    height: 10vh;
+    background-color: white;
+}
+
+#logo {
+    height: 100%;
+}

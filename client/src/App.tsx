@@ -8,11 +8,13 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home></Home>}></Route>
-        </Routes>
-      </BrowserRouter>
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home></Home>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </main>
     </>
   )
 }

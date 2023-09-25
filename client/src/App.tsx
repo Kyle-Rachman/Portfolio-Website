@@ -1,0 +1,17 @@
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+function App() {
+
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<p>Working on it</p>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App

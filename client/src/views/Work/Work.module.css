@@ -1,0 +1,5 @@
+#container {
+    color: white;
+    background-color: var(--background-black);
+    height: 100%;
+}

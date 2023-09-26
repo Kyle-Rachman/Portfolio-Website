@@ -5,9 +5,23 @@
 
 nav {
     height: 10vh;
-    background-color: white;
+    background-color: var(--background-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60%;
+    padding: 0px 40px;
 }
 
 #logo {
     height: 100%;
+    cursor: pointer;
+}
+
+
+#links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    list-style-type: none;
 }

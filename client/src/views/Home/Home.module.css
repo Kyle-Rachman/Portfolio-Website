@@ -28,11 +28,55 @@ section {
 }
 
 .skills {
-    padding: 20vh 2vw 0vh;
+    padding: 10vh 18vw 0vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2vw;
 }
+
+.skill {
+    height: 10vh;
+    object-fit: contain;
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    animation: FadeIn 1s linear;
+    animation-fill-mode: both;
+}
+
+.skill:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    outline: 1px solid var(--accent-blue);
+    outline-offset: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.5rem var(--accent-blue))
+}
+
+@keyframes FadeIn { 
+    0% { opacity:0; transform:scale(.1);}
+    85% {opacity:1; transform:scale(1.05);}
+    100% {transform:scale(1); }
+}
+
+.skill:nth-child(1) { animation-delay: 1s }
+.skill:nth-child(2) { animation-delay: 1.5s }
+.skill:nth-child(3) { animation-delay: 2s }
+.skill:nth-child(4) { animation-delay: 2.5s }
+.skill:nth-child(5) { animation-delay: 1s }
+.skill:nth-child(6) { animation-delay: 1.5s }
+.skill:nth-child(7) { animation-delay: 2s }
+.skill:nth-child(8) { animation-delay: 2.5s }
+.skill:nth-child(9) { animation-delay: 1s }
+.skill:nth-child(10) { animation-delay: 1.5s }
+.skill:nth-child(11) { animation-delay: 2s }
+.skill:nth-child(12) { animation-delay: 2.5s }
+.skill:nth-child(13) { animation-delay: 1s }
+.skill:nth-child(14) { animation-delay: 1.5s }
+.skill:nth-child(15) { animation-delay: 2s }
+.skill:nth-child(16) { animation-delay: 2.5s }
+.skill:nth-child(17) { animation-delay: 1s }
+
 
 /* .hero::before {
     content: url('wave-blue.svg');

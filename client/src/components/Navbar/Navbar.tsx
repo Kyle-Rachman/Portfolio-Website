@@ -19,6 +19,7 @@ const Navbar = () => {
                 <li><Link to={'/work'} style={activeUrl == 'http://localhost:5173/work' ? activeStyle : {}}>My Work</Link></li>
                 <li><Link to={'/contact'} style={activeUrl == 'http://localhost:5173/contact' ? activeStyle : {}}>Contact</Link></li>
             </ul>
+            <img src="/menu-icon.png" alt="menu icon" id={styles.linkMenu}/>
         </nav>
     )
 }

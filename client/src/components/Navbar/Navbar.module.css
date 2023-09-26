@@ -9,7 +9,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60%;
+    gap: 40vw;
     padding: 0px 40px;
 }
 
@@ -18,10 +18,35 @@ nav {
     cursor: pointer;
 }
 
-
 #links {
     display: flex;
     justify-content: space-evenly;
     gap: 40px;
     list-style-type: none;
+}
+
+#linkMenu {
+    display: none;
+}
+
+@media only screen and (min-width: 701px) and (max-width: 955px) {
+    nav {
+        gap: 30vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav {
+        padding: 0px 15px;
+    }
+    #links {
+        display: none !important;
+    }
+    #linkMenu {
+        display: block;
+        filter: invert(1);
+        object-fit: contain;
+        height: 50%;
+        cursor: pointer;
+    }
 }

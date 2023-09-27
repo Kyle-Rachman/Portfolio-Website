@@ -59,13 +59,13 @@ const Home = () => {
                     </ParallaxLayer>
                     <ParallaxLayer offset={1} factor={0.5} onClick={() => scrollToPage(1)}>
                         <section className={styles.about}>
-                            <ToggleOnScroll>
+                            <ToggleOnScroll firstTimeSlide>
                                 <h2 className= 'text-4xl'>
                                     Hey there! I'm a full stack developer and mathematician based in San Luis Obispo, California. I focus on clean whole-stack web design and UI/UX.
                                 </h2>
                             </ToggleOnScroll>
                             <ToggleOnScroll>
-                                <button className='border border-black p-2 text-black hover:text-white hover:bg-black' onClick={() => navigate('/about')}>More about me</button>
+                                <button className='border border-black p-2 text-black transition-color duration-500 hover:text-white hover:bg-black' onClick={() => navigate('/about')}>More about me</button>
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>

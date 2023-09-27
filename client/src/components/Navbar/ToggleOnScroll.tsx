@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState, ReactNode } from 'react'
 
 interface Props {
-    children?: ReactNode
+    children?: ReactNode,
+    firstTimeSlide?: boolean
 }
 
-const ToggleOnScroll = ({ children }: Props) => {
+const ToggleOnScroll = ({ children, firstTimeSlide }: Props) => {
     const [isVisible, setIsVisible] = useState(false)
-    const [firstAppear, setFirstAppear] = useState(true)
+    const [firstAppear, setFirstAppear] = useState(firstTimeSlide ? true : false)
     const ref = useRef(null)
 
     useEffect(() => {

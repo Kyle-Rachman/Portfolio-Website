@@ -1,11 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useNavigate } from 'react-router-dom'
+import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
 import styles from './Home.module.css'
 
 const Home = () => {
-    const ref = useRef<IParallax>(null);
-    const navigate = useNavigate();
+    const ref = useRef<IParallax>(null)
+    const navigate = useNavigate()
 
     const scrollToPage = (pageNumber: number) => {
         if (ref?.current) {
@@ -58,8 +59,14 @@ const Home = () => {
                     </ParallaxLayer>
                     <ParallaxLayer offset={1} factor={0.5} onClick={() => scrollToPage(1)}>
                         <section className={styles.about}>
-                            <h2 className= 'text-4xl'>Hey there! I'm a full stack developer and mathematician based in San Luis Obispo, California. I focus on clean whole-stack web design and UI/UX.</h2>
-                            <button className='border border-black p-2 text-black hover:text-white hover:bg-black' onClick={() => navigate('/about')}>More about me</button>
+                            <ToggleOnScroll>
+                                <h2 className= 'text-4xl'>
+                                    Hey there! I'm a full stack developer and mathematician based in San Luis Obispo, California. I focus on clean whole-stack web design and UI/UX.
+                                </h2>
+                            </ToggleOnScroll>
+                            <ToggleOnScroll>
+                                <button className='border border-black p-2 text-black hover:text-white hover:bg-black' onClick={() => navigate('/about')}>More about me</button>
+                            </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
                     <ParallaxLayer offset={1.65} onClick={() => scrollToPage(1.6)}>

@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        "accent-blue": "var(--accent-blue)",
-        "accent-purple": "var(--accent-purple)",
-        "accent-orange": "var(--accent-orange)",
-        "accent-yellow": "var(--accent-yellow)",
-        "background-black": "var(--background-black)"
+        "accent-blue": "rgb(var(--accent-blue))",
+        "accent-purple": "rgb(var(--accent-purple))",
+        "accent-orange": "rgb(var(--accent-orange))",
+        "accent-yellow": "rgb(var(--accent-yellow))",
+        "background-black": "rgb(var(--background-black))"
       },
     },
   },

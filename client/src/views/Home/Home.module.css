@@ -1,31 +1,54 @@
 #container {
-    background-color: var(--background-black);
+    background-color: rgb(var(--background-black));
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    overflow: scroll;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
 }
 
 section {
-    min-height: 60vh;
     width: 100vw;
-    z-index: 200;
-    border-top: 1px solid white;
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30vh;
+}
+
+@keyframes TitleIn { 
+    0% { opacity:0}
+    100% {opacity:1}
 }
 
 .hero {
-    padding-top: 40vh;
+    min-height: 100vh;
+    background-image: url('/waves/wave-blue.svg'), url('/waves/wave-purple.svg');
+    background-size: cover, cover;
+    background-position: bottom 90px left 0px, top -60px left 0px;
 }
-.subhero {
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    animation: TitleIn 1.5s linear;
+}
+
+.subtitle {
     margin-left: 60px;
 }
+
 
 .skills {
     padding: 10vh 18vw 0vh;
@@ -47,10 +70,10 @@ section {
 .skill:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
-    outline: 1px solid var(--accent-blue);
+    outline: 1px solid rgb(var(--accent-blue));
     outline-offset: 10px;
     border-radius: 10px;
-    filter: drop-shadow(0 0 0.5rem var(--accent-blue))
+    filter: drop-shadow(0 0 0.5rem rgb(var(--accent-blue)))
 }
 
 @keyframes FadeIn { 
@@ -77,41 +100,12 @@ section {
 .skill:nth-child(16) { animation-delay: 2.5s }
 .skill:nth-child(17) { animation-delay: 1s }
 
-
-/* .hero::before {
-    content: url('wave-blue.svg');
-    display: block;
-    width: 100%;
-    height: 50%;
-    transform: scale(2) translateY(-160%);
-    margin-bottom: -15%;
+.about {
+    position: relative;
+    margin: 0 auto;
+    padding: 20vh 15vw;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(var(--accent-orange),0.8), rgba(var(--accent-yellow),0.8));
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
-
-.hero::after {
-    content: url('wave-purple.svg');
-    display: block;
-    width: 100%;
-    height: 50%;
-    transform: scaleX(2) scaleY(0.6) translateY(-100%);
-    margin-bottom: -15%;
-}
-
-.about::after {
-    content: url('wave-orange.svg');
-    display: block;
-    width: 100%;
-    height: 50%;
-    transform: scale(2) translateY(-80%);
-    margin-bottom: -15%;
-}
-
-@media only screen and (max-width: 700px) {
-    .hero::before {
-        content: url('wave-blue.svg');
-        display: block;
-        width: 100%;
-        height: 50%;
-        transform: translateY(-230%);
-        margin-bottom: -65%;
-    }
-} */

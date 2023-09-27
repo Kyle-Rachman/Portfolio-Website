@@ -5,7 +5,7 @@
 
 nav {
     height: 10vh;
-    background-color: var(--background-black);
+    background-color: rgb(var(--background-black));
     display: flex;
     justify-content: space-between;
     align-items: center;

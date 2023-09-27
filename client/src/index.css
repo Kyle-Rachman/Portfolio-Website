@@ -10,11 +10,11 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  --accent-blue: rgb(100, 235, 255);
-  --accent-purple: rgb(189, 102, 255);
-  --accent-orange: rgb(255, 158, 102);
-  --accent-yellow: rgb(250, 255, 102);
-  --background-black: rgb(25, 25, 25);
+  --accent-blue: 100, 235, 255;
+  --accent-purple: 189, 102, 255;
+  --accent-orange: 255, 158, 102;
+  --accent-yellow: 250, 255, 102;
+  --background-black: 25, 25, 25;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,11 +22,12 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  overflow: hidden;
   scrollbar-width: 1px; /* Firefox */
   scrollbar-color: white white;
 }
 
-::-webkit-scrollbar { /* WebKit */
+::-webkit-scrollbar { /* Webit */
   width: 1px;
   height: 0px;
   scrollbar-color: white white;

@@ -1,5 +1,5 @@
 #container {
     color: white;
-    background-color: var(--background-black);
+    background-color: rgb(var(--background-black));
     height: 100%;
 }

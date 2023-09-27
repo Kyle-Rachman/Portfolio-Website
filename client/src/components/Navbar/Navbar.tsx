@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
 const activeStyle = {
-    color: 'var(--accent-blue)',
-    textShadow: 'var(--accent-blue) 1px 0 10px'
+    color: 'rgb(var(--accent-blue))',
+    textShadow: 'rgb(var(--accent-blue)) 1px 0 10px'
 }
 
 const Navbar = () => {

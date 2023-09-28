@@ -29,6 +29,17 @@ section {
     100% {opacity:1}
 }
 
+@keyframes FadeIn { 
+    0% { opacity:0; }
+    100% { opacity: 1; }
+}
+
+@keyframes GrowIn { 
+    0% { opacity:0; transform:scale(.1);}
+    85% {opacity:1; transform:scale(1.05);}
+    100% {transform:scale(1); }
+}
+
 .hero {
     min-height: 100vh;
     background-image: url('/waves/wave-blue.svg'), url('/waves/wave-purple.svg');
@@ -63,7 +74,7 @@ section {
     object-fit: contain;
     filter: gray;
     -webkit-filter: grayscale(100%);
-    animation: FadeIn 1s linear;
+    animation: GrowIn 1s linear;
     animation-fill-mode: both;
 }
 
@@ -74,12 +85,6 @@ section {
     outline-offset: 10px;
     border-radius: 10px;
     filter: drop-shadow(0 0 0.5rem rgb(var(--accent-blue)))
-}
-
-@keyframes FadeIn { 
-    0% { opacity:0; transform:scale(.1);}
-    85% {opacity:1; transform:scale(1.05);}
-    100% {transform:scale(1); }
 }
 
 .skill:nth-child(1) { animation-delay: 1s }
@@ -116,4 +121,12 @@ section {
     align-items: center;
     gap: 40px;
     height: 60vh;
+}
+
+.projectCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: FadeIn 1s linear;
 }

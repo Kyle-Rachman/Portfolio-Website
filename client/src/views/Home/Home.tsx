@@ -5,6 +5,8 @@ import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
 import styles from './Home.module.css'
 
 const Home = () => {
+    const [activeProject, setActiveProject] = useState(0)
+    const numProjects = 3
     const ref = useRef<IParallax>(null)
     const navigate = useNavigate()
 
@@ -26,7 +28,7 @@ const Home = () => {
                             >
                                 <div className={styles.heroTitle}>
                                     <h1 className=
-                                    'bg-clip-text text-transparent bg-gradient-to-b from-accent-blue via-accent-purple via-accent-orange to-accent-yellow text-7xl italic'>Kyle Rachman</h1>
+                                    'bg-clip-text text-transparent bg-gradient-to-b from-accent-blue via-accent-purple to-accent-yellow text-7xl italic'>Kyle Rachman</h1>
                                     <h2 className={`text-3xl text-gray-300 ${styles.subtitle}`}>Web Design and Development</h2>
                                 </div>
                             </ParallaxLayer>
@@ -72,16 +74,40 @@ const Home = () => {
                     <ParallaxLayer offset={window.innerWidth < 768 ? 1.985 : 1.51} onClick={() => scrollToPage(window.innerWidth < 768 ? 1.985 : 1.51)}>
                         <section className={`pt-10 ${styles.work}`}>
                             <div className={styles.project}>
-                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'>&lt;</button>
-                                <div className={styles.projectSummary}>
-                                    <p>Project Title</p>
-                                    <p>Project Stack</p>
-                                    <p>Project Description</p>
-                                </div>
-                                <div className={styles.imageContainer}>
-                                    <img src="/vite.svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
-                                </div>
-                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'>&gt;</button>
+                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'
+                                onClick={() => setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))}>&lt;</button>
+                                {(activeProject==0) &&<div className={styles.projectCard} id={styles.project1}>
+                                    <div className={styles.projectSummary}>
+                                        <p>Project 1</p>
+                                        <p>Project Stack</p>
+                                        <p>Project Description</p>
+                                    </div>
+                                    <div className={styles.imageContainer}>
+                                        <img src="/vite.svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                    </div>
+                                </div>}
+                                {(activeProject==1) && <div className={styles.projectCard} id={styles.project2}>
+                                    <div className={styles.projectSummary}>
+                                        <p>Project 2</p>
+                                        <p>Project Stack</p>
+                                        <p>Project Description</p>
+                                    </div>
+                                    <div className={styles.imageContainer}>
+                                        <img src="/wave-haikei (1).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                    </div>
+                                </div>}
+                                {(activeProject==2) && <div className={styles.projectCard} id={styles.project3}>
+                                    <div className={styles.projectSummary}>
+                                        <p>Project 3</p>
+                                        <p>Project Stack</p>
+                                        <p>Project Description</p>
+                                    </div>
+                                    <div className={styles.imageContainer}>
+                                        <img src="/wave-haikei (2).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                    </div>
+                                </div>}
+                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'
+                                onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                             </div>
                             <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10'>See all projects</button>
                         </section>

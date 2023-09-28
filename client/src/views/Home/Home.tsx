@@ -70,7 +70,7 @@ const Home = () => {
                         </section>
                     </ParallaxLayer>
                     <ParallaxLayer offset={window.innerWidth < 768 ? 1.985 : 1.51} onClick={() => scrollToPage(window.innerWidth < 768 ? 1.985 : 1.51)}>
-                        <section className={styles.work}>
+                        <section className={`pt-10 ${styles.work}`}>
                             <div className={styles.project}>
                                 <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'>&lt;</button>
                                 <div className={styles.projectSummary}>

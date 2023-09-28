@@ -17,7 +17,7 @@
 
 section {
     width: 100vw;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,7 @@ section {
     background-position: bottom 90px left 0px, top -60px left 0px;
 }
 
-.title {
+.heroTitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,9 +103,17 @@ section {
 .about {
     position: relative;
     margin: 0 auto;
-    padding: 20vh 15vw;
+    padding: 10vh 15vw;
     z-index: 1;
     background: linear-gradient(to right, rgba(var(--accent-orange),0.8), rgba(var(--accent-yellow),0.8));
     color: white;
     text-shadow: 1px 1px 2px black;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 60vh;
 }

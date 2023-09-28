@@ -17,14 +17,14 @@ const Home = () => {
     return (
         <>
             <div id={styles.container}>
-                <Parallax pages={4} ref={ref}>
+                <Parallax pages={3} ref={ref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>
                         <section className={styles.hero}>
                             <ParallaxLayer
                                 factor={0.5}
                                 speed={0.5}
                             >
-                                <div className={styles.title}>
+                                <div className={styles.heroTitle}>
                                     <h1 className=
                                     'bg-clip-text text-transparent bg-gradient-to-b from-accent-blue via-accent-purple via-accent-orange to-accent-yellow text-7xl italic'>Kyle Rachman</h1>
                                     <h2 className={`text-3xl text-gray-300 ${styles.subtitle}`}>Web Design and Development</h2>
@@ -65,16 +65,28 @@ const Home = () => {
                                 </h2>
                             </ToggleOnScroll>
                             <ToggleOnScroll>
-                                <button className='border border-black p-2 text-black transition-color duration-500 hover:text-white hover:bg-black' onClick={() => navigate('/about')}>More about me</button>
+                                <button className='border border-black p-2 text-black transition-color duration-500 hover:text-white hover:bg-black mt-10' onClick={() => navigate('/about')}>More about me</button>
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={1.65} onClick={() => scrollToPage(1.6)}>
+                    <ParallaxLayer offset={window.innerWidth < 768 ? 1.985 : 1.51} onClick={() => scrollToPage(window.innerWidth < 768 ? 1.985 : 1.51)}>
                         <section className={styles.work}>
-                            <p>test</p>
+                            <div className={styles.project}>
+                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'>&lt;</button>
+                                <div className={styles.projectSummary}>
+                                    <p>Project Title</p>
+                                    <p>Project Stack</p>
+                                    <p>Project Description</p>
+                                </div>
+                                <div className={styles.imageContainer}>
+                                    <img src="/vite.svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                </div>
+                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'>&gt;</button>
+                            </div>
+                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10'>See all projects</button>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={3} onClick={() => scrollToPage(3)}>
+                    <ParallaxLayer offset={2.5} onClick={() => scrollToPage(3)}>
                         <section className={styles.contact}>
                             <p>test</p>
                         </section>

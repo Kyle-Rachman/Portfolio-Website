@@ -8,8 +8,9 @@ const activeStyle = {
 }
 
 const Navbar = () => {
-    const navigate = useNavigate();
-    let activeUrl:string = window.location.href;
+    const navigate = useNavigate()
+    let activeUrl:string = window.location.href
+
     return (
         <nav>
             <img src="/placeholder-logo-1.png" alt="logo placeholder" id={styles.logo} onClick={() => navigate('/')}/>

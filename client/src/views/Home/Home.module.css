@@ -108,11 +108,18 @@ section {
 .about {
     position: relative;
     margin: 0 auto;
-    padding: 10vh 15vw;
+    padding: 10vh clamp(5vw,15vw,15vw);
+    max-height: 60vh;
     z-index: 1;
     background: linear-gradient(to right, rgba(var(--accent-orange),0.8), rgba(var(--accent-yellow),0.8));
     color: white;
     text-shadow: 1px 1px 2px black;
+}
+
+.work {
+    /* background-color: rgba(128,128,128,0.4); */
+    min-height: 60vh;
+    padding: 12vh 0vw;
 }
 
 .project {
@@ -120,7 +127,6 @@ section {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    height: 60vh;
 }
 
 .projectCard {

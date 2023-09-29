@@ -1,25 +1,25 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
 import styles from './Home.module.css'
 
 const Home = () => {
     const [activeProject, setActiveProject] = useState(0)
     const numProjects = 3
-    const ref = useRef<IParallax>(null)
+    const parallaxref = useRef<IParallax>(null)
+    const aboutref = useRef<HTMLElement>(null)
     const navigate = useNavigate()
-
     const scrollToPage = (pageNumber: number) => {
-        if (ref?.current) {
-            ref.current.scrollTo(pageNumber);
+        if (parallaxref?.current) {
+            parallaxref.current.scrollTo(pageNumber);
         }
     };
 
     return (
         <>
             <div id={styles.container}>
-                <Parallax pages={3} ref={ref}>
+                <Parallax pages={3} ref={parallaxref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>
                         <section className={styles.hero}>
                             <ParallaxLayer
@@ -59,10 +59,10 @@ const Home = () => {
                             </ParallaxLayer>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={1} factor={0.5} onClick={() => scrollToPage(1)}>
-                        <section className={styles.about}>
+                    <ParallaxLayer offset={1} factor={0.6} onClick={() => scrollToPage(1)}>
+                        <section className={styles.about} ref={aboutref}>
                             <ToggleOnScroll firstTimeSlide>
-                                <h2 className= 'text-4xl'>
+                                <h2 className= {window.innerWidth > 840 ? 'text-4xl' : 'text-3xl'}>
                                     Hey there! I'm a full stack developer and mathematician based in San Luis Obispo, California. I focus on clean whole-stack web design and UI/UX.
                                 </h2>
                             </ToggleOnScroll>
@@ -71,7 +71,7 @@ const Home = () => {
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={window.innerWidth < 768 ? 1.985 : 1.51} onClick={() => scrollToPage(window.innerWidth < 768 ? 1.985 : 1.51)}>
+                    <ParallaxLayer offset={1.51} onClick={() => scrollToPage(1.51)}>
                         <section className={`pt-10 ${styles.work}`}>
                             <div className={styles.project}>
                                 <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'
@@ -109,12 +109,20 @@ const Home = () => {
                                 <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'
                                 onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                             </div>
-                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10'>See all projects</button>
+                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10' onClick={() => navigate('/work')}>See all projects</button>
                         </section>
                     </ParallaxLayer>
                     <ParallaxLayer offset={2.5} onClick={() => scrollToPage(3)}>
+                        <hr className='w-[90vw]' style={{margin: 'auto', marginTop: '-10vh', marginBottom: '8vh'}}/>
                         <section className={styles.contact}>
-                            <p>test</p>
+                            <h2 className='text-4xl'>Looking for a <span className='text-accent-purple'>developer?</span></h2>
+                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' onClick={() => navigate('/contact')}>Contact Me</button>
+                            <h2 className='text-3xl mb-2'> Or find me via...</h2>
+                            <div className='links text-lg m-4'>
+                                <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="https://github.com/Kyle-Rachman" target='_blank' rel="noopener" aria-label='Github'>Github</a>
+                                <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="https://www.linkedin.com/in/kyle-rachman/" target='_blank' rel="noopener" aria-label='LinkedIn'>LinkedIn</a>
+                                <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="mailto:kcrachman@gmail.com" target='_blank' rel="noopener" aria-label='Email'>Email</a>
+                            </div>
                         </section>
                     </ParallaxLayer>
                 </Parallax>

@@ -13,6 +13,9 @@ export default {
         "accent-yellow": "rgb(var(--accent-yellow))",
         "background-black": "rgb(var(--background-black))"
       },
+      opacity: {
+        '85' : '0.85'
+      }
     },
   },
   plugins: [],

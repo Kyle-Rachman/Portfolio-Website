@@ -2,13 +2,30 @@ import React, { useEffect, useRef, useState, ReactNode } from 'react'
 
 interface Props {
     children?: ReactNode,
-    firstTimeSlide?: boolean
+    firstTimeSlide?: boolean,
+    direction?: string
 }
 
-const ToggleOnScroll = ({ children, firstTimeSlide }: Props) => {
+const ToggleOnScroll = ({ children, firstTimeSlide, direction }: Props) => {
     const [isVisible, setIsVisible] = useState(false)
     const [firstAppear, setFirstAppear] = useState(firstTimeSlide ? true : false)
+    let varDirection: string = ''
+    let varSign: string = ''
     const ref = useRef(null)
+
+    if (direction == 'from-left') {
+        varDirection = 'x'
+        varSign = '-'
+    } else if (direction == 'from-right') {
+        varDirection = 'x'
+        varSign = ''
+    } else if (direction == 'from-top') {
+        varDirection = 'y'
+        varSign = '-'
+    } else if (direction == 'from-bottom') {
+        varDirection = 'y'
+        varSign = ''
+    }
 
     useEffect(() => {
         const scrollObserver = new IntersectionObserver(([entry]) => {
@@ -29,7 +46,7 @@ const ToggleOnScroll = ({ children, firstTimeSlide }: Props) => {
 
     const classes = `transition-all delay-200 duration-1000
         ${isVisible ? "opacity-100" : "opacity-0"
-        } ${firstAppear ? " -translate-x-full" : ""}`
+        } ${firstAppear && direction ? varSign + `translate-${varDirection}-full` : ""}`
 
     return (
         <div ref={ref} className={classes}>

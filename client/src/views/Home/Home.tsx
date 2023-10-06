@@ -61,7 +61,7 @@ const Home = () => {
                     </ParallaxLayer>
                     <ParallaxLayer offset={1} factor={0.6} onClick={() => scrollToPage(1)}>
                         <section className={styles.about} ref={aboutref}>
-                            <ToggleOnScroll firstTimeSlide>
+                            <ToggleOnScroll firstTimeSlide direction='from-left'>
                                 <h2 className= {window.innerWidth > 840 ? 'text-4xl' : 'text-3xl'}>
                                     Hey there! I'm a full stack developer and mathematician based in San Luis Obispo, California. I focus on clean whole-stack web design and UI/UX.
                                 </h2>
@@ -74,49 +74,55 @@ const Home = () => {
                     <ParallaxLayer offset={1.51} onClick={() => scrollToPage(1.51)}>
                         <section className={`pt-10 ${styles.work}`}>
                             <div className={styles.project}>
-                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'
+                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black'
                                 onClick={() => setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))}>&lt;</button>
                                 {(activeProject==0) &&<div className={styles.projectCard} id={styles.project1}>
-                                    <div className={styles.projectSummary}>
-                                        <p>Project 1</p>
-                                        <p>Project Stack</p>
-                                        <p>Project Description</p>
+                                    <div className='w-[20vw] bg-background-black border border-white rounded-xl p-2'>
+                                        <p className='text-3xl'>Local Bingo</p>
+                                        <p>Technologies: React, Express, MongoDB (Mongoose), Node.js, MUI</p>
+                                        <br />
+                                        <p>Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.</p>
                                     </div>
                                     <div className={styles.imageContainer}>
-                                        <img src="/vite.svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                        <img src="/vite.svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw] bg-background-black'/>
                                     </div>
                                 </div>}
                                 {(activeProject==1) && <div className={styles.projectCard} id={styles.project2}>
-                                    <div className={styles.projectSummary}>
-                                        <p>Project 2</p>
+                                    <div className='w-[20vw] bg-background-black border border-white rounded-xl p-2'>
+                                        <p className='text-3xl'>Project 2</p>
                                         <p>Project Stack</p>
-                                        <p>Project Description</p>
+                                        <br />
+                                        <p>Description</p>
                                     </div>
                                     <div className={styles.imageContainer}>
-                                        <img src="/wave-haikei (1).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                        <img src="/wave-haikei (1).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw] bg-background-black'/>
                                     </div>
                                 </div>}
                                 {(activeProject==2) && <div className={styles.projectCard} id={styles.project3}>
-                                    <div className={styles.projectSummary}>
-                                        <p>Project 3</p>
+                                    <div className='w-[20vw] bg-background-black border border-white rounded-xl p-2'>
+                                        <p className='text-3xl'>Project 3</p>
                                         <p>Project Stack</p>
-                                        <p>Project Description</p>
+                                        <br />
+                                        <p>Project Description Project Description Project DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject Description</p>
                                     </div>
                                     <div className={styles.imageContainer}>
-                                        <img src="/wave-haikei (2).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw]'/>
+                                        <img src="/wave-haikei (2).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw] bg-background-black'/>
                                     </div>
                                 </div>}
-                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16'
+                                <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black'
                                 onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                             </div>
-                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10' onClick={() => navigate('/work')}>See all projects</button>
+                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10 bg-background-black' onClick={() => navigate('/work')}>See all projects</button>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={2.5} onClick={() => scrollToPage(3)}>
-                        <hr className='w-[90vw]' style={{margin: 'auto', marginTop: '-10vh', marginBottom: '8vh'}}/>
+                    <ParallaxLayer offset={2.5} onClick={() => scrollToPage(2)}>
+                        <hr className='w-[80vw]' style={{margin: 'auto', marginTop: '-20px', marginBottom: '20px'}}/>
                         <section className={styles.contact}>
                             <h2 className='text-4xl'>Looking for a <span className='text-accent-purple'>developer?</span></h2>
-                            <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' onClick={() => navigate('/contact')}>Contact Me</button>
+                            <div>
+                                <a className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' href="https://drive.google.com/file/d/1Q98KLwEXkBorhx7KFSl6L0-63JhAwfUd/view" target='_blank' rel="noopener" aria-label='Resume'>My Resume</a>
+                                <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' onClick={() => navigate('/contact')}>Contact Me</button>
+                            </div>
                             <h2 className='text-3xl mb-2'> Or find me via...</h2>
                             <div className='links text-lg m-4'>
                                 <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="https://github.com/Kyle-Rachman" target='_blank' rel="noopener" aria-label='Github'>Github</a>

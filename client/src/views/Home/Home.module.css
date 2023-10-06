@@ -117,9 +117,11 @@ section {
 }
 
 .work {
-    /* background-color: rgba(128,128,128,0.4); */
     min-height: 60vh;
     padding: 12vh 0vw;
+    background-image: url('/waves/wave-orange.svg'), url('/waves/wave-yellow.svg');
+    background-size: cover, cover;
+    background-position: bottom 60px left 0px, top -35px left 0px;
 }
 
 .project {
@@ -134,5 +136,5 @@ section {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    animation: FadeIn 1s linear;
+    animation: FadeIn 0.5s linear;
 }

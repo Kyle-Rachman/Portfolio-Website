@@ -22,13 +22,13 @@ const Navbar = () => {
                 <li><Link to={'/contact'} style={activeUrl == 'http://localhost:5173/contact' ? activeStyle : {}}>Contact</Link></li>
             </ul>
             <div id={styles.menu}>
-                <img src="/menu-icon.png" alt="menu icon" id={styles.menuIcon} onClick={() => setOpen(prev => !prev)}/>
+                <img src="/menu-icon.png" alt="menu icon" className='w-[100%] object-contain object-right' id={styles.menuIcon} onClick={() => setOpen(prev => !prev)}/>
                 {
-                    open && <ul id={styles.linkMenu}>
-                        <li><Link to={'/'} style={activeUrl == 'http://localhost:5173/' ? activeStyle : {}} onClick={() => setOpen(false)}>Home</Link></li>
-                        <li><Link to={'/about'} style={activeUrl == 'http://localhost:5173/about' ? activeStyle : {}} onClick={() => setOpen(false)}>About Me</Link></li>
-                        <li><Link to={'/work'} style={activeUrl == 'http://localhost:5173/work' ? activeStyle : {}} onClick={() => setOpen(false)}>My Work</Link></li>
-                        <li><Link to={'/contact'} style={activeUrl == 'http://localhost:5173/contact' ? activeStyle : {}} onClick={() => setOpen(false)}>Contact</Link></li>
+                    open && <ul id={styles.linkMenu} className='w-[100%]' style={{right: !open ? '0px' : '5vw'}}>
+                        <li className='w-[100%]'><Link to={'/'} style={activeUrl == 'http://localhost:5173/' ? activeStyle : {}} onClick={() => setOpen(false)}>Home</Link></li>
+                        <li className='w-[100%]'><Link to={'/about'} style={activeUrl == 'http://localhost:5173/about' ? activeStyle : {}} onClick={() => setOpen(false)}>About Me</Link></li>
+                        <li className='w-[100%]'><Link to={'/work'} style={activeUrl == 'http://localhost:5173/work' ? activeStyle : {}} onClick={() => setOpen(false)}>My Work</Link></li>
+                        <li className='w-[100%]'><Link to={'/contact'} style={activeUrl == 'http://localhost:5173/contact' ? activeStyle : {}} onClick={() => setOpen(false)}>Contact</Link></li>
                     </ul>
                 }
             </div>

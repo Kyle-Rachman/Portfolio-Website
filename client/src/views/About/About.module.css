@@ -2,11 +2,25 @@
     color: white;
     background-color: rgb(var(--background-black));
     height: 100%;
+    overflow: scroll;
 }
 
-.heroinfo {
+.heroinfodesktop {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     gap: 40px;
+}
+
+#mobileimage {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #mobileimage {
+        display: block;
+    }
+    #desktopimage {
+        display: none;
+    }
 }

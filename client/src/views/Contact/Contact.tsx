@@ -23,7 +23,7 @@ const Contact = () => {
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
             },
-            body: JSON.stringify(formDetails),
+            body: formDetails,
         })
         setSubmittedStatus(true)
         setFormDetails({

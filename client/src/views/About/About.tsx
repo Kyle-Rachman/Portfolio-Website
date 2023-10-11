@@ -14,7 +14,7 @@ const About = () => {
                             <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[-175px]'>Mathematician</p>
                             <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-175px]'>Climber</p>
                         </div>
-                        <p className='text-accent-yellow text-2xl w-[100%]'>|| About me</p>
+                        <p className='text-accent-yellow text-2xl w-[100%] font-light'>|| About me</p>
                         <p className='text-3xl'>My name is Kyle Rachman.
                         <br />
                         I'm a Full Stack web developer with a passion for making creative and seamless user experiences.</p>
@@ -33,6 +33,13 @@ const About = () => {
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <p className="text-3xl text-black">
                         <strong>My Expertise</strong>
+                    </p>
+                </ToggleOnScroll>
+            </div>
+            <div className='bg-white p-20'>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                    <p className="text-3xl text-black">
+                        <strong>What I'm Learning</strong>
                     </p>
                 </ToggleOnScroll>
             </div>

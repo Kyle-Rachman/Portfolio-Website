@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgb(15,15,15);
   --accent-blue: 100, 235, 255;
   --accent-purple: 189, 102, 255;
   --accent-orange: 255, 158, 102;

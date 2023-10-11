@@ -1,8 +1,14 @@
+@keyframes FadeIn { 
+    0% { opacity:0; }
+    100% { opacity: 1; }
+}
+
 #container {
     color: white;
     background-color: rgb(var(--background-black));
     height: 100%;
     overflow: scroll;
+    animation: FadeIn 0.5s linear;
 }
 
 .contact {
@@ -16,8 +22,12 @@
     min-width: 325px;
 }
 
-.textContact {
-    width: 10vw
+.contactText {
+    width: 23vw;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    gap: 20px;
 }
 
 .formGroup {
@@ -44,5 +54,8 @@ form > button {
     height: 60vh;
     background: linear-gradient(to right, rgba(var(--accent-orange),0.8), rgba(var(--accent-yellow),0.8));
     color: white;
-    text-shadow: 1px 1px 2px black;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 10vh 20vw 0vh;
 }

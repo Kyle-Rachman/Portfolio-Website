@@ -15,6 +15,11 @@ export default {
       },
       opacity: {
         '85' : '0.85'
+      },
+      dropShadow: {
+        "accent-orange" : "0px 0px 10px rgb(var(--accent-orange))",
+        "accent-blue" : "0px 0px 10px rgb(var(--accent-blue))",
+        "black" : "0px 0px 5px black"
       }
     },
   },

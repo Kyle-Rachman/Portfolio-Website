@@ -4,16 +4,22 @@ const secretEmail = process.env.SECRET_EMAIL
 const sendEmail = (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    const message = req.body.message; 
+    const phone = req.body.phone;
+    const help = req.body.help;
+    const happy = req.body.happy;
+    const timeframe = req.body.timeframe;
     const mail = {
         from: name,
         to: secretEmail,
-        subject: "Contact Form Submission",
+        subject: "Portfolio Website Contact Form Submission",
         html: `<p>Name: ${name}</p>
             <p>Email: ${email}</p>
-            <p>Message: ${message}</p>`,
+            <p>Phone: ${phone}</p>
+            <p>What are you looking for from me?: ${help}</p>
+            <p>What would make you happy in this project?: ${happy}</p>
+            <p>Timeframe: ${timeframe}</p>`,
     };
-    contactEmail.sendMail(mail, (error) => {
+    ContactEmail.sendMail(mail, (error) => {
         if (error) {
         res.json({ status: "ERROR" });
         } else {

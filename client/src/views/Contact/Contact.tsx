@@ -1,12 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
 import styles from './Contact.module.css'
 
 const Contact = () => {
+    const [submittedStatus, setSubmittedStatus] = useState(false);
+    const [formDetails, setFormDetails] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        help: "",
+        happy: "",
+        timeframe: "None"
+    })
     const formInput: string = "px-[15px] py-[5px] bg-white text-black placeholder:text-black placeholder:font-light rounded-md"
     const navigate = useNavigate();
-    
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        let response = await axios.post("http://localhost:8000/api/submitContactForm", {
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(formDetails),
+        })
+        setSubmittedStatus(true)
+        setFormDetails({
+            name: "",
+            email: "",
+            phone: "",
+            help: "",
+            happy: "",
+            timeframe: "None"
+        })
+    }
+
     return (
         <div id={styles.container}>
             <div className={styles.contact}>
@@ -16,38 +45,38 @@ const Contact = () => {
                     <br />
                     <p className='text-xl'>Fill in the form, or just send me an email at: <br /> <a className='text-accent-orange transition-color duration-500 hover:drop-shadow-accent-orange' href="mailto:kcrachman@gmail.com" target='_blank' rel="noopener" aria-label='Email'>kcrachman@gmail.com</a></p>
                 </div>
-                <form id={styles.contactForm}>
+                {!submittedStatus && <form id={styles.contactForm} onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
                         <label htmlFor="name" className="font-semibold">Name *</label>
-                        <input type="text" className={formInput} id="name" placeholder="Your name"/>
+                        <input type="text" className={formInput} id="name" name="name" placeholder="Your name" value={formDetails.name} onChange={(e) => setFormDetails((prev) => ({...prev, name: e.target.value}))}/>
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="email" className="font-semibold">Email *</label>
-                        <input type="email" className={formInput} id="email" placeholder="Your email"/>
+                        <input type="email" className={formInput} id="email" name="email" placeholder="Your email" value={formDetails.email} onChange={(e) => setFormDetails((prev) => ({...prev, email: e.target.value}))}/>
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="phone" className="font-semibold">Phone</label>
-                        <input type="tel" className={formInput} id="phone" placeholder="Your phone number (optional)"/>
+                        <input type="tel" className={formInput} id="phone" name="phone" placeholder="Your phone number (optional)" value={formDetails.phone} onChange={(e) => setFormDetails((prev) => ({...prev, phone: e.target.value}))}/>
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="help" className="font-semibold">How can I best help you? *</label>
-                        <textarea className={formInput} id="help" rows={2} placeholder="What are you looking for from me?"></textarea>
+                        <textarea className={formInput} id="help" rows={2} name="help" placeholder="What are you looking for from me?" value={formDetails.help} onChange={(e) => setFormDetails((prev) => ({...prev, help: e.target.value}))}></textarea>
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="happy" className="font-semibold">What would make you happy in this project?</label>
-                        <textarea className={formInput} id="happy" rows={2} placeholder="Share about the project goals. What does success look like? (optional)"></textarea>
+                        <textarea className={formInput} id="happy" rows={2} name="happy" placeholder="Share about the project goals. What does success look like? (optional)" value={formDetails.happy} onChange={(e) => setFormDetails((prev) => ({...prev, happy: e.target.value}))}></textarea>
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="timeframe" className="font-semibold">Do you have a defined timeframe?</label>
-                        <select className={formInput} id="timeframe" defaultValue={"none"}>
-                            <option value="none">Not yet</option>
-                            <option value="short">2-4 weeks</option>
-                            <option value="medium">1-2 months</option>
-                            <option value="long">2+ months</option>
+                        <select className={formInput} id="timeframe" name="timeframe" value={formDetails.timeframe} onChange={(e) => setFormDetails((prev) => ({...prev, timeframe: e.target.value}))}>
+                            <option value="None">Not yet</option>
+                            <option value="2-4 weeks">2-4 weeks</option>
+                            <option value="1-2 months">1-2 months</option>
+                            <option value="2+ months">2+ months</option>
                         </select>
                     </div>
                     <button type="submit" className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white font-bold'>Get In Touch</button>
-                </form>
+                </form>}
             </div>
             <div className={styles.moreInfo}>
                 <ToggleOnScroll>

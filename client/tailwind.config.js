@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      "md" : "769px"
+    },
     extend: {
       colors: {
         "accent-blue": "rgb(var(--accent-blue))",

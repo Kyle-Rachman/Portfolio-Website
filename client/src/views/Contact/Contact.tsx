@@ -122,7 +122,7 @@ const Contact = () => {
             <div className={styles.moreInfo}>
                 <ToggleOnScroll>
                     <div>
-                        <h2 className='text-4xl font-semibold w-[20vw] drop-shadow-black'>You can also find me on...</h2>
+                        <h2 className='text-4xl font-semibold md:w-[20vw] drop-shadow-black'>You can also find me on...</h2>
                         <div className='flex flex-col mt-10 gap-4 content-start pl-10'>
                             <a className='drop-shadow-black transition-all duration-200 hover:text-black hover:drop-shadow-accent-blue w-[100%] font-bold' href="https://github.com/Kyle-Rachman" target='_blank' rel="noopener" aria-label='Github'>Github</a>
                             <a className='drop-shadow-black transition-colors duration-200 hover:text-black hover:drop-shadow-accent-blue w-[100%] font-bold' href="https://www.linkedin.com/in/kyle-rachman/" target='_blank' rel="noopener" aria-label='LinkedIn'>LinkedIn</a>
@@ -131,7 +131,7 @@ const Contact = () => {
                 </ToggleOnScroll>
                 <ToggleOnScroll>
                     <div>
-                        <h2 className='text-4xl font-semibold w-[30vw] drop-shadow-black'>If you want to find out more about me check the page below:</h2>
+                        <h2 className='text-4xl font-semibold md:w-[30vw] drop-shadow-black'>If you want to find out more about me check the page below:</h2>
                         <button className='border-2 border-white p-2 transition-color duration-500 hover:text-black hover:border-black mt-10 drop-shadow-black hover:drop-shadow-accent-blue' onClick={() => navigate('/about')}>More about me</button>
                     </div>
                 </ToggleOnScroll>

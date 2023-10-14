@@ -9,7 +9,7 @@ interface Props {
     onSwipe: Function
 }
 
-const ProjectCard = ({ title, technologies, description, source, swiped, onSwipe }: Props) => {
+const ProjectCard = ({ title, technologies, description, source, onSwipe }: Props) => {
     const [descriptionActive, setDescriptionActive] = useState(window.innerWidth > 768 ? true : false)
     const [touchStart, setTouchStart] = useState(0)
     const [touchEnd, setTouchEnd] = useState(0)

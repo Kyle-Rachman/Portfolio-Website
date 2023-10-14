@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
+import ToggleOnScroll from '../../components/ToggleOnScroll'
 import styles from './About.module.css'
 
 const About = () => {
@@ -40,6 +40,13 @@ const About = () => {
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <p className="text-3xl text-black">
                         <strong>What I'm Learning</strong>
+                    </p>
+                </ToggleOnScroll>
+            </div>
+            <div className='bg-white p-20'>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                    <p className="text-3xl text-black">
+                        <strong>Testimonials</strong>
                     </p>
                 </ToggleOnScroll>
             </div>

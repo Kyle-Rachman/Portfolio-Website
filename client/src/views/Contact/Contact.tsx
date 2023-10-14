@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
+import ToggleOnScroll from '../../components/ToggleOnScroll'
 import styles from './Contact.module.css'
 
 const Contact = () => {

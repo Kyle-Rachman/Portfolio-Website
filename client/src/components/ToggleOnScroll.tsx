@@ -20,7 +20,7 @@ const ToggleOnScroll = ({ children, firstTimeSlide, direction, delay }: Props) =
     } else if (direction == 'from-top') {
         translateInstructions = `-translate-y-full`
     } else if (direction == 'from-bottom') {
-        translateInstructions = `translate-y-full`
+        translateInstructions = `translate-y-[25%] md:translate-y-[75%]`
     }
 
     useEffect(() => {

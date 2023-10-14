@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useNavigate } from 'react-router-dom'
-import ToggleOnScroll from '../../components/Navbar/ToggleOnScroll'
+import ToggleOnScroll from '../../components/ToggleOnScroll'
+import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import styles from './Home.module.css'
 
 const Home = () => {
@@ -15,11 +16,16 @@ const Home = () => {
             parallaxref.current.scrollTo(pageNumber);
         }
     };
+    
+    // TODO: Fix layout for mobile landscapes
+    // TODO: Make mobile project slider
+    // TODO: Add project images and descriptions
+    // TODO: Make skill icons link to specific projects
 
     return (
         <>
             <div id={styles.container}>
-                <Parallax pages={3} ref={parallaxref}>
+                <Parallax pages={window.innerWidth > 768 ? 3 : 3.5} ref={parallaxref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>
                         <section className={styles.hero}>
                             <ParallaxLayer
@@ -62,7 +68,7 @@ const Home = () => {
                     <ParallaxLayer offset={1} factor={0.6} onClick={() => scrollToPage(1)}>
                         <section className={styles.about} ref={aboutref}>
                             <ToggleOnScroll firstTimeSlide direction='from-left'>
-                                <h2 className= {window.innerWidth > 840 ? 'text-4xl' : 'text-3xl'}>
+                                <h2 className= 'text-4xl'>
                                     Hey there! I'm a full stack developer and mathematician based in San Luis Obispo, California. I focus on clean whole-stack web design and UI/UX.
                                 </h2>
                             </ToggleOnScroll>
@@ -71,45 +77,30 @@ const Home = () => {
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={1.6} factor={1} onClick={() => scrollToPage(1.6)}>
+                    <ParallaxLayer offset={window.innerWidth > 768 ? 1.6 : 2} factor={1} onClick={() => scrollToPage(window.innerWidth > 768 ? 1.61 : 1.97)}>
                         <section className={`pt-10 ${styles.work}`}>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                                     <div className={styles.project}>
                                         <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
                                         onClick={() => setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))}>&lt;</button>
-                                        {(activeProject==0) &&<div className={styles.projectCard} id={styles.project1}>
-                                            <div className='w-[80vw] md:w-[20vw] bg-background-black border border-white rounded-xl p-2'>
-                                                <p className='text-3xl'>Local Bingo</p>
-                                                <p>Technologies: React, Express, MongoDB (Mongoose), Node.js, MUI</p>
-                                                <br />
-                                                <p>Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.</p>
-                                            </div>
-                                            <div className={styles.imageContainer}>
-                                                <img src="/vite.svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black'/>
-                                            </div>
-                                        </div>}
-                                        {(activeProject==1) && <div className={styles.projectCard} id={styles.project2}>
-                                            <div className='w-[20vw] bg-background-black border border-white rounded-xl p-2'>
-                                                <p className='text-3xl'>Project 2</p>
-                                                <p>Project Stack</p>
-                                                <br />
-                                                <p>Description</p>
-                                            </div>
-                                            <div className={styles.imageContainer}>
-                                                <img src="/wave-haikei (1).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw] bg-background-black'/>
-                                            </div>
-                                        </div>}
-                                        {(activeProject==2) && <div className={styles.projectCard} id={styles.project3}>
-                                            <div className='w-[20vw] bg-background-black border border-white rounded-xl p-2'>
-                                                <p className='text-3xl'>Project 3</p>
-                                                <p>Project Stack</p>
-                                                <br />
-                                                <p>Project Description Project Description Project DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject DescriptionProject Description</p>
-                                            </div>
-                                            <div className={styles.imageContainer}>
-                                                <img src="/wave-haikei (2).svg" alt="placeholder" className='border border-white p-2 rounded-lg h-[60vh] w-[40vw] bg-background-black'/>
-                                            </div>
-                                        </div>}
+                                        {(activeProject==0) && <ProjectCard
+                                            title='Local Bingo'
+                                            technologies='React, Express, MongoDB (Mongoose), Node.js, MUI'
+                                            description='Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.'
+                                            source={['/vite.svg', 'Bingo Screen']}
+                                        />}
+                                        {(activeProject==1) && <ProjectCard
+                                            title='Test'
+                                            technologies='Test'
+                                            description='Test'
+                                            source={['/wave-haikei (1).svg', 'Placeholder']}
+                                        />}
+                                        {(activeProject==2) && <ProjectCard
+                                            title='Test'
+                                            technologies='Test'
+                                            description='Test'
+                                            source={['/wave-haikei (2).svg', 'Placeholder']}
+                                        />}
                                         <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
                                         onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                                     </div>
@@ -119,18 +110,18 @@ const Home = () => {
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={2.5} onClick={() => scrollToPage(2.5)}>
-                        <hr className='w-[80vw] mb-[20px] mx-auto'/>
+                    <ParallaxLayer offset={2.55} onClick={() => scrollToPage(2.5)}>
                         <section className={styles.contact}>
+                            <hr className='w-[80vw] mb-[20px] mx-auto mt-[20px] md:mt-[-60px]'/>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                                <h2 className='text-4xl'>Looking for a <span className='text-accent-purple'>developer?</span></h2>
+                                <h2 className='text-2xl sm:text-4xl'>Looking for a <span className='text-accent-purple'>developer?</span></h2>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                                 <a className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' href="https://drive.google.com/file/d/1Q98KLwEXkBorhx7KFSl6L0-63JhAwfUd/view" target='_blank' rel="noopener" aria-label='Resume'>My Resume</a>
                                 <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' onClick={() => navigate('/contact')}>Contact Me</button>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                                <h2 className='text-3xl mb-2'> Or find me via...</h2>
+                                <h2 className='text-2xl sm:text-3xl mb-2'> Or find me via...</h2>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                                 <div className='links text-lg m-4'>

@@ -82,21 +82,6 @@ section {
     animation-fill-mode: both;
 }
 
-@media only screen and (max-width: 768px) {
-    .heroTitle {
-        position: relative;
-        bottom: 100px;
-    }
-    .skills {
-        position: relative;
-        bottom: 200px;
-        gap: 4vw;
-    }
-    .skill {
-        height: 8.5vh;
-    }
-}
-
 @media (pointer: coarse) {
     .skill {
         filter: none;
@@ -158,20 +143,30 @@ section {
     gap: 40px;
 }
 
-.projectCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    animation: FadeIn 0.5s linear;
-}
-
 @media only screen and (max-width: 768px) {
+    .heroTitle {
+        position: relative;
+        bottom: 100px;
+    }
+    .skills {
+        position: relative;
+        bottom: 200px;
+        gap: 4vw;
+    }
+    .skill {
+        height: 8.5vh;
+    }
+    .about {
+        height: 90vh
+    }
     .work {
         padding: 12vh 5vw;
     }
-    .projectCard {
-        flex-direction: column;
-        justify-content: flex-start;
+    .project {
+        margin-top: -50px;
+    }
+    .contact {
+        position: relative;
+        top: 300px;
     }
 }

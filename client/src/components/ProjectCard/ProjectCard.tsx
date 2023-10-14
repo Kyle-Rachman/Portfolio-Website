@@ -6,13 +6,35 @@ interface Props {
     title: string,
     technologies: string,
     description: string,
-    source: Array<string>
+    source: Array<string>,
+    onSwipe: Function
 }
 
-// TODO: Fix margin when toggling dropdown
-
-const ProjectCard = ({ title, technologies, description, source }: Props) => {
+const ProjectCard = ({ title, technologies, description, source, swiped, onSwipe }: Props) => {
     const [descriptionActive, setDescriptionActive] = useState(window.innerWidth > 768 ? true : false)
+    const [touchStart, setTouchStart] = useState(0)
+    const [touchEnd, setTouchEnd] = useState(0)
+    
+    function handleTouchStart(e: any) {
+        setTouchEnd(0)
+        setTouchStart(e.targetTouches[0].clientX)
+    }
+    
+    function handleTouchMove(e: any) {
+        setTouchEnd(e.targetTouches[0].clientX)
+    }
+    
+    function handleTouchEnd() {
+        if (touchEnd) {
+            if ((touchStart! - touchEnd! > 50) && !descriptionActive) {
+                onSwipe(true)
+            }
+        
+            if ((touchStart! - touchEnd! < -50) && !descriptionActive) {
+                onSwipe(false)
+            }
+        }
+    }
 
     return (
         <div className={styles.container}>
@@ -28,11 +50,9 @@ const ProjectCard = ({ title, technologies, description, source }: Props) => {
                     <p>{description}</p>
                 </div>}
             </div>
-            <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
-                <div className={styles.imageContainer}>
-                    <img src={source[0]} alt={source[1]} className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
-                </div>
-            </ToggleOnScroll>
+            <div className={styles.imageContainer} onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} onTouchEnd={handleTouchEnd}>
+                <img src={source[0]} alt={source[1]} className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
+            </div>
         </div>
     )
 }

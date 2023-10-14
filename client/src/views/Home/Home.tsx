@@ -16,9 +16,16 @@ const Home = () => {
             parallaxref.current.scrollTo(pageNumber);
         }
     };
+
+    const swipe = (left: boolean) => {
+        if (left) {
+            setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))
+        } else {
+            setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))
+        }
+    }
     
     // TODO: Fix layout for mobile landscapes
-    // TODO: Make mobile project slider
     // TODO: Add project images and descriptions
     // TODO: Make skill icons link to specific projects
 
@@ -88,29 +95,37 @@ const Home = () => {
                                             technologies='React, Express, MongoDB (Mongoose), Node.js, MUI'
                                             description='Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.'
                                             source={['/vite.svg', 'Bingo Screen']}
+                                            onSwipe={swipe}
                                         />}
                                         {(activeProject==1) && <ProjectCard
-                                            title='Test'
+                                            title='Test 2'
                                             technologies='Test'
                                             description='Test'
                                             source={['/wave-haikei (1).svg', 'Placeholder']}
+                                            onSwipe={swipe}
                                         />}
                                         {(activeProject==2) && <ProjectCard
-                                            title='Test'
+                                            title='Test 3'
                                             technologies='Test'
                                             description='Test'
                                             source={['/wave-haikei (2).svg', 'Placeholder']}
+                                            onSwipe={swipe}
                                         />}
                                         <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
                                         onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                                     </div>
                             </ToggleOnScroll>
+                            <fieldset className="mt-4 flex gap-4 md:hidden">
+                                <input type='radio' name='projSlider' value={0} checked={activeProject == 0} onChange={() => setActiveProject(0)}></input>
+                                <input type='radio' name='projSlider' value={1} checked={activeProject == 1} onChange={() => setActiveProject(1)}></input>
+                                <input type='radio' name='projSlider' value={2} checked={activeProject == 2} onChange={() => setActiveProject(2)}></input>
+                            </fieldset>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={100}>
-                                <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-10 bg-background-black' onClick={() => navigate('/work')}>See all projects</button>
+                                <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-4 bg-background-black' onClick={() => navigate('/work')}>See all projects</button>
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} onClick={() => scrollToPage(2.25)}>
+                    <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} factor={0.1} onClick={() => scrollToPage(2.25)}>
                         <section className={styles.contact}>
                             <hr className='w-[80vw] mb-[20px] mx-auto mt-[20px] md:mt-[-60px]'/>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>

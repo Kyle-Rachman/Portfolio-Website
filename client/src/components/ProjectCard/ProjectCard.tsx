@@ -16,7 +16,7 @@ const ProjectCard = ({ title, technologies, description, source }: Props) => {
 
     return (
         <div className={styles.container}>
-            <div className='w-[80vw] md:w-[20vw] bg-background-black border border-white rounded-xl px-4 py-2'>
+            <div className='w-[80vw] md:w-[20vw] md:h-[60vh] bg-background-black border border-white rounded-xl px-4 py-2 absolute md:static overflow-scroll'>
                 <p className='text-3xl flex justify-between items-center' onClick={() => setDescriptionActive(prev => !prev)}>
                     {title}
                     <button className={`md:hidden scale-x-[120%] ${descriptionActive && 'animate-flip'}`}>&or;</button>
@@ -30,7 +30,7 @@ const ProjectCard = ({ title, technologies, description, source }: Props) => {
             </div>
             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                 <div className={styles.imageContainer}>
-                    <img src={source[0]} alt={source[1]} className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black'/>
+                    <img src={source[0]} alt={source[1]} className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
                 </div>
             </ToggleOnScroll>
         </div>

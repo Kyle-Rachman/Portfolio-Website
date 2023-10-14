@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <>
             <div id={styles.container}>
-                <Parallax pages={window.innerWidth > 768 ? 3 : 3.5} ref={parallaxref}>
+                <Parallax pages={window.innerWidth > 768 ? 3.1 : 3.3} ref={parallaxref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>
                         <section className={styles.hero}>
                             <ParallaxLayer
@@ -110,7 +110,7 @@ const Home = () => {
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={2.55} onClick={() => scrollToPage(2.5)}>
+                    <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} onClick={() => scrollToPage(2.25)}>
                         <section className={styles.contact}>
                             <hr className='w-[80vw] mb-[20px] mx-auto mt-[20px] md:mt-[-60px]'/>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>

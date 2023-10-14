@@ -6,7 +6,7 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 20px;
     animation: FadeIn 0.5s linear;
 }

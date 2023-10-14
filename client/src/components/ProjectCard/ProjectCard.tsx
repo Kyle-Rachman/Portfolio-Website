@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ToggleOnScroll from '../ToggleOnScroll'
 import styles from './ProjectCard.module.css'
 
 interface Props {

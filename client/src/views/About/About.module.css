@@ -22,7 +22,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media (pointer: coarse) {
     #mobileimage {
         display: block;
     }

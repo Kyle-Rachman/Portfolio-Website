@@ -1,3 +1,8 @@
+@keyframes FadeIn { 
+    0% { opacity:0; }
+    100% { opacity: 1; }
+}
+
 #container {
     background-color: rgb(var(--background-black));
     height: 100%;
@@ -5,6 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    animation: FadeIn 0.5s linear;
 }
 
 .hidden {
@@ -29,11 +35,6 @@ section {
     100% {opacity:1}
 }
 
-@keyframes FadeIn { 
-    0% { opacity:0; }
-    100% { opacity: 1; }
-}
-
 @keyframes GrowIn { 
     0% { opacity:0; transform:scale(.1); }
     85% { opacity:1; transform:scale(1.05); }
@@ -56,8 +57,10 @@ section {
     animation: TitleIn 1.5s linear;
 }
 
+
 .subtitle {
     margin-left: 60px;
+    margin-right: 20px;
 }
 
 
@@ -69,6 +72,7 @@ section {
     gap: 2vw;
 }
 
+
 .skill {
     height: 10vh;
     object-fit: contain;
@@ -76,6 +80,28 @@ section {
     -webkit-filter: grayscale(100%);
     animation: GrowIn 1s linear;
     animation-fill-mode: both;
+}
+
+@media only screen and (max-width: 768px) {
+    .heroTitle {
+        position: relative;
+        bottom: 100px;
+    }
+    .skills {
+        position: relative;
+        bottom: 200px;
+        gap: 4vw;
+    }
+    .skill {
+        height: 8.5vh;
+    }
+}
+
+@media (pointer: coarse) {
+    .skill {
+        filter: none;
+        -webkit-filer: none;
+    }
 }
 
 .skill:hover {
@@ -109,7 +135,7 @@ section {
     position: relative;
     margin: 0 auto;
     padding: 10vh clamp(5vw,15vw,15vw);
-    max-height: 60vh;
+    height: 60vh;
     z-index: 1;
     background: linear-gradient(to right, rgba(var(--accent-orange),0.8), rgba(var(--accent-yellow),0.8));
     color: white;
@@ -122,6 +148,7 @@ section {
     background-image: url('/waves/wave-orange.svg'), url('/waves/wave-yellow.svg');
     background-size: cover, cover;
     background-position: bottom 60px left 0px, top -35px left 0px;
+    margin-bottom: 20px;
 }
 
 .project {
@@ -137,4 +164,14 @@ section {
     align-items: center;
     gap: 20px;
     animation: FadeIn 0.5s linear;
+}
+
+@media only screen and (max-width: 768px) {
+    .work {
+        padding: 12vh 5vw;
+    }
+    .projectCard {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }

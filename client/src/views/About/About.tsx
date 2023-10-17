@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ToggleOnScroll from '../../components/ToggleOnScroll'
+import Footer from '../../components/Footer'
 import styles from './About.module.css'
+
+// TODO: Update sidebar picture
 
 const About = () => {
 
@@ -30,25 +33,82 @@ const About = () => {
                 <img id={styles.mobileimage} src="/profile-formal.jpg" alt="Profile Picture" className='w-[50vw] rounded-md'/>
             </div>
             <div className='bg-white p-20'>
+                <img src="/profile-casual.jpg" alt="placeholder" className='float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                    <div className='expertise text-black'>
+                        <p className="text-3xl">
+                            <strong>My Expertise:</strong>
+                        </p>
+                    </div>
+                </ToggleOnScroll>
+            </div>
+            <div className='bg-white p-20 mt-[-1px]'>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                    <div className='learning text-black'>
+                        <p className="text-3xl text-black">
+                            <strong>What I'm Learning:</strong>
+                        </p>
+                    </div>
+                </ToggleOnScroll>
+            </div>
+            <div className='bg-white p-20 mt-[-1px]'>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                    <div className='whoIAm text-black'>
+                        <p className="text-3xl mb-4">
+                            <strong>Who I Am:</strong>
+                        </p>
+                        <ToggleOnScroll firstTimeSlide direction='from-bottom'>
+                            <div className='grid grid-rows-2 grid-cols-3 gap-8'>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Dedicated.</p>
+                                    <p>I go above and beyond to complete projects with excellence. I give 110%.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Organized.</p>
+                                    <p>I thoroughly plan and document steps to save both of us time and resources.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Precise.</p>
+                                    <p>As a mathematician, I believe in paying attention to even the smallest details.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Responsible.</p>
+                                    <p>I follow through with commitments I make, never leaving people hanging.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Team-oriented.</p>
+                                    <p>I am a team player and believe strongly in collaborative effort. Nobody walks alone.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Joyful.</p>
+                                    <p>People say I always have a smile on my face. I bring a positive environment with me.</p>
+                                </div>
+                            </div>
+                        </ToggleOnScroll>
+                    </div>
+                </ToggleOnScroll>
+            </div>
+            <div className='bg-white p-20 mt-[-1px]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <p className="text-3xl text-black">
-                        <strong>My Expertise</strong>
+                        <strong>Testimonials:</strong>
+                    </p>
+                    <div className="testimonials flex justify-between text-black">
+                        <div>card 1</div>
+                        <div>card 2</div>
+                        <div>card 3</div>
+                    </div>
+                </ToggleOnScroll>
+            </div>
+            <div className='bg-gray-300 p-20 mt-[-1px]'>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                    <p className="text-3xl text-black">
+                        <strong>Outside the Office:</strong>
                     </p>
                 </ToggleOnScroll>
             </div>
-            <div className='bg-white p-20'>
-                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
-                    <p className="text-3xl text-black">
-                        <strong>What I'm Learning</strong>
-                    </p>
-                </ToggleOnScroll>
-            </div>
-            <div className='bg-white p-20'>
-                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
-                    <p className="text-3xl text-black">
-                        <strong>Testimonials</strong>
-                    </p>
-                </ToggleOnScroll>
+            <div className='flex flex-col py-[48px]'>
+                <Footer></Footer>
             </div>
         </div>
     )

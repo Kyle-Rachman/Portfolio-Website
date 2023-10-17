@@ -3,6 +3,7 @@ import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useNavigate } from 'react-router-dom'
 import ToggleOnScroll from '../../components/ToggleOnScroll'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
+import Footer from '../../components/Footer'
 import styles from './Home.module.css'
 
 const Home = () => {
@@ -128,23 +129,7 @@ const Home = () => {
                     <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} factor={0.1} onClick={() => scrollToPage(2.25)}>
                         <section className={styles.contact}>
                             <hr className='w-[80vw] mb-[20px] mx-auto mt-[20px] md:mt-[-60px]'/>
-                            <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                                <h2 className='text-2xl sm:text-4xl'>Looking for a <span className='text-accent-purple'>developer?</span></h2>
-                            </ToggleOnScroll>
-                            <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                                <a className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' href="https://drive.google.com/file/d/1Q98KLwEXkBorhx7KFSl6L0-63JhAwfUd/view" target='_blank' rel="noopener" aria-label='Resume'>My Resume</a>
-                                <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white m-4' onClick={() => navigate('/contact')}>Contact Me</button>
-                            </ToggleOnScroll>
-                            <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                                <h2 className='text-2xl sm:text-3xl mb-2'> Or find me via...</h2>
-                            </ToggleOnScroll>
-                            <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                                <div className='links text-lg m-4'>
-                                    <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="https://github.com/Kyle-Rachman" target='_blank' rel="noopener" aria-label='Github'>Github</a>
-                                    <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="https://www.linkedin.com/in/kyle-rachman/" target='_blank' rel="noopener" aria-label='LinkedIn'>LinkedIn</a>
-                                    <a className='text-accent-orange m-4 p-2 border border-accent-orange transition-color duration-500 hover:text-black hover:bg-white hover:border-white' href="mailto:kcrachman@gmail.com" target='_blank' rel="noopener" aria-label='Email'>Email</a>
-                                </div>
-                            </ToggleOnScroll>
+                            <Footer></Footer>
                         </section>
                     </ParallaxLayer>
                 </Parallax>

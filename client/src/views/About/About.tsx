@@ -37,18 +37,47 @@ const About = () => {
                 <img src="/profile-casual.jpg" alt="placeholder" className='float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='expertise text-black'>
-                        <p className="text-3xl">
+                        <p className="text-3xl mb-4">
                             <strong>My Expertise:</strong>
                         </p>
+                        <ToggleOnScroll firstTimeSlide direction='from-bottom'>
+                            <div className='grid grid-rows-2 grid-cols-2 gap-8'>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Area 1.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Area 2.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Area 3.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Area 4.</p>
+                                </div>
+                            </div>
+                        </ToggleOnScroll>
                     </div>
                 </ToggleOnScroll>
             </div>
             <div className='bg-white p-20 mt-[-1px]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='learning text-black'>
-                        <p className="text-3xl text-black">
+                        <p className="text-3xl text-black mb-4">
                             <strong>What I'm Learning:</strong>
                         </p>
+                        <ToggleOnScroll firstTimeSlide direction='from-bottom'>
+                            <div className='flex justify-between gap-8'>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Skill 1.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Skill 2.</p>
+                                </div>
+                                <div className='max-w-[240px]'>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Skill 3.</p>
+                                </div>
+                            </div>
+                        </ToggleOnScroll>
                     </div>
                 </ToggleOnScroll>
             </div>

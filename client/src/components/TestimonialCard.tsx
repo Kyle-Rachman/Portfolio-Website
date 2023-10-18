@@ -12,7 +12,7 @@ interface Props {
 const TestimonialCard = ({testifier, position, testimonial, source}: Props) => {
 
     return (
-        <div className={`border-4 border-accent-blue rounded-3xl w-[350px] h-[500px] bg-background-black px-6 pt-6 pb-2`}>
+        <div className={`border-[3px] border-accent-blue rounded-3xl w-[350px] h-[500px] bg-background-black px-6 pt-6 pb-2 drop-shadow-accent-blue`}>
             <p className='text-3xl mb-[-10px]'>"</p>
             {testimonial.map((paragraph, index) => (
                 <p key={index} className={index == testimonial.length-1 ? '' : 'mb-4'}>{paragraph}</p>

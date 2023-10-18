@@ -1,5 +1,6 @@
 import React from 'react'
 import ToggleOnScroll from '../../components/ToggleOnScroll'
+import TestimonialCard from '../../components/TestimonialCard'
 import Footer from '../../components/Footer'
 import styles from './About.module.css'
 
@@ -81,7 +82,7 @@ const About = () => {
                                 </div>
                                 <div className='max-w-[240px]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Joyful.</p>
-                                    <p>People say I always have a smile on my face. I bring a positive environment with me.</p>
+                                    <p>I always have a smile on my face. I bring a positive environment with me wherever I go.</p>
                                 </div>
                             </div>
                         </ToggleOnScroll>
@@ -93,10 +94,25 @@ const About = () => {
                     <p className="text-3xl text-black">
                         <strong>Testimonials:</strong>
                     </p>
-                    <div className="testimonials flex justify-between text-black">
-                        <div>card 1</div>
-                        <div>card 2</div>
-                        <div>card 3</div>
+                    <div className="testimonials flex justify-between gap-[2vw] flex-wrap mx-auto mt-4">
+                        <TestimonialCard
+                            testifier='Brandon Davis'
+                            position='test position'
+                            testimonial={['Aliqua nostrud fugiat dolor ipsum commodo eu occaecat non sit eu eiusmod fugiat. Id id laboris laboris qui aute do aliquip nisi officia.', 'Excepteur aute aliqua fugiat incididunt aliqua sint laborum proident ut dolor qui. Reprehenderit sint sunt dolor anim ad eiusmod irure ea ipsum nostrud dolore. Cupidatat ea minim ullamco aute commodo officia minim sint amet minim tempor elit officia tempor. Id tempor quis cupidatat elit.']}
+                            source={['/vite.svg', 'placeholder']}
+                        ></TestimonialCard>
+                        <TestimonialCard
+                            testifier='firstname lastname'
+                            position='test position'
+                            testimonial={['Ullamco irure consectetur est irure cillum fugiat exercitation amet pariatur ex do. Qui mollit minim culpa reprehenderit culpa.']}
+                            source={['/profile-formal.jpg', 'placeholder']}
+                        ></TestimonialCard>
+                        <TestimonialCard
+                            testifier='funny name'
+                            position='test position'
+                            testimonial={['Consectetur sint dolore nostrud pariatur commodo officia sit aliqua. Aute enim eu minim magna fugiat incididunt sunt nostrud mollit eiusmod. Consequat tempor aute elit qui nisi reprehenderit officia incididunt consequat ex cillum. Aliquip nostrud incididunt incididunt eu Lorem in nisi occaecat.']}
+                            source={['/profile-casual.jpg', 'placeholder']}
+                        ></TestimonialCard>
                     </div>
                 </ToggleOnScroll>
             </div>

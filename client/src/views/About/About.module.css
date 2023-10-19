@@ -11,13 +11,6 @@
     animation: FadeIn 0.5s linear;
 }
 
-.heroinfodesktop {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    gap: 40px;
-}
-
 #mobileimage {
     display: none;
 }

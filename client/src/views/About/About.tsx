@@ -1,26 +1,28 @@
 import React from 'react'
 import ToggleOnScroll from '../../components/ToggleOnScroll'
-import TestimonialCard from '../../components/TestimonialCard'
+import TestimonialCard from '../../components/TestimonialCard/TestimonialCard'
 import Footer from '../../components/Footer'
 import styles from './About.module.css'
 import { transform } from '@babel/core'
 
-// TODO: Update sidebar picture
+// TODO: Update sidebar picture and "outside" pictures
+// TODO: Get testimonials
+// TODO: Finish making layout responsive
 
 const About = () => {
 
     return (
         <div id={styles.container}>
-            <div className='hero flex items-center text-4xl gap-20 mb-10 p-20'>
+            <div className='hero flex flex-col md:flex-row items-center text-4xl gap-20 mb-10 p-20 w-[100%]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                    <div className={styles.heroinfodesktop}>
+                    <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0'>
                         <div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-center w-[100%] font-bold'>
                             <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%]'>Developer</p>
                             <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[-175px]'>Mathematician</p>
                             <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-175px]'>Climber</p>
                         </div>
                         <p className='text-accent-yellow text-2xl w-[100%] font-light'>|| About me</p>
-                        <p className='text-3xl'>My name is Kyle Rachman.
+                        <p className='text-xl md:text-3xl'>My name is Kyle Rachman.
                         <br />
                         I'm a Full Stack web developer with a passion for making creative and seamless user experiences.</p>
                     </div>
@@ -32,7 +34,7 @@ const About = () => {
                         e.currentTarget.src='/profile-formal.jpg'
                         e.currentTarget.classList.add('filter', 'grayscale', 'opacity-85')
                 }} className='filter grayscale w-[50vw] rounded-md transition-opacity duration-500 opacity-85'/>
-                <img id={styles.mobileimage} src="/profile-formal.jpg" alt="Profile Picture" className='w-[50vw] rounded-md'/>
+                <img id={styles.mobileimage} src="/profile-formal.jpg" alt="Profile Picture" className='w-[80vw] md:w-[50vw] rounded-md'/>
             </div>
             <div className='bg-white py-20 px-16 xs:px-20'>
                 <img src="/profile-casual.jpg" alt="placeholder" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
@@ -128,6 +130,8 @@ const About = () => {
                     <p className="text-2.5xl xs:text-3xl text-black">
                         <strong>Testimonials:</strong>
                     </p>
+                </ToggleOnScroll>
+                <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className="testimonials flex justify-between gap-[2vw] flex-wrap mx-auto mt-4">
                         <TestimonialCard
                             testifier='Brandon Davis'

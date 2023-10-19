@@ -16,7 +16,6 @@
     flex-direction: column;
     align-content: flex-start;
     gap: 40px;
-    padding: 0rem 5rem;
 }
 
 #mobileimage {
@@ -35,18 +34,23 @@
 @keyframes CirclePath {
     0% {
         transform: scale(1) translateX(0vw);
+        z-index: 10;
     }
     25% {
         transform: scale(0.75) translateX(-40vw);
+        z-index: 5;
     }
     50% {
         transform: scale(0.5) translateX(0vw);
+        z-index: 1;
     }
     75% {
         transform: scale(0.75) translateX(40vw);
+        z-index: 5;
     }
     100% {
         transform: scale(1) translateX(0vw);
+        z-index: 10;
     }
 }
 
@@ -61,7 +65,7 @@
 .outsideImage:hover {
     position: relative;
     animation-play-state: paused;
-    z-index: 500;
+    z-index: 500 !important;
     filter: none;
 }
 
@@ -72,6 +76,9 @@
 
 .outsideImage:hover > img {
     height: 60vh;
+    transition: all;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
 }
 
 .outsideImage:nth-child(1) { animation-duration: 20s; animation-delay: 0s; margin-bottom: -16vh;}

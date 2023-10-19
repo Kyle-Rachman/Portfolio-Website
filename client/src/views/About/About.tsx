@@ -11,7 +11,7 @@ const About = () => {
 
     return (
         <div id={styles.container}>
-            <div className='hero flex items-center text-4xl gap-20 mb-10'>
+            <div className='hero flex items-center text-4xl gap-20 mb-10 p-20'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                     <div className={styles.heroinfodesktop}>
                         <div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-center w-[100%] font-bold'>

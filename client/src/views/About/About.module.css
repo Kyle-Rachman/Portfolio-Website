@@ -30,3 +30,50 @@
         display: none;
     }
 }
+
+@keyframes CirclePath {
+    0% {
+        transform: scale(1) translateX(0vw);
+    }
+    25% {
+        transform: scale(0.75) translateX(-40vw);
+    }
+    50% {
+        transform: scale(0.5) translateX(0vw);
+    }
+    75% {
+        transform: scale(0.75) translateX(40vw);
+    }
+    100% {
+        transform: scale(1) translateX(0vw);
+    }
+}
+
+.outsideImage {
+    animation: CirclePath linear infinite;
+    position: relative;
+    z-index: 10;
+    filter: grayscale();
+    height: 28vh;
+}
+
+.outsideImage:hover {
+    position: relative;
+    animation-play-state: paused;
+    z-index: 500;
+    filter: none;
+}
+
+.outsideImage > img {
+    position: relative;
+    height: 30vh;
+}
+
+.outsideImage:hover > img {
+    height: 60vh;
+}
+
+.outsideImage:nth-child(1) { animation-duration: 20s; animation-delay: 0s; margin-bottom: -16vh;}
+.outsideImage:nth-child(2) { animation-duration: 14s; animation-delay: 0.75s; margin-bottom: -20vh;}
+.outsideImage:nth-child(3) { animation-duration: 18s; animation-delay: 0.5s; margin-bottom: -16vh;}
+.outsideImage:nth-child(4) { animation-duration: 12s; animation-delay: 1s; margin-bottom: 0vh;}

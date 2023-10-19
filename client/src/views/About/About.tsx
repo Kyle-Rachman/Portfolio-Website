@@ -3,9 +3,9 @@ import ToggleOnScroll from '../../components/ToggleOnScroll'
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard'
 import Footer from '../../components/Footer'
 import styles from './About.module.css'
-import { transform } from '@babel/core'
 
 // TODO: Update sidebar picture and "outside" pictures
+// TODO: Update expertise descriptions
 // TODO: Get testimonials
 // TODO: Finish making layout responsive
 
@@ -161,6 +161,9 @@ const About = () => {
                     </p>
                 </ToggleOnScroll>
                 <div className='flex flex-col w-[80vw]'>
+                    <div className={styles.outsideImage}>
+                        <img src="/profile-formal.jpg" alt="Profile Picture"/>
+                    </div>
                     <div className={styles.outsideImage}>
                         <img src="/profile-formal.jpg" alt="Profile Picture"/>
                     </div>

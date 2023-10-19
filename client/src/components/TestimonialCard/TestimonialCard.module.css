@@ -2,7 +2,7 @@
     --perspective: 500px;
     --rotateX: 0;
     --rotateY: 0;
-    --angle: 5deg;
+    --angle: 10deg;
     position: relative;
     transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(var(--rotateY));
     transition: transform 350ms ease;

@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     screens: {
+      "xs" : "367px",
       "sm" : "551px",
       "md" : "769px"
     },
@@ -33,6 +34,9 @@ export default {
       },
       animation: {
         flip: "flip 0.25s ease-in-out forwards"
+      },
+      fontSize: {
+        "2.5xl" : "1.6rem"
       }
     },
   },

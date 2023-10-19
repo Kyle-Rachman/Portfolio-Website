@@ -27,7 +27,7 @@
   scrollbar-color: white white;
 }
 
-::-webkit-scrollbar { /* Webit */
+::-webkit-scrollbar { /* Webkit */
   width: 1px;
   height: 0px;
   scrollbar-color: white white;

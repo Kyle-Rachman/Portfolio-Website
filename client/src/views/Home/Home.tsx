@@ -52,23 +52,23 @@ const Home = () => {
                                 speed={0.75}
                             >
                                 <div className={styles.skills}>
-                                    <img src="/logos/HTML5_Badge.svg" alt="HTML logo" className={styles.skill}/>
-                                    <img src="/logos/CSS3_logo.svg" alt="CSS logo" className={styles.skill}/>
-                                    <img src="/logos/logo-javascript.svg" alt="Javascript logo" className={styles.skill}/>
-                                    <img src="/logos/Typescript_logo_2020.svg" alt="Typescript logo" className={styles.skill}/>
-                                    <img src="/logos/logo-python.svg" alt="Python logo" className={styles.skill}/>
-                                    <img src="/logos/Bootstrap_logo.svg" alt="Bootstrap logo" className={styles.skill}/>
-                                    <img src="/logos/Tailwind_CSS_Logo.svg" alt="Tailwind logo" className={styles.skill}/>
-                                    <img src="/logos/jquery-logo.svg" alt="jQuery logo" className={styles.skill}/>
-                                    <img src="/logos/flask.svg" alt="Flask logo" className={styles.skill}/>
-                                    <img src="/logos/mysql-logo.svg" alt="MySQL logo" className={styles.skill}/>
-                                    <img src="/logos/mongodb.svg" alt="MongoDB logo" className={styles.skill}/>
-                                    <img src="/logos/expressjs-icon.svg" alt="Express.js logo" className={styles.skill}/>
-                                    <img src="/logos/React-icon.svg" alt="React logo" className={styles.skill}/>
-                                    <img src="/logos/Node.js_logo.svg" alt="Node.js logo" className={styles.skill}/>
-                                    <img src="/logos/Amazon_Web_Services_Logo.svg" alt="AWS logo" className={styles.skill}/>
-                                    <img src="/logos/postman.svg" alt="Postman logo" className={styles.skill}/>
-                                    <img src="/logos/Mathematica_Logo.svg" alt="Mathematica logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/HTML5_Badge.svg" alt="HTML logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/CSS3_logo.svg" alt="CSS logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/logo-javascript.svg" alt="Javascript logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/Typescript_logo_2020.svg" alt="Typescript logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/logo-python.svg" alt="Python logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/Bootstrap_logo.svg" alt="Bootstrap logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/Tailwind_CSS_Logo.svg" alt="Tailwind logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/jquery-logo.svg" alt="jQuery logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/flask.svg" alt="Flask logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/mysql-logo.svg" alt="MySQL logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/mongodb.svg" alt="MongoDB logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/expressjs-icon.svg" alt="Express.js logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/React-icon.svg" alt="React logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/Node.js_logo.svg" alt="Node.js logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/Amazon_Web_Services_Logo.svg" alt="AWS logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/postman.svg" alt="Postman logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/Mathematica_Logo.svg" alt="Mathematica logo" className={styles.skill}/>
                                 </div>
                             </ParallaxLayer>
                         </section>
@@ -95,21 +95,21 @@ const Home = () => {
                                             title='Local Bingo'
                                             technologies='React, Express, MongoDB (Mongoose), Node.js, MUI'
                                             description='Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.'
-                                            source={['/vite.svg', 'Bingo Screen']}
+                                            source={['src/assets/vite.svg', 'Bingo Screen']}
                                             onSwipe={swipe}
                                         />}
                                         {(activeProject==1) && <ProjectCard
                                             title='Test 2'
                                             technologies='Test'
                                             description='Test'
-                                            source={['/wave-haikei (1).svg', 'Placeholder']}
+                                            source={['src/assets/wave-haikei (1).svg', 'Placeholder']}
                                             onSwipe={swipe}
                                         />}
                                         {(activeProject==2) && <ProjectCard
                                             title='Test 3'
                                             technologies='Test'
                                             description='Test'
-                                            source={['/wave-haikei (2).svg', 'Placeholder']}
+                                            source={['src/assets/wave-haikei (2).svg', 'Placeholder']}
                                             onSwipe={swipe}
                                         />}
                                         <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'

@@ -8,12 +8,13 @@ import styles from './About.module.css'
 // TODO: Update expertise descriptions
 // TODO: Get testimonials
 // TODO: Finish making layout responsive
+// TODO: Make "outside" pictures move faster on smaller screens via timing CSS variable
 
 const About = () => {
 
     return (
         <div id={styles.container}>
-            <div className='hero flex flex-col md:flex-row items-center text-4xl gap-20 mb-10 p-20 w-[100%]'>
+            <div className='hero flex flex-col md:flex-row items-center text-4xl gap-20 mb-10 p-20 w-[100%] h-[90vh]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                     <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0'>
                         <div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-center w-[100%] font-bold'>
@@ -27,17 +28,17 @@ const About = () => {
                         I'm a Full Stack web developer with a passion for making creative and seamless user experiences.</p>
                     </div>
                 </ToggleOnScroll>
-                <img id={styles.desktopimage} src="/profile-formal.jpg" alt="Profile Picture" onMouseOver={(e) => {
-                    e.currentTarget.src='/profile-casual.jpg'
+                <img id={styles.desktopimage} src="src/assets/profile-formal.jpg" alt="Profile Picture" onMouseOver={(e) => {
+                    e.currentTarget.src='src/assets/profile-casual.jpg'
                     e.currentTarget.classList.remove('filter', 'grayscale', 'opacity-85')
                 }} onMouseOut={(e) => {
-                        e.currentTarget.src='/profile-formal.jpg'
+                        e.currentTarget.src='src/assets/profile-formal.jpg'
                         e.currentTarget.classList.add('filter', 'grayscale', 'opacity-85')
                 }} className='filter grayscale w-[50vw] rounded-md transition-opacity duration-500 opacity-85'/>
-                <img id={styles.mobileimage} src="/profile-formal.jpg" alt="Profile Picture" className='w-[80vw] md:w-[50vw] rounded-md'/>
+                <img id={styles.mobileimage} src="src/assets/profile-formal.jpg" alt="Profile Picture" className='w-[80vw] md:w-[50vw] rounded-md'/>
             </div>
             <div className='bg-white py-20 px-16 xs:px-20'>
-                <img src="/profile-casual.jpg" alt="placeholder" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
+                <img src="src/assets/profile-casual.jpg" alt="placeholder" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='expertise text-black'>
                         <p className="text-2.5xl xs:text-3xl mb-4">
@@ -81,7 +82,7 @@ const About = () => {
                                     <p className='text-accent-purple text-2xl font-semibold'>TypeScript.</p>
                                 </div>
                                 <div className='max-w-[240px]'>
-                                    <p className='text-accent-purple text-2xl font-semibold'>Tailwind.</p>
+                                    <p className='text-accent-purple text-2xl font-semibold'>Solid.js.</p>
                                 </div>
                             </div>
                         </ToggleOnScroll>
@@ -137,44 +138,45 @@ const About = () => {
                             testifier='Brandon Davis'
                             position='test position'
                             testimonial={['Aliqua nostrud fugiat dolor ipsum commodo eu occaecat non sit eu eiusmod fugiat. Id id laboris laboris qui aute do aliquip nisi officia.', 'Excepteur aute aliqua fugiat incididunt aliqua sint laborum proident ut dolor qui. Reprehenderit sint sunt dolor anim ad eiusmod irure ea ipsum nostrud dolore. Cupidatat ea minim ullamco aute commodo officia minim sint amet minim tempor elit officia tempor. Id tempor quis cupidatat elit.']}
-                            source={['/vite.svg', 'placeholder']}
+                            source={['src/assets/vite.svg', 'placeholder']}
                         ></TestimonialCard>
                         <TestimonialCard
                             testifier='firstname lastname'
                             position='test position'
                             testimonial={['Ullamco irure consectetur est irure cillum fugiat exercitation amet pariatur ex do. Qui mollit minim culpa reprehenderit culpa.']}
-                            source={['/profile-formal.jpg', 'placeholder']}
+                            source={['src/assets/profile-formal.jpg', 'placeholder']}
                         ></TestimonialCard>
                         <TestimonialCard
                             testifier='funny name'
                             position='test position'
                             testimonial={['Consectetur sint dolore nostrud pariatur commodo officia sit aliqua. Aute enim eu minim magna fugiat incididunt sunt nostrud mollit eiusmod. Consequat tempor aute elit qui nisi reprehenderit officia incididunt consequat ex cillum. Aliquip nostrud incididunt incididunt eu Lorem in nisi occaecat.']}
-                            source={['/profile-casual.jpg', 'placeholder']}
+                            source={['src/assets/profile-casual.jpg', 'placeholder']}
                         ></TestimonialCard>
                     </div>
                 </ToggleOnScroll>
             </div>
-            <div className='bg-gray-300 py-20 px-16 xs:px-20 mt-[-1px]'>
+            <div className='py-20 px-16 xs:px-20 mt-[-1px]' style={{background: 'linear-gradient(to right, rgb(var(--accent-blue)) 5%, whitesmoke 20%, whitesmoke 80%, rgb(var(--accent-blue)) 95%)'}}>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
-                    <p className="text-2.5xl xs:text-3xl text-black">
-                        <strong>Outside the Office:</strong>
-                    </p>
+                    <div className="text-2.5xl xs:text-3xl text-black">
+                        <p><strong>Outside the Office:</strong></p>
+                        <p className='text-sm'>Hover over or tap an image!</p>
+                    </div>
                 </ToggleOnScroll>
                 <div className='flex flex-col w-[80vw]'>
                     <div className={styles.outsideImage}>
-                        <img src="/profile-formal.jpg" alt="Profile Picture"/>
+                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="/profile-formal.jpg" alt="Profile Picture"/>
+                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="/profile-formal.jpg" alt="Profile Picture"/>
+                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="/profile-formal.jpg" alt="Profile Picture"/>
+                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="/profile-formal.jpg" alt="Profile Picture"/>
+                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
                     </div>
                 </div>
             </div>

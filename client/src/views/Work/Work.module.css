@@ -2,4 +2,19 @@
     color: white;
     background-color: rgb(var(--background-black));
     height: 100%;
+    overflow: scroll;
+    animation: FadeIn 0.5s linear;
+}
+
+#mobileimage {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    #mobileimage {
+        display: block;
+    }
+    #desktopimage {
+        display: none;
+    }
 }

@@ -43,7 +43,7 @@ section {
 
 .hero {
     min-height: 100vh;
-    background-image: url('/waves/wave-blue.svg'), url('/waves/wave-purple.svg');
+    background-image: url('src/assets/waves/wave-blue.svg'), url('src/assets/waves/wave-purple.svg');
     background-size: cover, cover;
     background-position: bottom 90px left 0px, top -60px left 0px;
 }
@@ -130,7 +130,7 @@ section {
 .work {
     min-height: 60vh;
     padding: 12vh 0vw;
-    background-image: url('/waves/wave-orange.svg'), url('/waves/wave-yellow.svg');
+    background-image: url('src/assets/waves/wave-orange.svg'), url('src/assets/waves/wave-yellow.svg');
     background-size: cover, cover;
     background-position: bottom 60px left 0px, top -35px left 0px;
     margin-bottom: 20px;

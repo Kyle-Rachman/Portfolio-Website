@@ -5,6 +5,7 @@ import About from './views/About/About'
 import Work from './views/Work/Work'
 import Contact from './views/Contact/Contact'
 import Navbar from './components/Navbar/Navbar'
+import SingleProject from './components/SingleProject'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
               <Route path='/' element={<Home></Home>}></Route>
               <Route path='/about' element={<About></About>}></Route>
               <Route path='/work' element={<Work></Work>}></Route>
+              <Route path='/work/:project' element={<SingleProject></SingleProject>}></Route>
               <Route path='/contact' element={<Contact></Contact>}></Route>
             </Routes>
         </main>

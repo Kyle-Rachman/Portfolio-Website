@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <img src="/placeholder-logo-1.png" alt="logo placeholder" id={styles.logo} onClick={() => navigate('/')}/>
+            <img src="src/assets/placeholder-logo-1.png" alt="logo placeholder" id={styles.logo} onClick={() => navigate('/')}/>
             <ul id={styles.links}>
                 <li><Link to={'/'} style={activeUrl == 'http://localhost:5173/' ? activeStyle : {}}>Home</Link></li>
                 <li><Link to={'/about'} style={activeUrl == 'http://localhost:5173/about' ? activeStyle : {}}>About Me</Link></li>
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <li><Link to={'/contact'} style={activeUrl == 'http://localhost:5173/contact' ? activeStyle : {}}>Contact</Link></li>
             </ul>
             <div id={styles.menu}>
-                <img src="/menu-icon.png" alt="menu icon" className='w-[100%] object-contain object-right' id={styles.menuIcon} onClick={() => setOpen(prev => !prev)}/>
+                <img src="src/assets/menu-icon.png" alt="menu icon" className='w-[100%] object-contain object-right' id={styles.menuIcon} onClick={() => setOpen(prev => !prev)}/>
                 {
                     open && <ul id={styles.linkMenu} className='w-[100%]' style={{right: !open ? '0px' : '5vw'}}>
                         <li className='w-[100%]'><Link to={'/'} style={activeUrl == 'http://localhost:5173/' ? activeStyle : {}} onClick={() => setOpen(false)}>Home</Link></li>

@@ -1,14 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useNavigate } from 'react-router-dom'
 import ToggleOnScroll from '../../components/ToggleOnScroll'
-import ProjectCard from '../../components/ProjectCard/ProjectCard'
+import ProjectCarousel from '../../components/ProjectCarousel'
 import Footer from '../../components/Footer'
 import styles from './Home.module.css'
 
 const Home = () => {
-    const [activeProject, setActiveProject] = useState(0)
-    const numProjects = 3
     const parallaxref = useRef<IParallax>(null)
     const aboutref = useRef<HTMLElement>(null)
     const navigate = useNavigate()
@@ -17,14 +15,6 @@ const Home = () => {
             parallaxref.current.scrollTo(pageNumber);
         }
     };
-
-    const swipe = (left: boolean) => {
-        if (left) {
-            setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))
-        } else {
-            setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))
-        }
-    }
     
     // TODO: Fix layout for mobile landscapes
     // TODO: Add project images and descriptions
@@ -87,34 +77,7 @@ const Home = () => {
                     </ParallaxLayer>
                     <ParallaxLayer offset={window.innerWidth > 768 ? 1.6 : 2} factor={1} onClick={() => scrollToPage(window.innerWidth > 768 ? 1.61 : 1.97)}>
                         <section className={`pt-10 ${styles.work}`}>
-                            <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
-                                    <div className={styles.project}>
-                                        <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
-                                        onClick={() => setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))}>&lt;</button>
-                                        {(activeProject==0) && <ProjectCard
-                                            project='bingo'
-                                            alt='Bingo Scren'
-                                            onSwipe={swipe}
-                                        />}
-                                        {(activeProject==1) && <ProjectCard
-                                            project='test'
-                                            alt='Placeholder'
-                                            onSwipe={swipe}
-                                        />}
-                                        {(activeProject==2) && <ProjectCard
-                                            project='test2'
-                                            alt='Placeholder'
-                                            onSwipe={swipe}
-                                        />}
-                                        <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
-                                        onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
-                                    </div>
-                            </ToggleOnScroll>
-                            <fieldset className="mt-4 flex gap-4 md:hidden">
-                                <input type='radio' name='projSlider' value={0} checked={activeProject == 0} onChange={() => setActiveProject(0)}></input>
-                                <input type='radio' name='projSlider' value={1} checked={activeProject == 1} onChange={() => setActiveProject(1)}></input>
-                                <input type='radio' name='projSlider' value={2} checked={activeProject == 2} onChange={() => setActiveProject(2)}></input>
-                            </fieldset>
+                            <ProjectCarousel></ProjectCarousel>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={100}>
                                 <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-4 bg-background-black' onClick={() => navigate('/work')}>See all projects</button>
                             </ToggleOnScroll>

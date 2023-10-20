@@ -136,13 +136,6 @@ section {
     margin-bottom: 20px;
 }
 
-.project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
 @media only screen and (max-width: 768px) {
     .heroTitle {
         position: relative;
@@ -161,9 +154,6 @@ section {
     }
     .work {
         padding: 12vh 5vw;
-    }
-    .project {
-        margin-top: -50px;
     }
     .contact {
         position: relative;

@@ -18,9 +18,9 @@ const About = () => {
                 <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                     <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0'>
                         <div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-center w-[100%] font-bold'>
-                            <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%]'>Developer</p>
-                            <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[-175px]'>Mathematician</p>
-                            <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-175px]'>Climber</p>
+                            <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%]'>Developer.</p>
+                            <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[-175px]'>Mathematician.</p>
+                            <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-175px]'>Climber.</p>
                         </div>
                         <p className='text-accent-yellow text-2xl w-[100%] font-light'>|| About me</p>
                         <p className='text-xl md:text-3xl'>My name is Kyle Rachman.
@@ -115,7 +115,7 @@ const About = () => {
                                 </div>
                                 <div className='xs:max-w-[70vw] md:max-w-[240px]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Team-oriented.</p>
-                                    <p>I am a team player and believe strongly in collaborative effort. Nobody walks alone.</p>
+                                    <p>I am a team player and believe strongly in collaborative effort. Nobody should walk alone.</p>
                                 </div>
                                 <div className='xs:max-w-[70vw] md:max-w-[240px]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Joyful.</p>
@@ -159,7 +159,7 @@ const About = () => {
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className="text-2.5xl xs:text-3xl text-black">
                         <p><strong>Outside the Office:</strong></p>
-                        <p className='text-sm'>Hover over or tap an image!</p>
+                        <p className='text-sm font-light'>Hover over or tap an image!</p>
                     </div>
                 </ToggleOnScroll>
                 <div className='flex flex-col w-[80vw]'>

@@ -9,8 +9,8 @@ const Work = () => {
             <div className='hero flex flex-col md:flex-row items-center text-4xl gap-20 mb-10 px-20 py-2 w-[100%] h-[90vh]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                     <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0'>
-                        <p className='max-w-[100%] font-bold'>Developer</p>
-                        <p className='text-accent-yellow text-2xl w-[100%] font-light'>|| Work  </p>
+                        <p className='max-w-[100%] font-bold'>What I've been up to.</p>
+                        <p className='text-accent-yellow text-2xl w-[100%] font-light'>|| Work</p>
                         <p className='text-xl md:text-3xl'>Here are some projects that I've worked on.</p>
                     </div>
                 </ToggleOnScroll>

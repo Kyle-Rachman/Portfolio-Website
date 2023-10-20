@@ -92,24 +92,18 @@ const Home = () => {
                                         <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
                                         onClick={() => setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))}>&lt;</button>
                                         {(activeProject==0) && <ProjectCard
-                                            title='Local Bingo'
-                                            technologies='React, Express, MongoDB (Mongoose), Node.js, MUI'
-                                            description='Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.'
-                                            source={['src/assets/vite.svg', 'Bingo Screen']}
+                                            project='bingo'
+                                            alt='Bingo Scren'
                                             onSwipe={swipe}
                                         />}
                                         {(activeProject==1) && <ProjectCard
-                                            title='Test 2'
-                                            technologies='Test'
-                                            description='Test'
-                                            source={['src/assets/wave-haikei (1).svg', 'Placeholder']}
+                                            project='test'
+                                            alt='Placeholder'
                                             onSwipe={swipe}
                                         />}
                                         {(activeProject==2) && <ProjectCard
-                                            title='Test 3'
-                                            technologies='Test'
-                                            description='Test'
-                                            source={['src/assets/wave-haikei (2).svg', 'Placeholder']}
+                                            project='test2'
+                                            alt='Placeholder'
                                             onSwipe={swipe}
                                         />}
                                         <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'

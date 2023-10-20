@@ -19,93 +19,23 @@
     z-index: 20;
 }
 
-.wrapper:has(.mousePositionTracker > div:nth-child(1):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(2):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(3):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(4):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(5):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(6):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(7):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(8):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(9):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(10):hover) { --rotateX: calc(var(--angle) * 1); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(11):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(12):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(13):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(14):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(15):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(16):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(17):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(18):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(19):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(20):hover) { --rotateX: calc(var(--angle) * 0.8); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(21):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(22):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(23):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(24):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(25):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(26):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(27):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(28):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(29):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(30):hover) { --rotateX: calc(var(--angle) * 0.6); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(41):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(42):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(43):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(44):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(45):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(46):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(47):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(48):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(49):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(50):hover) { --rotateX: calc(var(--angle) * 0.2); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(51):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(52):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(53):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(54):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(55):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(56):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(57):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(58):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(59):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(60):hover) { --rotateX: calc(var(--angle) * -0.2); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(61):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(62):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(63):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(64):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(65):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(66):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(67):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(68):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(69):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(70):hover) { --rotateX: calc(var(--angle) * -0.4); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(71):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(72):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(73):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(74):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(75):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(76):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(77):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(78):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(79):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(80):hover) { --rotateX: calc(var(--angle) * -0.6); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(81):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(82):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(83):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(84):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(85):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(86):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(87):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(88):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(89):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(90):hover) { --rotateX: calc(var(--angle) * -0.8); --rotateY: calc(var(--angle) * 1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(91):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * -1); }
-.wrapper:has(.mousePositionTracker > div:nth-child(92):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * -0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(93):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * -0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(94):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * -0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(95):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * -0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(96):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * 0.2); }
-.wrapper:has(.mousePositionTracker > div:nth-child(97):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * 0.4); }
-.wrapper:has(.mousePositionTracker > div:nth-child(98):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * 0.6); }
-.wrapper:has(.mousePositionTracker > div:nth-child(99):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * 0.8); }
-.wrapper:has(.mousePositionTracker > div:nth-child(100):hover) { --rotateX: calc(var(--angle) * -1); --rotateY: calc(var(--angle) * 1); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+1):nth-child(-n+10):hover) { --rotateX: calc(var(--angle) * 1); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+11):nth-child(-n+20):hover) { --rotateX: calc(var(--angle) * 0.8); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+21):nth-child(-n+30):hover) { --rotateX: calc(var(--angle) * 0.6); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+31):nth-child(-n+40):hover) { --rotateX: calc(var(--angle) * 0.4); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+41):nth-child(-n+50):hover) { --rotateX: calc(var(--angle) * 0.2); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+51):nth-child(-n+60):hover) { --rotateX: calc(var(--angle) * -0.2); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+61):nth-child(-n+70):hover) { --rotateX: calc(var(--angle) * -0.4); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+71):nth-child(-n+80):hover) { --rotateX: calc(var(--angle) * -0.6); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+81):nth-child(-n+90):hover) { --rotateX: calc(var(--angle) * -0.8); }
+.wrapper:has(.mousePositionTracker > div:nth-child(n+91):nth-child(-n+100):hover) { --rotateX: calc(var(--angle) * -1); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+1):hover) { --rotateY: calc(var(--angle) * -1); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+2):hover) { --rotateY: calc(var(--angle) * -0.8); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+3):hover) { --rotateY: calc(var(--angle) * -0.6); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+4):hover) { --rotateY: calc(var(--angle) * -0.4); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+5):hover) { --rotateY: calc(var(--angle) * -0.2); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+6):hover) { --rotateY: calc(var(--angle) * 0.2); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+7):hover) { --rotateY: calc(var(--angle) * 0.4); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+8):hover) { --rotateY: calc(var(--angle) * 0.6); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+9):hover) { --rotateY: calc(var(--angle) * 0.8); }
+.wrapper:has(.mousePositionTracker > div:nth-child(10n+10):hover) { --rotateY: calc(var(--angle) * 1); }

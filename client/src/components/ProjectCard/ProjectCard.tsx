@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
+import ProjectInfos from '../../assets/projectinfo.json'
 import styles from './ProjectCard.module.css'
 
 interface Props {
-    title: string,
-    technologies: string,
-    description: string,
-    source: Array<string>,
+    project: string,
+    alt: string,
     onSwipe: Function
 }
 
-const ProjectCard = ({ title, technologies, description, source, onSwipe }: Props) => {
+const ProjectCard = ({ project, alt, onSwipe }: Props) => {
+    const projectDetails = ProjectInfos[project as keyof typeof ProjectInfos]
     const [descriptionActive, setDescriptionActive] = useState(window.innerWidth > 768 ? true : false)
     const [touchStart, setTouchStart] = useState(0)
     const [touchEnd, setTouchEnd] = useState(0)
@@ -39,18 +39,18 @@ const ProjectCard = ({ title, technologies, description, source, onSwipe }: Prop
         <div className={styles.container}>
             <div className='w-[80vw] md:w-[20vw] md:h-[60vh] bg-background-black border border-white rounded-xl px-4 py-2 absolute md:static overflow-scroll'>
                 <p className='text-3xl flex justify-between items-center' onClick={() => setDescriptionActive(prev => !prev)}>
-                    {title}
+                    {projectDetails.name}
                     <button className={`md:hidden scale-x-[120%] ${descriptionActive && 'animate-flip'}`}>&or;</button>
                 </p>
                 {descriptionActive && <div className="details">
                     <br />
-                    <p>Technologies: {technologies}</p>
+                    <p>Technologies: {projectDetails.technologies}</p>
                     <br />
-                    <p>{description}</p>
+                    <p>{projectDetails.description}</p>
                 </div>}
             </div>
             <div className={styles.imageContainer} onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} onTouchEnd={handleTouchEnd}>
-                <img src={source[0]} alt={source[1]} className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
+                <img src={projectDetails.mainImage} alt={alt} className='border border-white p-2 rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
             </div>
         </div>
     )

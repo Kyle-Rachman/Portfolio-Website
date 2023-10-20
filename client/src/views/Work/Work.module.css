@@ -18,3 +18,8 @@
         display: none;
     }
 }
+
+.projects:has(img:hover) {
+    background-color: rgb(181, 180, 180);
+    background-blend-mode: multiply;
+}

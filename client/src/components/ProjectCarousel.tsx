@@ -13,6 +13,12 @@ const ProjectCarousel = () => {
         }
     }
 
+    const radioSelectors = []
+    for (let i = 0; i < numProjects; i++) {
+        radioSelectors.push(<input key={i} type='radio' name='projSlider' value={i} checked={activeProject == i} onChange={() => setActiveProject(i)}></input>)
+    }
+    
+
     return (
         <>
             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
@@ -39,9 +45,7 @@ const ProjectCarousel = () => {
                     </div>
             </ToggleOnScroll>
             <fieldset className="mt-4 flex gap-4 md:hidden">
-                <input type='radio' name='projSlider' value={0} checked={activeProject == 0} onChange={() => setActiveProject(0)}></input>
-                <input type='radio' name='projSlider' value={1} checked={activeProject == 1} onChange={() => setActiveProject(1)}></input>
-                <input type='radio' name='projSlider' value={2} checked={activeProject == 2} onChange={() => setActiveProject(2)}></input>
+                {radioSelectors}
             </fieldset>
         </>
     )

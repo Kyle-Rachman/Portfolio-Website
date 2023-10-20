@@ -37,7 +37,7 @@ const ProjectCard = ({ project, alt, onSwipe }: Props) => {
 
     return (
         <div className={styles.container}>
-            <div className='w-[80vw] md:w-[20vw] md:h-[60vh] bg-background-black border border-white rounded-xl px-4 py-2 absolute md:static overflow-scroll'>
+            <div className='w-[80vw] md:w-[20vw] md:h-[60vh] bg-background-black border border-white rounded-xl px-4 py-2 absolute md:static overflow-hidden'>
                 <p className='text-3xl flex justify-between items-center' onClick={() => setDescriptionActive(prev => !prev)}>
                     {projectDetails.name}
                     <button className={`md:hidden scale-x-[120%] ${descriptionActive && 'animate-flip'}`}>&or;</button>

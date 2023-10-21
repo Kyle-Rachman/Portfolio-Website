@@ -9,6 +9,7 @@ import styles from './About.module.css'
 // TODO: Get testimonials
 // TODO: Finish making layout responsive
 // TODO: Make "outside" pictures move faster on smaller screens via timing CSS variable
+// TODO: Update "outside" styling
 
 const About = () => {
 

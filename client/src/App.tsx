@@ -5,7 +5,8 @@ import About from './views/About/About'
 import Work from './views/Work/Work'
 import Contact from './views/Contact/Contact'
 import Navbar from './components/Navbar/Navbar'
-import SingleProject from './components/SingleProject'
+import SingleProject from './components/SingleProject/SingleProject'
+import Error404 from './components/404/Error404'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Navbar></Navbar>
         <main>
             <Routes>
+              <Route path='*' element={<Error404/>} />
               <Route path='/' element={<Home></Home>}></Route>
               <Route path='/about' element={<About></About>}></Route>
               <Route path='/work' element={<Work></Work>}></Route>

@@ -23,7 +23,7 @@ const ProjectCarousel = () => {
         <>
             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='flex justify-center items-center gap-[40px] mt-[-50px] md:mt-0'>
-                        <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
+                        <button className='mt-20 border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
                         onClick={() => setActiveProject(prev => ((((prev-1) % numProjects) + numProjects) % numProjects))}>&lt;</button>
                         {(activeProject==0) && <ProjectCard
                             project='bingo'
@@ -40,7 +40,7 @@ const ProjectCarousel = () => {
                             alt='Placeholder'
                             onSwipe={swipe}
                         />}
-                        <button className='border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
+                        <button className='mt-20 border border-white text-white transition-color duration-500 hover:text-black hover:bg-white rounded-full h-16 w-16 bg-background-black hidden md:block'
                         onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                     </div>
             </ToggleOnScroll>

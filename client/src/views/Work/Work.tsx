@@ -4,7 +4,9 @@ import Footer from '../../components/Footer'
 import styles from './Work.module.css'
 import { useNavigate } from 'react-router-dom'
 
-// TODO: Replace BG images for when projects are hovered
+// TODO: Replace all images
+// TODO: Add other projects
+// TODO: Figure out a hero project/summary video
 
 const Work = () => {
     const [hoveredProj, setHoveredProj] = useState('bg-white')
@@ -31,17 +33,17 @@ const Work = () => {
             </div>
             <div className={`text-white p-20 flex flex-wrap gap-10 pt-24 transition-all duration-[2s] ${styles.projects} ${(hoveredProj != 'bg-white') ? hoveredProj : 'bg-white duration-[0.1s]'}`}>
                 <div>
-                    <img src="src/assets/bingo-picture.png" alt="Placeholder" className={`peer border-2 border-black rounded-lg object-cover h-[200px] w-[300px] transition-all duration-200 ${(hoveredProj != 'bg-white') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4]`} onClick={() => navigate('/work/bingo')} onMouseOver={() => setHoveredProj('bg-[url(src/assets/bingo-picture.png)] bg-cover bg-center')} onMouseLeave={() => setHoveredProj('bg-white')}/>
+                    <img src="src/assets/bingo-picture.png" alt="Placeholder" className={`peer border-2 border-black rounded-lg object-cover h-[200px] w-[300px] transition-all duration-200 ${(hoveredProj != 'bg-white') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4] hover:cursor-pointer`} onClick={() => navigate('/work/bingo')} onMouseOver={() => setHoveredProj('bg-[url(src/assets/bingo-picture.png)] bg-cover bg-center')} onMouseLeave={() => setHoveredProj('bg-white')}/>
                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-250px] text-center w-[100%] text-3xl bg-slate-800 bg-opacity-95 pb-1 rounded-md'>Local Bingo</p>
                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-38px] text-center mx-auto w-[50%] font-extralight bg-slate-800 bg-opacity-95 pb-1 rounded-md'>Click to learn more</p>
                 </div>
                 <div>
-                    <img src="src/assets/vite.svg" alt="Placeholder" className={ `peer border-2 border-black rounded-lg object-cover h-[200px] w-[300px] transition-all duration-200 ${(hoveredProj != 'bg-white') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4]`} onClick={() => navigate('/work/test')} onMouseOver={() => setHoveredProj('bg-[url(src/assets/vite.svg)] bg-cover bg-center')} onMouseLeave={() => setHoveredProj('bg-white')}/>
+                    <img src="src/assets/vite.svg" alt="Placeholder" className={ `peer border-2 border-black rounded-lg object-cover h-[200px] w-[300px] transition-all duration-200 ${(hoveredProj != 'bg-white') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4] hover:cursor-pointer`} onClick={() => navigate('/work/test')} onMouseOver={() => setHoveredProj('bg-[url(src/assets/vite.svg)] bg-cover bg-center')} onMouseLeave={() => setHoveredProj('bg-white')}/>
                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-250px] text-center w-[100%] text-3xl bg-slate-800 bg-opacity-95 pb-1 rounded-md'>Project Title</p>
                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-38px] text-center mx-auto w-[50%] font-extralight bg-slate-800 bg-opacity-95 pb-1 rounded-md'>Click to learn more</p>
                 </div>
                 <div>
-                    <img src="src/assets/vite.svg" alt="Placeholder" className={ `peer border-2 border-black rounded-lg object-cover h-[200px] w-[300px] transition-all duration-200 ${(hoveredProj != 'bg-white') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4]`} onClick={() => navigate('/work/test')} onMouseOver={() => setHoveredProj('bg-[url(src/assets/vite.svg)] bg-cover bg-center')} onMouseLeave={() => setHoveredProj('bg-white')}/>
+                    <img src="src/assets/vite.svg" alt="Placeholder" className={ `peer border-2 border-black rounded-lg object-cover h-[200px] w-[300px] transition-all duration-200 ${(hoveredProj != 'bg-white') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4] hover:cursor-pointer`} onClick={() => navigate('/work/test')} onMouseOver={() => setHoveredProj('bg-[url(src/assets/vite.svg)] bg-cover bg-center')} onMouseLeave={() => setHoveredProj('bg-white')}/>
                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-250px] text-center w-[100%] text-3xl bg-slate-800 bg-opacity-95 pb-1 rounded-md'>Project Title</p>
                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-38px] text-center mx-auto w-[50%] font-extralight bg-slate-800 bg-opacity-95 pb-1 rounded-md'>Click to learn more</p>
                 </div>

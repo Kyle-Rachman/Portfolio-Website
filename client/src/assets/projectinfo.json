@@ -2,19 +2,25 @@
     "bingo" : {
         "name" : "Local Bingo",
         "technologies" : "React, Express, MongoDB (Mongoose), Node.js, MUI",
-        "description" : "Host your own Bingo league for events (work, social, or otherwise) featuring customizable prompts, leaderboards, and user roles.",
-        "mainImage" : "src/assets/vite.svg"
+        "description" : "Host your own Bingo league for events (work, social, or otherwise) using customizable prompts, leaderboards, and user roles.",
+        "mainImage" : "../src/assets/bingo-picture.png"
     },
     "test" : {
         "name" : "Test",
         "technologies" : "Test test test",
         "description" : "Nostrud ea ex excepteur tempor. Tempor fugiat irure velit tempor quis non adipisicing duis nulla ipsum. Duis elit nisi cupidatat sunt aute laboris dolor.",
-        "mainImage" : "src/assets/wave-haikei (1).svg"
+        "mainImage" : "../src/assets/wave-haikei (1).svg"
     },
     "test2" : {
         "name" : "Test 2",
         "technologies" : "Consectetur ullamco sit nulla laboris ipsum.",
         "description" : "Proident elit in id amet anim ipsum occaecat commodo nulla est Lorem labore cupidatat in. Laborum consectetur commodo sint cupidatat minim culpa aliqua aliqua sint ad pariatur laborum duis. Ex mollit in do ad commodo laborum irure sunt voluptate eu.",
-        "mainImage" : "src/assets/wave-haikei (2).svg"
+        "mainImage" : "../src/assets/wave-haikei (2).svg"
+    },
+    "math" : {
+        "name" : "Mathematics",
+        "technologies" : "N/a",
+        "description" : "Proident elit in id amet anim ipsum occaecat commodo nulla est Lorem labore cupidatat in. Laborum consectetur commodo sint cupidatat minim culpa aliqua aliqua sint ad pariatur laborum duis. Ex mollit in do ad commodo laborum irure sunt voluptate eu.",
+        "mainImage" : "../src/assets/wave-haikei (2).svg"
     }
 }

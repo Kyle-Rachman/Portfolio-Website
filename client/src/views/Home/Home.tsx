@@ -59,6 +59,7 @@ const Home = () => {
                                     <img src="src/assets/logos/Amazon_Web_Services_Logo.svg" alt="AWS logo" className={styles.skill}/>
                                     <img src="src/assets/logos/postman.svg" alt="Postman logo" className={styles.skill}/>
                                     <img src="src/assets/logos/Mathematica_Logo.svg" alt="Mathematica logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/matrix.svg" alt="Matrix" className={styles.skill}/>
                                 </div>
                             </ParallaxLayer>
                         </section>
@@ -71,7 +72,7 @@ const Home = () => {
                                 </h2>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-right'>
-                                <button className='border border-black p-2 text-black transition-color duration-500 hover:text-white hover:bg-black mt-10' onClick={() => navigate('/about')}>More about me</button>
+                                <button className='border border-black p-2 text-black transition-color duration-500 hover:text-white hover:bg-black mt-10 hover:drop-shadow-accent-blue' onClick={() => navigate('/about')}>More about me</button>
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
@@ -79,7 +80,7 @@ const Home = () => {
                         <section className={`pt-10 ${styles.work}`}>
                             <ProjectCarousel></ProjectCarousel>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={100}>
-                                <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-4 bg-background-black' onClick={() => navigate('/work')}>See all projects</button>
+                                <button className='border border-white p-2 text-white transition-color duration-500 hover:text-black hover:bg-white mt-4 bg-background-black hover:drop-shadow-accent-blue' onClick={() => navigate('/work')}>See all projects</button>
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>

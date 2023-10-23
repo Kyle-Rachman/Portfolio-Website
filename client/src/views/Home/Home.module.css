@@ -115,6 +115,7 @@ section {
 .skill:nth-child(15) { animation-delay: 2s }
 .skill:nth-child(16) { animation-delay: 2.5s }
 .skill:nth-child(17) { animation-delay: 1s }
+.skill:nth-child(18) { animation-delay: 1.5s }
 
 .about {
     position: relative;

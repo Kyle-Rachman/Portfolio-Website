@@ -20,7 +20,7 @@ const Error404 = () => {
                         <button className='border-2 border-white w-fit px-3 py-1 text-2xl self-center transition-color duration-500 hover:text-black hover:bg-white hover:drop-shadow-accent-blue' onClick={() => navigate('/')}>Return Home</button>
                     </div>
                 </ToggleOnScroll>
-                <img src="src/assets/dragon.png" alt="Here Be Dragons" className='h-[70vh] rounded-md'/>
+                <img src="../src/assets/dragon.png" alt="Here Be Dragons" className='h-[70vh] rounded-md'/>
             </div>
         </div>
     )

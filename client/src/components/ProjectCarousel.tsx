@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import ProjectCard from './ProjectCard/ProjectCard'
 import ToggleOnScroll from './ToggleOnScroll'
 
+// To add a new project, simply update numProjects and add an extra ProjectCard with the appropriate name/alt props
+
 const ProjectCarousel = () => {
     const [activeProject, setActiveProject] = useState(0)
     const numProjects = 3

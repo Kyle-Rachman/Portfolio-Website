@@ -11,19 +11,6 @@
     animation: FadeIn 0.5s linear;
 }
 
-#mobileimage {
-    display: none;
-}
-
-@media (pointer: coarse) {
-    #mobileimage {
-        display: block;
-    }
-    #desktopimage {
-        display: none;
-    }
-}
-
 .projects:has(img:hover) {
     background-color: rgb(181, 180, 180);
     background-blend-mode: multiply;

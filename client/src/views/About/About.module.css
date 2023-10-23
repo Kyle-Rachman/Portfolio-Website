@@ -11,19 +11,6 @@
     animation: FadeIn 0.5s linear;
 }
 
-#mobileimage {
-    display: none;
-}
-
-@media (pointer: coarse) {
-    #mobileimage {
-        display: block;
-    }
-    #desktopimage {
-        display: none;
-    }
-}
-
 @keyframes CirclePath {
     0% {
         transform: scale(1) translateX(0vw);

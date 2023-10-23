@@ -1,0 +1,12 @@
+#mobileimage {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    #mobileimage {
+        display: block;
+    }
+    #desktopimage {
+        display: none;
+    }
+}

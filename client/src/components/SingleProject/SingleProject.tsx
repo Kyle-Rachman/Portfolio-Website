@@ -30,7 +30,19 @@ const SingleProject = () => {
                             <button className='border-2 border-white w-fit px-3 py-1 text-2xl self-center transition-color duration-500 hover:text-black hover:bg-white hover:drop-shadow-accent-blue' onClick={() => navigate('/')}>Return Home</button>
                         </div>
                     </ToggleOnScroll>
-                    <img src={projectDetails.mainImage} alt="Placeholder" className='h-[50vh] w-[80vw] md:h-[60vh] md:w-[50vw] rounded-md object-contain'/>
+                    <img src={projectDetails.mainImage[0]} alt={projectDetails.mainImage[1]} className='h-[50vh] w-[80vw] md:h-[60vh] md:w-[50vw] rounded-md object-contain'/>
+                </div>
+                <div className='bg-white text-black p-20'>
+                    <p className='font-bold text-3xl mb-10'>The briefing.</p>
+                    <p className='text-xl md:w-[40vw] mb-10'>{projectDetails.briefing}</p>
+                    <div className='flex flex-wrap'>
+                        <div>
+                            <img src={projectDetails.featureImage1[0]} alt={projectDetails.featureImage1[1]} className='h-[45vh]'/>
+                        </div>
+                        <div>
+                            <img src={projectDetails.featureImage2[0]} alt={projectDetails.featureImage2[1]} className='h-[45vh]'/>
+                        </div>
+                    </div>
                 </div>
                 <div className='flex flex-col py-[48px]'>
                     <Footer></Footer>

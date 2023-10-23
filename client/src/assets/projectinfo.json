@@ -3,24 +3,30 @@
         "name" : "Local Bingo",
         "technologies" : "React, Express, MongoDB (Mongoose), Node.js, MUI",
         "description" : "Host your own Bingo league for events (work, social, or otherwise) using customizable prompts, leaderboards, and user roles.",
-        "mainImage" : "../src/assets/bingo-picture.png"
+        "mainImage" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "briefing" : "Mollit excepteur incididunt culpa eiusmod mollit Lorem ex minim duis tempor consequat culpa amet. Excepteur ullamco nostrud nostrud consectetur laborum ipsum esse labore ut quis labore aliqua aute et. Dolore eu dolor ea fugiat amet est esse pariatur sit occaecat tempor incididunt aliqua.",
+        "featureImage1" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "featureImage2" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "bigFeatureImage" : ["../src/assets/bingo-picture.png", "Placeholder"]
     },
     "test" : {
         "name" : "Test",
         "technologies" : "Test test test",
         "description" : "Nostrud ea ex excepteur tempor. Tempor fugiat irure velit tempor quis non adipisicing duis nulla ipsum. Duis elit nisi cupidatat sunt aute laboris dolor.",
-        "mainImage" : "../src/assets/wave-haikei (1).svg"
-    },
-    "test2" : {
-        "name" : "Test 2",
-        "technologies" : "Consectetur ullamco sit nulla laboris ipsum.",
-        "description" : "Proident elit in id amet anim ipsum occaecat commodo nulla est Lorem labore cupidatat in. Laborum consectetur commodo sint cupidatat minim culpa aliqua aliqua sint ad pariatur laborum duis. Ex mollit in do ad commodo laborum irure sunt voluptate eu.",
-        "mainImage" : "../src/assets/wave-haikei (2).svg"
+        "mainImage" : ["../src/assets/wave-haikei (1).svg", "Placeholder"],
+        "briefing" : "Ea sunt proident esse in id veniam sunt sunt. Fugiat incididunt est culpa laborum sit anim pariatur dolore consequat. Velit labore ipsum in sunt. Sit aute qui anim cupidatat enim ea cupidatat. Aliquip culpa fugiat labore pariatur voluptate exercitation fugiat enim nisi exercitation irure. Occaecat mollit minim voluptate occaecat Lorem irure ipsum eiusmod duis sint proident ipsum enim. Aliqua ex deserunt deserunt ut.",
+        "featureImage1" : ["../src/assets/wave-haikei (1).svg", "Placeholder"],
+        "featureImage2" : ["../src/assets/wave-haikei (1).svg", "Placeholder"],
+        "bigFeatureImage" : ["../src/assets/wave-haikei (1).svg", "Placeholder"]
     },
     "math" : {
         "name" : "Mathematics",
-        "technologies" : "N/a",
+        "technologies" : "LaTex, Linear Algebra, Abstract Algebra, Discrete Mathematics, Probability & Measure Theory, Topology, Analysis",
         "description" : "Proident elit in id amet anim ipsum occaecat commodo nulla est Lorem labore cupidatat in. Laborum consectetur commodo sint cupidatat minim culpa aliqua aliqua sint ad pariatur laborum duis. Ex mollit in do ad commodo laborum irure sunt voluptate eu.",
-        "mainImage" : "../src/assets/wave-haikei (2).svg"
+        "mainImage" : ["../src/assets/wave-haikei (2).svg", "Placeholder"],
+        "briefing" : "Voluptate laborum proident exercitation eiusmod consequat ea esse. Duis commodo dolore cupidatat anim eiusmod deserunt Lorem ipsum laboris. Consectetur exercitation et elit voluptate tempor labore. Ex deserunt cillum esse sint.",
+        "featureImage1" : ["../src/assets/wave-haikei (2).svg", "Placeholder"],
+        "featureImage2" : ["../src/assets/wave-haikei (2).svg", "Placeholder"],
+        "bigFeatureImage" : ["../src/assets/wave-haikei (2).svg", "Placeholder"]
     }
 }

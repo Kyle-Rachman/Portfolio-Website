@@ -123,7 +123,7 @@ const About = () => {
                     </p>
                 </ToggleOnScroll>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
-                    <div className="testimonials flex justify-between gap-[2vw] flex-wrap mx-auto mt-4">
+                    <div className="testimonials flex justify-center gap-[5vh] md:gap-[2vw] flex-wrap mx-auto mt-4">
                         <TestimonialCard
                             testifier='Brandon Davis'
                             position='test position'

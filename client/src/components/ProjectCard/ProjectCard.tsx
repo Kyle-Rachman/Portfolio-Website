@@ -50,7 +50,7 @@ const ProjectCard = ({ project, alt, onSwipe }: Props) => {
                 </div>}
             </div>
             <div className={styles.imageContainer} onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} onTouchEnd={handleTouchEnd}>
-                <img src={projectDetails.mainImage} alt={alt} className='border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
+                <img src={projectDetails.mainImage[0]} alt={alt} className='border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
             </div>
         </div>
     )

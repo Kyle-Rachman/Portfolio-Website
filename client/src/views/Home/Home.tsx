@@ -53,13 +53,14 @@ const Home = () => {
                                     <img src="src/assets/logos/flask.svg" alt="Flask logo" className={styles.skill}/>
                                     <img src="src/assets/logos/mysql-logo.svg" alt="MySQL logo" className={styles.skill}/>
                                     <img src="src/assets/logos/mongodb.svg" alt="MongoDB logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/mongoose.svg" alt="Mongoose logo" className={styles.skill}/>
                                     <img src="src/assets/logos/expressjs-icon.svg" alt="Express.js logo" className={styles.skill}/>
                                     <img src="src/assets/logos/React-icon.svg" alt="React logo" className={styles.skill}/>
                                     <img src="src/assets/logos/Node.js_logo.svg" alt="Node.js logo" className={styles.skill}/>
+                                    <img src="src/assets/logos/github-mark.svg" alt="Github logo" className={styles.skill}/>
                                     <img src="src/assets/logos/Amazon_Web_Services_Logo.svg" alt="AWS logo" className={styles.skill}/>
                                     <img src="src/assets/logos/postman.svg" alt="Postman logo" className={styles.skill}/>
                                     <img src="src/assets/logos/Mathematica_Logo.svg" alt="Mathematica logo" className={styles.skill}/>
-                                    <img src="src/assets/logos/matrix.svg" alt="Matrix" className={styles.skill}/>
                                 </div>
                             </ParallaxLayer>
                         </section>

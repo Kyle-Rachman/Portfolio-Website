@@ -65,7 +65,7 @@ section {
 
 
 .skills {
-    padding: 10vh 18vw 0vh;
+    padding: 10vh 16vw 0vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -116,6 +116,7 @@ section {
 .skill:nth-child(16) { animation-delay: 2.5s }
 .skill:nth-child(17) { animation-delay: 1s }
 .skill:nth-child(18) { animation-delay: 1.5s }
+.skill:nth-child(19) { animation-delay: 2s }
 
 .about {
     position: relative;
@@ -145,7 +146,7 @@ section {
     .skills {
         position: relative;
         bottom: 200px;
-        gap: 4vw;
+        gap: 3vw;
     }
     .skill {
         height: 8.5vh;

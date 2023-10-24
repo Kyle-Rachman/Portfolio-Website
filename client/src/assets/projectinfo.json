@@ -1,32 +1,41 @@
 {
     "bingo" : {
         "name" : "Local Bingo",
-        "technologies" : "React, Express, MongoDB (Mongoose), Node.js, MUI",
+        "technologies" : "React, Express, MongoDB, Mongoose, Node.js, MUI",
         "description" : "Host your own Bingo league for events (work, social, or otherwise) using customizable prompts, leaderboards, and user roles.",
         "mainImage" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "navlink" : ["", "Check It Out"],
         "briefing" : "Mollit excepteur incididunt culpa eiusmod mollit Lorem ex minim duis tempor consequat culpa amet. Excepteur ullamco nostrud nostrud consectetur laborum ipsum esse labore ut quis labore aliqua aute et. Dolore eu dolor ea fugiat amet est esse pariatur sit occaecat tempor incididunt aliqua.",
-        "featureImage1" : ["../src/assets/bingo-picture.png", "Placeholder"],
-        "featureImage2" : ["../src/assets/bingo-picture.png", "Placeholder"],
-        "bigFeatureImage" : ["../src/assets/bingo-picture.png", "Placeholder"]
+        "featureImage1" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
+        "featureImage2" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
+        "bigFeatureImage" : ["../src/assets/bingo-picture.png", "Placeholder", "Placeholder feature"],
+        "solutionImage" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "solution" : "Aliqua ipsum tempor ipsum adipisicing deserunt ea reprehenderit sint deserunt officia. Voluptate ullamco quis aute non culpa laborum commodo duis quis anim non minim adipisicing enim. Officia enim occaecat sunt id ullamco fugiat excepteur. Ad aliqua ex cupidatat consequat officia voluptate incididunt sint exercitation duis aliquip labore."
     },
     "test" : {
         "name" : "Test",
         "technologies" : "Test test test",
         "description" : "Nostrud ea ex excepteur tempor. Tempor fugiat irure velit tempor quis non adipisicing duis nulla ipsum. Duis elit nisi cupidatat sunt aute laboris dolor.",
         "mainImage" : ["../src/assets/wave-haikei (1).svg", "Placeholder"],
+        "navlink" : ["", "Check It Out"],
         "briefing" : "Ea sunt proident esse in id veniam sunt sunt. Fugiat incididunt est culpa laborum sit anim pariatur dolore consequat. Velit labore ipsum in sunt. Sit aute qui anim cupidatat enim ea cupidatat. Aliquip culpa fugiat labore pariatur voluptate exercitation fugiat enim nisi exercitation irure. Occaecat mollit minim voluptate occaecat Lorem irure ipsum eiusmod duis sint proident ipsum enim. Aliqua ex deserunt deserunt ut.",
-        "featureImage1" : ["../src/assets/wave-haikei (1).svg", "Placeholder"],
-        "featureImage2" : ["../src/assets/wave-haikei (1).svg", "Placeholder"],
-        "bigFeatureImage" : ["../src/assets/wave-haikei (1).svg", "Placeholder"]
+        "featureImage1" : ["../src/assets/wave-haikei (1).svg", "Placeholder", "Placeholder feature"],
+        "featureImage2" : ["../src/assets/wave-haikei (1).svg", "Placeholder", "Placeholder feature"],
+        "bigFeatureImage" : ["../src/assets/wave-haikei (1).svg", "Placeholder", "Placeholder feature"],
+        "solutionImage" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "solution" : "Excepteur consequat cillum do elit. Incididunt excepteur veniam pariatur magna. Officia minim aliquip labore magna pariatur excepteur et elit. Minim officia culpa deserunt nisi enim mollit irure sunt ad. Sint commodo proident aliqua reprehenderit qui in laboris aliquip esse nisi sint nisi cillum exercitation."
     },
     "math" : {
         "name" : "Mathematics",
         "technologies" : "LaTex, Linear Algebra, Abstract Algebra, Discrete Mathematics, Probability & Measure Theory, Topology, Analysis",
         "description" : "Proident elit in id amet anim ipsum occaecat commodo nulla est Lorem labore cupidatat in. Laborum consectetur commodo sint cupidatat minim culpa aliqua aliqua sint ad pariatur laborum duis. Ex mollit in do ad commodo laborum irure sunt voluptate eu.",
         "mainImage" : ["../src/assets/wave-haikei (2).svg", "Placeholder"],
+        "navlink" : ["", "Check It Out"],
         "briefing" : "Voluptate laborum proident exercitation eiusmod consequat ea esse. Duis commodo dolore cupidatat anim eiusmod deserunt Lorem ipsum laboris. Consectetur exercitation et elit voluptate tempor labore. Ex deserunt cillum esse sint.",
-        "featureImage1" : ["../src/assets/wave-haikei (2).svg", "Placeholder"],
-        "featureImage2" : ["../src/assets/wave-haikei (2).svg", "Placeholder"],
-        "bigFeatureImage" : ["../src/assets/wave-haikei (2).svg", "Placeholder"]
+        "featureImage1" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
+        "featureImage2" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
+        "bigFeatureImage" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
+        "solutionImage" : ["../src/assets/bingo-picture.png", "Placeholder"],
+        "solution" : "Proident Lorem nostrud magna elit officia est esse magna aliquip minim consequat anim in. Excepteur dolore amet labore consectetur. Cillum eu culpa ea in. Ut culpa veniam non esse non ad non velit id consequat."
     }
 }

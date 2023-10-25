@@ -16,9 +16,7 @@ const Home = () => {
         }
     };
     
-    // TODO: Fix layout for mobile landscapes
-    // TODO: Add project images and descriptions
-    // TODO: Make skill icons link to specific projects
+    // TODO: Make skill icons link to specific projects??
 
     return (
         <>

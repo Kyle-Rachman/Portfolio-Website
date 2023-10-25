@@ -6,7 +6,6 @@ import Footer from '../../components/Footer'
 import styles from './About.module.css'
 
 // TODO: Update sidebar picture and "outside" pictures
-// TODO: Update expertise descriptions
 // TODO: Get testimonials
 // TODO: Make "outside" pictures move faster on smaller screens via timing CSS variable
 // TODO: Update "outside" styling
@@ -38,19 +37,19 @@ const About = () => {
                             <div className='flex flex-col sm:grid sm:grid-rows-2 sm:grid-cols-2 gap-8 sm:items-start sm:text-left'>
                                 <div className='max-w-[320px] w-[100%]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Full Stack Web Development.</p>
-                                    <p>(MERN and Flask). Ipsum sint in id quis laboris laborum. Ut aliqua mollit in id enim consectetur elit minim adipisicing consectetur ut eu.</p>
+                                    <p><strong>Digital presence is at the core of the modern world.</strong> I use MERN, Flask and other cutting-edge tools to create high-functioning, responsive websites for companies.</p>
                                 </div>
                                 <div className='max-w-[320px] w-[100%]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Frontend UI/UX.</p>
-                                    <p>Laboris irure adipisicing irure pariatur do proident. Culpa laborum ea velit ad tempor Lorem do eiusmod culpa nostrud eu veniam.</p>
+                                    <p><strong>I make a difference by implementing clean and strong design.</strong> Having the right look and feel for an interface adds value to the product, strengthens user experience, and boosts results.</p>
                                 </div>
                                 <div className='max-w-[320px] w-[100%]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Mathematics.</p>
-                                    <p>(Group Theory and Linear Algebra). Dolor commodo commodo fugiat cillum proident eu laboris eiusmod nisi dolore sunt.</p>
+                                    <p><strong>Visualizing and analyzing complex relationships and interactions comes naturally to me.</strong> I specialize in group and ring theory and linear algebra at the graduate level.</p>
                                 </div>
                                 <div className='max-w-[320px] w-[100%]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Education.</p>
-                                    <p>(Former teacher). Consequat incididunt magna ex ex consequat dolor tempor et incididunt dolor consequat duis.</p>
+                                    <p><strong>Passing on knowledge and strong communication skills are talents of mine.</strong> As a former teacher, I am passionate about helping others develop their skills.</p>
                                 </div>
                             </div>
                         </ToggleOnScroll>

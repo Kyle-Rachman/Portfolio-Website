@@ -49,13 +49,13 @@ nav {
 
 @media only screen and (min-width: 769px) and (max-width: 955px) {
     nav {
-        gap: 20vw;
+        gap: 25vw;
     }
 }
 
 @media only screen and (max-width: 768px) {
     nav {
-        padding: 0px 15px;
+        padding: 0px 10px;
     }
     #links {
         display: none !important;

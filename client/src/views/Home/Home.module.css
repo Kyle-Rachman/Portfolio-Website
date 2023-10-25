@@ -74,7 +74,7 @@ section {
 
 
 .skill {
-    height: 10vh;
+    height: 65px;
     object-fit: contain;
     filter: gray;
     -webkit-filter: grayscale(100%);

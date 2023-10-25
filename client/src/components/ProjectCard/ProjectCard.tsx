@@ -8,6 +8,8 @@ interface Props {
     onSwipe: Function
 }
 
+// TODO: Make tablet/mobile landscape responsive
+
 const ProjectCard = ({ project, alt, onSwipe }: Props) => {
     const projectDetails = ProjectInfos[project as keyof typeof ProjectInfos]
     const [descriptionActive, setDescriptionActive] = useState(window.innerWidth > 768 ? true : false)
@@ -37,7 +39,7 @@ const ProjectCard = ({ project, alt, onSwipe }: Props) => {
 
     return (
         <div className={styles.container}>
-            <div className='w-[80vw] md:w-[20vw] md:h-[60vh] bg-background-black border border-white rounded-xl px-4 py-2 absolute md:static overflow-hidden'>
+            <div className='w-[80vw] md:w-[20vw] md:h-[60vh] bg-background-black border border-white rounded-xl px-4 py-2 absolute md:static overflow-y-scroll'>
                 <p className='text-3xl flex justify-between items-center' onClick={() => setDescriptionActive(prev => !prev)}>
                     {projectDetails.name}
                     <button className={`md:hidden scale-x-[120%] ${descriptionActive && 'animate-flip'}`}>&or;</button>
@@ -50,7 +52,7 @@ const ProjectCard = ({ project, alt, onSwipe }: Props) => {
                 </div>}
             </div>
             <div className={styles.imageContainer} onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} onTouchEnd={handleTouchEnd}>
-                <img src={projectDetails.mainImage[0]} alt={alt} className='border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20'/>
+                <img src={projectDetails.mainImage[0]} alt={alt} className='border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20 object-cover'/>
             </div>
         </div>
     )

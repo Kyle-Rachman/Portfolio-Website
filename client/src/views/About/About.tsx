@@ -56,14 +56,14 @@ const About = () => {
                     </div>
                 </ToggleOnScroll>
             </div>
-            <div className='bg-white p-6 mt-[-1px]'>
+            <div className='bg-white py-6 mt-[-1px]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='learning text-black'>
-                        <p className="text-2.5xl xs:text-3xl text-black mb-4">
+                        <p className="text-2.5xl xs:text-3xl text-black mb-4 px-16">
                             <strong>What I'm Working On:</strong>
                         </p>
                         <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                            <div className='flex flex-wrap justify-between gap-8'>
+                            <div className='flex flex-wrap justify-between gap-8 px-[2.6rem] md:px-16'>
                                 <div className='max-w-[240px]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>AWS Certification.</p>
                                 </div>

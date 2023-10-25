@@ -36,7 +36,7 @@ export default {
         flip: "flip 0.25s ease-in-out forwards"
       },
       fontSize: {
-        "2.5xl" : "1.6rem"
+        "2.5xl" : "1.75rem"
       }
     },
   },

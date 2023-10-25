@@ -8,9 +8,9 @@ import styles from './About.module.css'
 // TODO: Update sidebar picture and "outside" pictures
 // TODO: Update expertise descriptions
 // TODO: Get testimonials
-// TODO: Finish making layout responsive
 // TODO: Make "outside" pictures move faster on smaller screens via timing CSS variable
 // TODO: Update "outside" styling
+// TODO: Make "outside" pictures not solely stretch downwards on small screens when clicked
 
 const About = () => {
 
@@ -145,7 +145,7 @@ const About = () => {
                     </div>
                 </ToggleOnScroll>
             </div>
-            <div className='py-20 px-16 xs:px-20 mt-[-1px]' style={{background: 'linear-gradient(to right, rgb(var(--accent-blue)) 5%, whitesmoke 20%, whitesmoke 80%, rgb(var(--accent-blue)) 95%)'}}>
+            <div className='py-20 px-16 xs:px-20 mt-[-1px] overflow-x-hidden' style={{background: 'linear-gradient(to right, rgb(var(--accent-blue)) 5%, whitesmoke 20%, whitesmoke 80%, rgb(var(--accent-blue)) 95%)'}}>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className="text-2.5xl xs:text-3xl text-black">
                         <p><strong>Outside the Office:</strong></p>

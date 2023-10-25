@@ -1,5 +1,4 @@
 import React from 'react'
-import ProjectInfos from '../../assets/projectinfo.json'
 import ToggleOnScroll from '../ToggleOnScroll'
 import styles from './Error404.module.css'
 import { useNavigate } from 'react-router-dom'

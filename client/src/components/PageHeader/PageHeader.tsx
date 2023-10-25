@@ -10,13 +10,11 @@ interface Props {
     heroDescription: string,
 }
 
-// TODO: Make responsive
-
 const PageHeader = ({heroImage, altImage, heroTitle, heroPage, heroDescription}: Props) => {
     return (
-        <div className='flex flex-col md:flex-row items-center text-4xl gap-20 mb-10 px-20 py-2 w-[100%] h-[90vh]'>
+        <div className='flex flex-col md:flex-row items-center content-center text-4xl gap-20 mb-10 py-2 w-[100%] min-h-[90vh] overflow-x-hidden'>
             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0'>
+                <div className='flex flex-col content-start gap-[40px] mx-10 md:ml-20 mb-[-50px] md:mb-0 md:w-[275px]'>
                     {heroTitle}
                     <p className='text-accent-yellow text-2xl w-[100%] font-light'>|| {heroPage}</p>
                     <p className='text-xl md:text-3xl'>{heroDescription}</p>
@@ -28,8 +26,8 @@ const PageHeader = ({heroImage, altImage, heroTitle, heroPage, heroDescription}:
             }} onMouseOut={(e) => {
                     e.currentTarget.src=heroImage
                     e.currentTarget.classList.add('filter', 'grayscale', 'opacity-85')
-            }} className='filter grayscale w-[50vw] rounded-md transition-opacity duration-500 opacity-85'/>
-            <img id={styles.mobileimage} src={heroImage} alt="Placeholder" className='w-[80vw] md:w-[50vw] rounded-md'/>
+            }} className='filter grayscale md:ml-6 min-h-[450px] h-[450px] md:relative md:right-20 rounded-md transition-opacity duration-500 opacity-85'/>
+            <img id={styles.mobileimage} src={heroImage} alt="Placeholder" className='md:ml-6 min-h-[450px] h-[450px] md:relative md:right-20 rounded-md object-cover'/>
         </div>
     )
 }

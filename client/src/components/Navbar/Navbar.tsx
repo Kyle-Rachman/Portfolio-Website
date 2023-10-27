@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <img src="../src/assets/phoenixv5.png" alt="Phoenix Logo, KR" id={styles.logo} onClick={() => navigate('/')} className='p-1 scale-1 hover:scale-[1.1] hover:drop-shadow-accent-blue'/>
+            <img src="../src/assets/phoenixv5.png" alt="Phoenix Logo, KR" id={styles.logo} onClick={() => navigate('/')} className='p-[0.35rem] scale-1 hover:scale-[1.1] hover:drop-shadow-accent-blue'/>
             <ul id={styles.links}>
                 <li className='transition-transform scale-x-100 hover:scale-x-[1.1] hover:drop-shadow-accent-blue'><Link to={'/'} style={activeUrl == 'http://localhost:5173/' ? activeStyle : {}}>Home</Link></li>
                 <li className='transition-transform scale-x-100 hover:scale-x-[1.1] hover:drop-shadow-accent-blue'><Link to={'/about'} style={activeUrl == 'http://localhost:5173/about' ? activeStyle : {}}>About Me</Link></li>

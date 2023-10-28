@@ -5,8 +5,8 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 import Footer from '../../components/Footer'
 import styles from './About.module.css'
 
-// TODO: Update sidebar picture and "outside" pictures
-// TODO: Get testimonials
+// TODO: Update "outside" pictures
+// TODO: Get testimonials and update testimonial cards
 // TODO: Make "outside" pictures move faster on smaller screens via timing CSS variable
 // TODO: Update "outside" styling
 // TODO: Make "outside" pictures not solely stretch downwards on small screens when clicked
@@ -17,17 +17,19 @@ const About = () => {
         <div id={styles.container}>
             <PageHeader
                 heroImage='../src/assets/profile-formal.jpg'
+                heroImageAlt='Formal Profile Picture of Kyle Rachman'
                 altImage='../src/assets/profile-casual.jpg'
-                heroTitle={<div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-center font-bold'>
-                                <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%]'>Developer.</p>
-                                <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[-175px]'>Mathematician.</p>
-                                <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-175px]'>Climber.</p>
+                heroAltImageAlt='Casual Profile Picture of Kyle Rachman'
+                heroTitle={<div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-start font-bold sm:ml-[10vw] md:ml-[-40px]'>
+                                <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%]'>Mathematician.</p>
+                                <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[2px]'>Developer.</p>
+                                <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-40px]'>Climber.</p>
                             </div>}
                 heroPage='About me'
-                heroDescription="My name is Kyle Rachman. I'm a Full Stack web developer with a passion for making creative and seamless user experiences."
+                heroDescription="My name is Kyle Rachman. I'm a Full Stack developer and software engineer with a passion for making creative and seamless user experiences."
             ></PageHeader>
             <div className='bg-white py-20 px-16 xs:px-20'>
-                <img src="src/assets/profile-casual.jpg" alt="placeholder" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
+                <img src="src/assets/sidebar.jpg" alt="Open VS Code Editor" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='expertise text-black'>
                         <p className="text-2.5xl xs:text-3xl mb-4">
@@ -56,7 +58,7 @@ const About = () => {
                     </div>
                 </ToggleOnScroll>
             </div>
-            <div className='bg-white py-6 mt-[-1px]'>
+            <div className='bg-white pb-6 mt-[-1px]'>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className='learning text-black'>
                         <p className="text-2.5xl xs:text-3xl text-black mb-4 px-16">
@@ -125,21 +127,21 @@ const About = () => {
                     <div className="testimonials flex justify-center gap-[5vh] md:gap-[2vw] flex-wrap mx-auto mt-4">
                         <TestimonialCard
                             testifier='Brandon Davis'
-                            position='test position'
+                            position='Staff Software Engineer and Tech Lead at Appfolio, Inc.'
                             testimonial={['Aliqua nostrud fugiat dolor ipsum commodo eu occaecat non sit eu eiusmod fugiat. Id id laboris laboris qui aute do aliquip nisi officia.', 'Excepteur aute aliqua fugiat incididunt aliqua sint laborum proident ut dolor qui. Reprehenderit sint sunt dolor anim ad eiusmod irure ea ipsum nostrud dolore. Cupidatat ea minim ullamco aute commodo officia minim sint amet minim tempor elit officia tempor. Id tempor quis cupidatat elit.']}
-                            source={['src/assets/vite.svg', 'placeholder']}
+                            source={['src/assets/brandon-profile.jpg', 'Brandon Davis Profile Picture']}
                         ></TestimonialCard>
                         <TestimonialCard
-                            testifier='firstname lastname'
-                            position='test position'
+                            testifier='Rachel Russell'
+                            position='Director of Youth Programs at &nbsp; The Pad Climbing SLO'
                             testimonial={['Ullamco irure consectetur est irure cillum fugiat exercitation amet pariatur ex do. Qui mollit minim culpa reprehenderit culpa.']}
                             source={['src/assets/profile-formal.jpg', 'placeholder']}
                         ></TestimonialCard>
                         <TestimonialCard
-                            testifier='funny name'
-                            position='test position'
+                            testifier='Eric Dunham'
+                            position='Master Teacher at Central Coast New Tech High School'
                             testimonial={['Consectetur sint dolore nostrud pariatur commodo officia sit aliqua. Aute enim eu minim magna fugiat incididunt sunt nostrud mollit eiusmod. Consequat tempor aute elit qui nisi reprehenderit officia incididunt consequat ex cillum. Aliquip nostrud incididunt incididunt eu Lorem in nisi occaecat.']}
-                            source={['src/assets/profile-casual.jpg', 'placeholder']}
+                            source={['src/assets/eric-profile.jpg', 'Eric Dunham Profile Picture']}
                         ></TestimonialCard>
                     </div>
                 </ToggleOnScroll>
@@ -153,20 +155,21 @@ const About = () => {
                 </ToggleOnScroll>
                 <div className='flex flex-col w-[80vw]'>
                     <div className={styles.outsideImage}>
-                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
+                        <img src="src/assets/climbing-graduation.jpg" alt="Grad Picture Climbing at Bishop Peak" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
+                        <img src="src/assets/album-cover.jpg" alt="Jumping down a sand dune at Montano de Oro" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
+                        <img src="src/assets/friends-hangout.jpg" alt="Pumpkin painting party with friends" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
+                        <img src="src/assets/local-church-booth.jpg" alt="Local Church booth at the Cal Poly Club Showcase 2023" className='blur-[1px] hover:blur-none'/>
                     </div>
                     <div className={styles.outsideImage}>
-                        <img src="src/assets/profile-formal.jpg" alt="Profile Picture" className='blur-[1px] hover:blur-none'/>
+                        <img src="src/assets/hiking-woods.jpg" alt="Hiking through Deception Pass in Washington" className='blur-[1px] hover:blur-none'/>
                     </div>
+                    <div className='h-[7rem]'></div>
                 </div>
             </div>
             <div className='flex flex-col py-[48px]'>

@@ -5,12 +5,14 @@ import styles from './PageHeader.module.css'
 interface Props {
     heroImage: string,
     altImage: string,
+    heroImageAlt: string,
+    heroAltImageAlt: string,
     heroTitle: ReactNode,
     heroPage: string,
     heroDescription: string,
 }
 
-const PageHeader = ({heroImage, altImage, heroTitle, heroPage, heroDescription}: Props) => {
+const PageHeader = ({heroImage, altImage, heroImageAlt, heroAltImageAlt, heroTitle, heroPage, heroDescription}: Props) => {
     return (
         <div className='flex flex-col md:flex-row items-center content-center text-4xl gap-20 mb-10 py-2 w-[100%] min-h-[90vh] overflow-x-hidden'>
             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
@@ -20,14 +22,16 @@ const PageHeader = ({heroImage, altImage, heroTitle, heroPage, heroDescription}:
                     <p className='text-xl md:text-3xl'>{heroDescription}</p>
                 </div>
             </ToggleOnScroll>
-            <img id={styles.desktopimage} src={heroImage} alt="Placeholder" onMouseOver={(e) => {
+            <img id={styles.desktopimage} src={heroImage} alt={heroImageAlt} onMouseOver={(e) => {
                 e.currentTarget.src=altImage
+                e.currentTarget.alt=heroAltImageAlt
                 e.currentTarget.classList.remove('filter', 'grayscale', 'opacity-85')
             }} onMouseOut={(e) => {
                     e.currentTarget.src=heroImage
+                    e.currentTarget.alt=heroImageAlt
                     e.currentTarget.classList.add('filter', 'grayscale', 'opacity-85')
             }} className='filter grayscale md:ml-6 min-h-[450px] h-[450px] md:relative md:right-20 rounded-md transition-opacity duration-500 opacity-85'/>
-            <img id={styles.mobileimage} src={heroImage} alt="Placeholder" className='md:ml-6 min-h-[450px] h-[450px] md:relative md:right-20 rounded-md object-cover'/>
+            <img id={styles.mobileimage} src={heroImage} alt={heroImageAlt} className='md:ml-6 min-h-[450px] h-[450px] md:relative md:right-20 rounded-md object-cover'/>
         </div>
     )
 }

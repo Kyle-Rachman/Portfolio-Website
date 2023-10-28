@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 // TODO: Replace all images
 // TODO: Add other projects
-// TODO: Figure out a hero project/summary video
+// TODO: Figure out new hero image for mobile (srcset for responsive)
 
 const Work = () => {
     const [hoveredProj, setHoveredProj] = useState('bg-white duration-0')
@@ -18,11 +18,13 @@ const Work = () => {
     return (
         <div id={styles.container}>
             <PageHeader
-                heroImage='../src/assets/wave-haikei (1).svg'
-                altImage='../src/assets/wave-haikei (2).svg'
+                heroImage='../src/assets/phoenixv5.png'
+                heroImageAlt='Placeholder'
+                altImage='../src/assets/phoenixv5.png'
+                heroAltImageAlt='Placeholder'
                 heroTitle={<p className='max-w-[100%] font-bold'>What I've been up to.</p>}
                 heroPage='Work'
-                heroDescription="Here's a sample of my work."
+                heroDescription="Here's a selection of projects I've worked on and roles I've filled."
             ></PageHeader>
             <div className={`text-white p-20 flex flex-wrap justify-center gap-10 pt-24 transition-all duration-[2s] ${styles.projects} ${(hoveredProj != 'bg-white') ? hoveredProj : 'bg-white duration-[0.1s]'}`}>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom'>

@@ -11,8 +11,8 @@ interface Props {
 const TestimonialCard = ({testifier, position, testimonial, source}: Props) => {
 
     return (
-        <div className={`h-[550px] xs:h-[500px] w-[300px] xs:w-[350px] grid ${styles.wrapper}`}>
-            <div className={`h-[550px] xs:h-[500px] w-[300px] xs:w-[350px] border-[3px] border-accent-blue rounded-3xl bg-background-black px-6 pt-6 pb-2 drop-shadow-accent-blue`}>
+        <div className={`h-[590px] xs:h-[520px] w-[300px] xs:w-[350px] grid ${styles.wrapper}`}>
+            <div className={`h-[590px] xs:h-[520px] w-[300px] xs:w-[350px] border-[3px] border-accent-blue rounded-3xl bg-background-black px-6 pt-6 pb-2 drop-shadow-accent-blue`}>
                 <p className='text-3xl mb-[-10px]'>"</p>
                 {testimonial.map((paragraph, index) => (
                     <p key={index} className={index == testimonial.length-1 ? '' : 'mb-4'}>{paragraph}</p>
@@ -28,7 +28,7 @@ const TestimonialCard = ({testifier, position, testimonial, source}: Props) => {
                     </div>
                 </div>
             </div>
-            <div className={`grid grid-rows-[10] grid-cols-[10] h-[550px] xs:h-[500px] w-[300px] xs:w-[350px] relative inset-0 top-[-100%] ${styles.mousePositionTracker}`}>
+            <div className={`grid grid-rows-[10] grid-cols-[10] h-[590px] xs:h-[520px] w-[300px] xs:w-[350px] relative inset-0 top-[-100%] ${styles.mousePositionTracker}`}>
                 <div className='row-start-1 row-span-1 col-start-1 col-span-1'></div>
                 <div className='row-start-1 row-span-1 col-start-2 col-span-1'></div>
                 <div className='row-start-1 row-span-1 col-start-3 col-span-1'></div>

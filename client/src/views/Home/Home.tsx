@@ -16,7 +16,6 @@ const Home = () => {
         }
     };
     
-    // TODO: Make skill icons link to specific projects??
     // TODO: To help make it responsive, get the Parallax to be based off both window.innerWidth and window.innerHeight
 
     return (

@@ -5,6 +5,7 @@ import ToggleOnScroll from '../../components/ToggleOnScroll'
 import ProjectCarousel from '../../components/ProjectCarousel'
 import Footer from '../../components/Footer'
 import styles from './Home.module.css'
+import SEO from '../../components/SEO'
 
 const Home = () => {
     const parallaxref = useRef<IParallax>(null)
@@ -20,6 +21,13 @@ const Home = () => {
 
     return (
         <>
+            <SEO
+                title='Kyle Rachman Web Design and Development'
+                url=''
+                image=''
+                imageAlt=''
+                description=''
+            ></SEO>
             <div id={styles.container}>
                 <Parallax pages={window.innerWidth > 768 ? 3.1 : 3.3} ref={parallaxref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>

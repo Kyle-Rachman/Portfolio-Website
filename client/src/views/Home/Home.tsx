@@ -6,6 +6,7 @@ import ProjectCarousel from '../../components/ProjectCarousel'
 import Footer from '../../components/Footer'
 import styles from './Home.module.css'
 import SEO from '../../components/SEO'
+import phoenixv5 from '../../assets/phoenixv5.png'
 
 const Home = () => {
     const parallaxref = useRef<IParallax>(null)
@@ -22,11 +23,11 @@ const Home = () => {
     return (
         <>
             <SEO
-                title='Kyle Rachman Web Design and Development'
-                url=''
-                image=''
-                imageAlt=''
-                description=''
+                title='Kyle Rachman | Web Design and Development'
+                url='https://kylerachman.dev'
+                image={phoenixv5}
+                imageAlt='Phoenix logo, KR'
+                description="Kyle Rachman is a web designer and mathematician with a focus on frontend development and user experiences. Let's work together on a project!"
             ></SEO>
             <div id={styles.container}>
                 <Parallax pages={window.innerWidth > 768 ? 3.1 : 3.3} ref={parallaxref}>

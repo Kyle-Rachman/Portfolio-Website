@@ -10,8 +10,6 @@ import Error404 from './components/404/Error404'
 import { HelmetProvider } from 'react-helmet-async'
 
 // TODO: Make mobile landscape mode responsive for Home, Contact, and SingleProject
-// TODO: Add SEO Component to About, Work, Single Project, and Contact
-// TODO: Update SEO urls in Home, About, Work, Single Project, and Contact
 
 function App() {
 

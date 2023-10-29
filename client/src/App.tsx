@@ -9,7 +9,7 @@ import SingleProject from './components/SingleProject/SingleProject'
 import Error404 from './components/404/Error404'
 import { HelmetProvider } from 'react-helmet-async'
 
-// TODO: Make mobile landscape mode responsive for Home, Contact, and SingleProject
+// TODO: Make mobile landscape mode responsive for Home and SingleProject
 
 function App() {
 

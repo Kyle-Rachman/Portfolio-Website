@@ -53,13 +53,13 @@ form > button {
 }
 
 .moreInfo {
-    height: 60vh;
     background: linear-gradient(to right, rgba(var(--accent-orange),0.8), rgba(var(--accent-yellow),0.8));
     color: white;
     display: flex;
     gap: 100px;
     justify-content: center;
     padding: 10vh 20vw;
+    min-height: fit-content;
 }
 
 @media only screen and (max-width: 768px) {
@@ -73,7 +73,6 @@ form > button {
     .moreInfo {
         flex-direction: column;
         gap: 40px;
-        height: 90vh;
     }
 }
 

@@ -30,7 +30,7 @@ const Home = () => {
                             >
                                 <div className={styles.heroTitle}>
                                     <h1 className=
-                                    'bg-clip-text text-transparent bg-gradient-to-b from-accent-blue via-accent-purple to-accent-yellow text-5xl sm:text-7xl italic'>Kyle Rachman</h1>
+                                    'bg-clip-text text-transparent bg-gradient-to-b from-accent-blue from-20% via-accent-purple to-accent-yellow to-[92%] text-5xl sm:text-7xl italic'>Kyle Rachman</h1>
                                     <h2 className={`text-2xl sm:text-3xl text-gray-300 ${styles.subtitle}`}>Web Design and Development</h2>
                                 </div>
                             </ParallaxLayer>

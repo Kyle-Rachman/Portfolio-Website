@@ -5,11 +5,7 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 import Footer from '../../components/Footer'
 import styles from './About.module.css'
 
-// TODO: Update "outside" pictures
 // TODO: Get testimonials and update testimonial cards
-// TODO: Make "outside" pictures move faster on smaller screens via timing CSS variable
-// TODO: Update "outside" styling
-// TODO: Make "outside" pictures not solely stretch downwards on small screens when clicked
 
 const About = () => {
 
@@ -21,9 +17,9 @@ const About = () => {
                 altImage='../src/assets/profile-casual.jpg'
                 heroAltImageAlt='Casual Profile Picture of Kyle Rachman'
                 heroTitle={<div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-start font-bold sm:ml-[10vw] md:ml-[-40px]'>
-                                <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%]'>Mathematician.</p>
-                                <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[2px]'>Developer.</p>
-                                <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-40px]'>Climber.</p>
+                                <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%] '>Mathematician<span className='text-accent-blue'>.</span></p>
+                                <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[2px]'>Developer<span className='text-accent-purple'>.</span></p>
+                                <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-40px]'>Climber<span className='text-accent-orange'>.</span></p>
                             </div>}
                 heroPage='About me'
                 heroDescription="My name is Kyle Rachman. I'm a Full Stack developer and software engineer with a passion for making creative and seamless user experiences."
@@ -47,7 +43,7 @@ const About = () => {
                                 </div>
                                 <div className='max-w-[320px] w-[100%]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Mathematics.</p>
-                                    <p><strong>Visualizing and analyzing complex relationships and interactions comes naturally to me.</strong> I specialize in group and ring theory and linear algebra at the graduate level.</p>
+                                    <p><strong>Visualizing and analyzing complex relationships and interactions comes naturally to me.</strong> I specialize in group and ring theory and linear algebra at a M.S. level.</p>
                                 </div>
                                 <div className='max-w-[320px] w-[100%]'>
                                     <p className='text-accent-purple text-2xl font-semibold'>Education.</p>
@@ -146,30 +142,29 @@ const About = () => {
                     </div>
                 </ToggleOnScroll>
             </div>
-            <div className='py-20 px-16 xs:px-20 mt-[-1px] overflow-x-hidden' style={{background: 'linear-gradient(to right, rgb(var(--accent-blue)) 5%, whitesmoke 20%, whitesmoke 80%, rgb(var(--accent-blue)) 95%)'}}>
+            <div className='py-20 px-16 xs:px-20 mt-[-1px] overflow-x-hidden' style={{background: 'linear-gradient(to right, rgb(var(--accent-blue)) 5%, whitesmoke 15%, whitesmoke 85%, rgb(var(--accent-blue)) 95%)'}}>
                 <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                     <div className="text-2.5xl xs:text-3xl text-black">
                         <p><strong>Outside the Office:</strong></p>
-                        <p className='text-sm font-light'>Hover over or tap an image!</p>
+                        <p className='text-sm font-light mb-10'>Hover over or tap an image!</p>
                     </div>
                 </ToggleOnScroll>
-                <div className='flex flex-col w-[80vw]'>
-                    <div className={styles.outsideImage}>
-                        <img src="src/assets/climbing-graduation.jpg" alt="Grad Picture Climbing at Bishop Peak" className='blur-[1px] hover:blur-none'/>
+                <div className='flex flex-col w-[80vw] gap-10 md:gap-2'>
+                    <div className={`${styles.outsideImage} group`}>
+                        <img src="src/assets/climbing-graduation.jpg" alt="Grad Picture Climbing at Bishop Peak" className='blur-[1px] hover:blur-none group-hover:scale-[1.25] sm:group-hover:scale-[1.75] md:group-hover:scale-[2]'/>
                     </div>
-                    <div className={styles.outsideImage}>
-                        <img src="src/assets/album-cover.jpg" alt="Jumping down a sand dune at Montano de Oro" className='blur-[1px] hover:blur-none'/>
+                    <div className={`${styles.outsideImage} group`}>
+                        <img src="src/assets/album-cover.jpg" alt="Jumping down a sand dune at Montano de Oro" className='blur-[1px] hover:blur-none group-hover:scale-[1.5] sm:group-hover:scale-[1.75] md:group-hover:scale-[2]'/>
                     </div>
-                    <div className={styles.outsideImage}>
-                        <img src="src/assets/friends-hangout.jpg" alt="Pumpkin painting party with friends" className='blur-[1px] hover:blur-none'/>
+                    <div className={`${styles.outsideImage} group`}>
+                        <img src="src/assets/friends-hangout.jpg" alt="Pumpkin painting party with friends" className='blur-[1px] hover:blur-none group-hover:scale-[1.25] sm:group-hover:scale-[1.75] md:group-hover:scale-[2]'/>
                     </div>
-                    <div className={styles.outsideImage}>
-                        <img src="src/assets/local-church-booth.jpg" alt="Local Church booth at the Cal Poly Club Showcase 2023" className='blur-[1px] hover:blur-none'/>
+                    <div className={`${styles.outsideImage} group`}>
+                        <img src="src/assets/local-church-booth.jpg" alt="Local Church booth at the Cal Poly Club Showcase 2023" className='blur-[1px] hover:blur-none group-hover:scale-[1.25] sm:group-hover:scale-[1.75] md:group-hover:scale-[2]'/>
                     </div>
-                    <div className={styles.outsideImage}>
-                        <img src="src/assets/hiking-woods.jpg" alt="Hiking through Deception Pass in Washington" className='blur-[1px] hover:blur-none'/>
+                    <div className={`${styles.outsideImage} group mb-10`}>
+                        <img src="src/assets/hiking-woods.jpg" alt="Hiking through Deception Pass in Washington" className='blur-[1px] hover:blur-none group-hover:scale-[1.5] sm:group-hover:scale-[1.75] md:group-hover:scale-[2]'/>
                     </div>
-                    <div className='h-[7rem]'></div>
                 </div>
             </div>
             <div className='flex flex-col py-[48px]'>

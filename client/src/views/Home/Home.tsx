@@ -13,10 +13,20 @@ const Home = () => {
     const aboutref = useRef<HTMLElement>(null)
     const navigate = useNavigate()
     const scrollToPage = (pageNumber: number) => {
-        if (parallaxref?.current) {
+        if (parallaxref?.current && window.matchMedia("(any-hover: hover)").matches) {
             parallaxref.current.scrollTo(pageNumber);
         }
     };
+
+    const decideLayout = () => {
+        let pages: any = 3.2
+        let contactTop: string = '40vh'
+        if (window.innerWidth <= 768 && window.innerHeight <= 800) {
+            pages = 3.5
+            contactTop = '50vh'
+        }
+        return [pages, contactTop]
+    }
     
     // TODO: To help make it responsive, get the Parallax to be based off both window.innerWidth and window.innerHeight
 
@@ -30,7 +40,7 @@ const Home = () => {
                 description="Kyle Rachman is a web designer and mathematician with a focus on frontend development and user experiences. Let's work together on a project!"
             ></SEO>
             <div id={styles.container}>
-                <Parallax pages={window.innerWidth > 768 ? 3.1 : 3.3} ref={parallaxref}>
+                <Parallax pages={decideLayout()[0]} ref={parallaxref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>
                         <section className={styles.hero}>
                             <ParallaxLayer
@@ -93,8 +103,8 @@ const Home = () => {
                         </section>
                     </ParallaxLayer>
                     <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} factor={0.1} onClick={() => scrollToPage(2.25)}>
-                        <section className={styles.contact}>
-                            <hr className='w-[80vw] mb-[20px] mx-auto mt-[20px] md:mt-[-60px]'/>
+                        <section className={styles.contact} style={{top: decideLayout()[1]}}>
+                            <hr className='w-[80vw] mb-[10vh] mx-auto mt-[20px] md:mt-[-60px]'/>
                             <Footer></Footer>
                         </section>
                     </ParallaxLayer>

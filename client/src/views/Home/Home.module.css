@@ -145,7 +145,7 @@ section {
     }
     .skills {
         position: relative;
-        bottom: 200px;
+        bottom: 30vh;
         gap: 3vw;
     }
     .skill {
@@ -159,6 +159,5 @@ section {
     }
     .contact {
         position: relative;
-        top: 300px;
     }
 }

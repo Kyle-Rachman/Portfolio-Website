@@ -10,6 +10,7 @@ import Error404 from './components/404/Error404'
 import { HelmetProvider } from 'react-helmet-async'
 
 // TODO: Make mobile landscape mode responsive for Home and SingleProject
+// TODO: Fix logo's imperfections
 
 function App() {
 

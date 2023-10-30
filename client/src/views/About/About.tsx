@@ -32,7 +32,7 @@ const About = () => {
                                     <p className='col-start-3 row-start-3 col-end-3 row-end-3 max-w-[100%] ml-[-40px]'>Climber<span className='text-accent-orange'>.</span></p>
                                 </div>}
                     heroPage='About me'
-                    heroDescription="My name is Kyle Rachman. I'm a Full Stack developer and software engineer with a passion for making creative and seamless user experiences."
+                    heroDescription="My name is Kyle Rachman. I'm a Full Stack developer and software engineer with a passion for making creative and seamless user experiences!"
                 ></PageHeader>
                 <div className='bg-white py-20 px-16 xs:px-20'>
                     <img src="src/assets/sidebar.jpg" alt="Open VS Code Editor" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>

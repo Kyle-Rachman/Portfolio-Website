@@ -75,7 +75,7 @@ const Home = () => {
                                 factor={0.5}
                                 speed={0.5}
                             >
-                                <div className={styles.heroTitle}>
+                                <div className={`transition-transform duration-300 scale-1 hover:scale-[1.1] hover:cursor-default ${styles.heroTitle}`}>
                                     <h1 className=
                                     'bg-clip-text text-transparent bg-gradient-to-b from-accent-blue from-20% via-accent-purple to-accent-yellow to-[92%] text-5xl sm:text-7xl italic'>Kyle Rachman</h1>
                                     <h2 className={`text-2xl sm:text-3xl text-gray-300 ${styles.subtitle}`}>Web Design and Development</h2>

@@ -78,7 +78,7 @@ const Contact = () => {
             <div id={styles.container}>
                 <div className={styles.contact}>
                     <div className={styles.contactText}>
-                        <h2 className='text-5xl font-semibold'>Want to work on solutions <span className='text-accent-purple'>together?</span></h2>
+                        <h2 className='text-5xl font-semibold'>Want to work on solutions <span className='text-accent-purple transition-color duration-500 hover:drop-shadow-accent-purple'>together?</span></h2>
                         <p className='text-lg text-accent-yellow font-light mb-4'>|| Contact</p>
                         <p className='text-xl'>Fill in the form, or just send me an email at: <br /> <a className='text-accent-orange transition-color duration-500 hover:drop-shadow-accent-orange' href="mailto:kcrachman@gmail.com" target='_blank' rel="noopener" aria-label='Email'>kcrachman@gmail.com</a></p>
                     </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                     <ToggleOnScroll>
                         <div>
                             <h2 className='text-4xl font-semibold md:w-[20vw] drop-shadow-black'>You can also find me on...</h2>
-                            <div className='flex flex-col mt-10 gap-4 content-start pl-10'>
+                            <div className='flex flex-col mt-10 gap-4 content-start px-10'>
                                 <a className='drop-shadow-black transition-all duration-200 hover:text-black hover:drop-shadow-accent-blue w-[100%] font-bold' href="https://github.com/Kyle-Rachman" target='_blank' rel="noopener" aria-label='Github'>Github</a>
                                 <a className='drop-shadow-black transition-colors duration-200 hover:text-black hover:drop-shadow-accent-blue w-[100%] font-bold' href="https://www.linkedin.com/in/kyle-rachman/" target='_blank' rel="noopener" aria-label='LinkedIn'>LinkedIn</a>
                             </div>
@@ -141,7 +141,7 @@ const Contact = () => {
                     </ToggleOnScroll>
                     <ToggleOnScroll>
                         <div>
-                            <h2 className='text-4xl font-semibold md:w-[30vw] drop-shadow-black'>If you want to find out more about me check the page below:</h2>
+                            <h2 className='text-4xl font-semibold md:w-[30vw] drop-shadow-black'>Want to learn more about me? Check here:</h2>
                             <button className='border-2 border-white p-2 transition-color duration-500 hover:text-black hover:border-black mt-10 drop-shadow-black hover:drop-shadow-accent-blue' onClick={() => navigate('/about')}>More about me</button>
                         </div>
                     </ToggleOnScroll>

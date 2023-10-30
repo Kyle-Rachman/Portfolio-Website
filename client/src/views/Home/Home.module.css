@@ -53,7 +53,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20vh;
+    margin-top: 20vh;
+    width: fit-content;
     animation: TitleIn 1.5s linear;
 }
 

@@ -24,6 +24,7 @@ export default {
       dropShadow: {
         "accent-orange" : "0px 0px 10px rgb(var(--accent-orange))",
         "accent-blue" : "0px 0px 10px rgb(var(--accent-blue))",
+        "accent-purple" : "0px 0px 10px rgb(var(--accent-purple))",
         "black" : "0px 0px 5px black"
       },
       keyframes: {

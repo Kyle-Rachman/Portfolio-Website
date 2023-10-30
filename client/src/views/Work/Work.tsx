@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import SEO from '../../components/SEO'
 import phoenixv5 from '../../assets/phoenixv5.png'
 
-// TODO: Replace all images
+// TODO: Replace project images
 // TODO: Add other projects (possibly update SEO description)
 // TODO: Figure out new hero image for mobile (srcset for responsive)
 

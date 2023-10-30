@@ -9,8 +9,6 @@ import SingleProject from './components/SingleProject/SingleProject'
 import Error404 from './components/404/Error404'
 import { HelmetProvider } from 'react-helmet-async'
 
-// TODO: Make SingleProject responsive
-
 function App() {
 
   return (

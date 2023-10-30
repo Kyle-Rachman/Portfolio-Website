@@ -10,6 +10,9 @@ interface Props {
 
 const TestimonialCard = ({testifier, position, testimonial, source}: Props) => {
 
+    const gridinfo: Array<Array<number>> = [[1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10],
+    [1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10],
+    [1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10]]
     return (
         <div className={`h-[590px] xs:h-[520px] w-[300px] xs:w-[350px] grid ${styles.wrapper}`}>
             <div className={`h-[590px] xs:h-[520px] w-[300px] xs:w-[350px] border-[3px] border-accent-blue rounded-3xl bg-background-black px-6 pt-6 pb-2 drop-shadow-accent-blue`}>
@@ -29,106 +32,13 @@ const TestimonialCard = ({testifier, position, testimonial, source}: Props) => {
                 </div>
             </div>
             <div className={`grid grid-rows-[10] grid-cols-[10] h-[590px] xs:h-[520px] w-[300px] xs:w-[350px] relative inset-0 top-[-100%] ${styles.mousePositionTracker}`}>
-                <div className='row-start-1 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-1 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-2 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-3 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-4 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-5 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-6 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-7 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-8 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-9 row-span-1 col-start-10 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-1 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-2 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-3 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-4 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-5 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-6 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-7 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-8 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-9 col-span-1'></div>
-                <div className='row-start-10 row-span-1 col-start-10 col-span-1'></div>
+                {
+                    gridinfo.map((arr, idx1) => (
+                        arr.map((val, idx2) => (
+                            <div key={10*(idx1+1) + val} className={`row-start-${idx1+1} row-span-1 col-start-${val} col-span-1`}></div>
+                        ))
+                    ))
+                }
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ import SEO from '../../components/SEO'
 import phoenixv5 from '../../assets/phoenixv5.png'
 
 const Work = () => {
-    const [hoveredProj, setHoveredProj] = useState('bg-white duration-0')
+    const [hoveredProj, setHoveredProj] = useState('bg-white duration-[20ms]')
     const navigate = useNavigate()
 
     const miniCardStyle: string = `peer border-2 border-black rounded-lg object-cover h-[200px] min-w-[280px] w-[300px] transition-all ${(hoveredProj != 'bg-white duration-[20ms]') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4] hover:cursor-pointer`
@@ -26,11 +26,11 @@ const Work = () => {
             <div id={styles.container}>
                 <PageHeader
                     heroImage='../src/assets/phoenixv5.png'
-                    heroImageAlt='Placeholder'
+                    heroImageAlt='Phoenix Logo, KR'
                     altImage='../src/assets/phoenixv5.png'
-                    heroAltImageAlt='Placeholder'
-                    mobileHeroImage='../src/assets/dragon.png'
-                    mobileHeroImageAlt='Placeholder'
+                    heroAltImageAlt='Phoenix Logo, KR'
+                    mobileHeroImage='../src/assets/phoenixsmall.png'
+                    mobileHeroImageAlt='Phoenix Logo, KR'
                     heroTitle={<p className='max-w-[100%] font-bold'>What I've been up to.</p>}
                     heroPage='Work'
                     heroDescription="Here's a selection of projects I've worked on and roles I've filled."

@@ -143,7 +143,7 @@ const About = () => {
                                 testifier='Rachel Russell'
                                 position='Director of Youth Programs at &nbsp; The Pad Climbing SLO'
                                 testimonial={['Ullamco irure consectetur est irure cillum fugiat exercitation amet pariatur ex do. Qui mollit minim culpa reprehenderit culpa.']}
-                                source={['src/assets/profile-formal.jpg', 'placeholder']}
+                                source={['src/assets/pad-climbing.png', 'Rachel Russell Profile Picture']}
                             ></TestimonialCard>
                             <TestimonialCard
                                 testifier='Eric Dunham'

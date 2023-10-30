@@ -8,8 +8,6 @@ interface Props {
     onSwipe: Function
 }
 
-// TODO: Make tablet/mobile landscape responsive
-
 const ProjectCard = ({ project, alt, onSwipe }: Props) => {
     const projectDetails = ProjectInfos[project as keyof typeof ProjectInfos]
     const [descriptionActive, setDescriptionActive] = useState(window.innerWidth > 768 ? true : false)
@@ -52,7 +50,8 @@ const ProjectCard = ({ project, alt, onSwipe }: Props) => {
                 </div>}
             </div>
             <div className={styles.imageContainer} onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} onTouchEnd={handleTouchEnd}>
-                <img src={projectDetails.mainImage[0]} alt={alt} className='border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20 object-cover'/>
+                <img src={projectDetails.mainImage[0]} alt={alt} className='hidden sm:block border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20 object-cover'/>
+                <img src={projectDetails.mobileMainImage[0]} alt={alt} className='sm:hidden border border-white rounded-lg h-[50vh] w-[80vw] md:h-[60vh] md:w-[40vw] bg-background-black mt-20 object-cover'/>
             </div>
         </div>
     )

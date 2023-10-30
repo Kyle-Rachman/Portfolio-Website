@@ -130,9 +130,9 @@ const Home = () => {
                             </ToggleOnScroll>
                         </section>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} factor={0.1} onClick={() => scrollToPage(2.25)}>
+                    <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} factor={0.2} onClick={() => scrollToPage(2.25)}>
                         <section className={styles.contact} style={{top: decideLayout() ? '50vh' : '40vh'}}>
-                            <hr className='w-[80vw] mb-[10vh] mx-auto mt-[20px] md:mt-[-60px]'/>
+                            <hr className='w-[80vw] mb-[10vh] mx-auto mt-[40px] md:mt-[-60px]'/>
                             <Footer></Footer>
                         </section>
                     </ParallaxLayer>

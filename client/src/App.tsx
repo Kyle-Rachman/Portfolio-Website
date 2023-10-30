@@ -9,6 +9,8 @@ import SingleProject from './components/SingleProject/SingleProject'
 import Error404 from './components/404/Error404'
 import { HelmetProvider } from 'react-helmet-async'
 
+// To add/remove projects, update the ProjectCarousel.tsx and the projectinfo.json files
+
 function App() {
 
   return (

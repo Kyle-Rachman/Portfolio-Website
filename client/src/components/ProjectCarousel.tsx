@@ -46,9 +46,11 @@ const ProjectCarousel = () => {
                         onClick={() => setActiveProject(prev => ((((prev+1) % numProjects) + numProjects) % numProjects))}>&gt;</button>
                     </div>
             </ToggleOnScroll>
-            <fieldset className="mt-4 flex gap-4 md:hidden">
-                {radioSelectors}
-            </fieldset>
+            <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
+                <fieldset className="mt-4 flex gap-4 md:hidden">
+                    {radioSelectors}
+                </fieldset>
+            </ToggleOnScroll>
         </>
     )
 }

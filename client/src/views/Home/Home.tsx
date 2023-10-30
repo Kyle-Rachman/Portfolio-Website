@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useNavigate } from 'react-router-dom'
 import ToggleOnScroll from '../../components/ToggleOnScroll'
@@ -38,19 +38,25 @@ const Home = () => {
             b) If it's a tablet, it just ask the user to refresh the page.
     */
 
-    window.onload = function () {
-        if (window.matchMedia('(any-hover:none)').matches && window.matchMedia('(orientation: landscape)').matches && window.innerHeight < 768) {
-            alert('Please use this screen in portrait mode and refresh the page to ensure the best user experience. Thank you!')
+    useEffect(() => {
+        window.onload = function () {
+            if (window.matchMedia('(any-hover:none)').matches && window.matchMedia('(orientation: landscape)').matches && window.innerHeight < 768) {
+                alert('Mobile users, please use this screen in portrait mode and refresh the page to ensure the best user experience. Thank you!')
+            }
         }
-    }
-    window.addEventListener('orientationchange', () => {
-        if (window.matchMedia('(any-hover:none)').matches && window.matchMedia('(orientation: portrait)').matches && window.innerHeight < 768) {
-            alert('Please use this screen in portrait mode to ensure the best user experience. Thank you!')
+
+        function handleOrientationChange() {
+            if (window.matchMedia('(any-hover:none)').matches && window.matchMedia('(orientation: portrait)').matches && window.innerHeight < 768) {
+                alert('Mobile users, please use this screen in portrait mode to ensure the best user experience. Thank you!')
+            }
+            else if (window.matchMedia('(any-hover:none)').matches && window.innerHeight >= 768) {
+                alert('Please refresh the page to ensure the best user experience. Thank you!')
+            }
         }
-        else if (window.matchMedia('(any-hover:none)').matches && window.innerHeight >= 768) {
-            alert('Please refresh the page to ensure the best user experience. Thank you!')
-        }
-    })
+
+        window.addEventListener('orientationchange', handleOrientationChange)
+        return () => {window.removeEventListener('orientationchange', handleOrientationChange)}
+    }, [])
 
     return (
         <>

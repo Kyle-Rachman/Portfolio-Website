@@ -35,7 +35,7 @@ const SingleProject = () => {
                                 <p className='font-bold'>{projectDetails.name}</p>
                                 <p className='text-accent-yellow text-xl font-light'>|| {projectDetails.technologies}</p>
                                 <p className='text-xl'>{projectDetails.description}</p>
-                                <button className='border-2 border-white w-fit px-3 py-1 text-2xl self-center transition-color duration-500 hover:text-black hover:bg-white hover:drop-shadow-accent-blue' onClick={() => navigate(projectDetails.navlink[0])}>{projectDetails.navlink[1]}</button>
+                                <a className='border-2 border-white w-fit px-3 py-1 text-2xl self-center transition-color duration-500 hover:text-black hover:bg-white hover:drop-shadow-accent-blue' href={projectDetails.navlink[0]} target="_blank">{projectDetails.navlink[1]}</a>
                             </div>
                         </ToggleOnScroll>
                         <img src={projectDetails.mainImage[0]} alt={projectDetails.mainImage[1]} className='hidden sm:block h-[80vh] md:h-[60vh]md:ml-6 md:relative md:right-20 rounded-md object-cover'/>
@@ -50,23 +50,29 @@ const SingleProject = () => {
                         </ToggleOnScroll>
                         <div className='flex flex-wrap justify-between gap-4 mx-auto px-4'>
                             <ToggleOnScroll firstTimeSlide direction='from-left'>
-                                <img src={projectDetails.featureImage1[0]} alt={projectDetails.featureImage1[1]} className='h-[40.65vh] object-cover'/>
-                                <p className='italic mt-4 text-xl'>{projectDetails.featureImage1[2]}</p>
+                                <div className='flex flex-col content-start justify-center w-fit'>
+                                    <img src={projectDetails.featureImage1[0]} alt={projectDetails.featureImage1[1]} className='h-[40.65vh] object-cover'/>
+                                    <p className='italic mt-4 text-xl w-[300px]'>{projectDetails.featureImage1[2]}</p>
+                                </div>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-left'>
-                                <img src={projectDetails.featureImage2[0]} alt={projectDetails.featureImage2[1]} className='h-[40.65vh] object-cover'/>
-                                <p className='italic mt-4 text-xl'>{projectDetails.featureImage2[2]}</p>
+                                <div className='flex flex-col content-start justify-center w-fit'>
+                                    <img src={projectDetails.featureImage2[0]} alt={projectDetails.featureImage2[1]} className='h-[40.65vh] object-cover'/>
+                                    <p className='italic mt-4 text-xl w-[300px]'>{projectDetails.featureImage2[2]}</p>
+                                </div>
                             </ToggleOnScroll>
                         </div>
                         <ToggleOnScroll>
-                            <div className='w-[100vw] mt-[80px] mb-[150px]'>
-                                <img src={projectDetails.bigFeatureImage[0]} alt={projectDetails.bigFeatureImage[1]} className='object-cover w-full h-[90vh]'/>
-                                <p className='italic ml-[20vw] mt-4 text-xl'>{projectDetails.bigFeatureImage[2]}</p>
+                            <div className='w-[100vw] mt-[80px] mb-[80px]'>
+                                <div className='flex flex-col content-center justify-center'>
+                                    <img src={projectDetails.bigFeatureImage[0]} alt={projectDetails.bigFeatureImage[1]} className='object-cover w-full h-[90vh]'/>
+                                    <p className='italic ml-[10vw] mt-4 text-xl w-[80vw]'>{projectDetails.bigFeatureImage[2]}</p>
+                                </div>
                             </div>
                         </ToggleOnScroll>
                         <div className='px-8 md:px-20 min-h-[100vh] flex flex-wrap gap-20 justify-between items-center'>
                             <ToggleOnScroll firstTimeSlide direction='from-left'>
-                                <img src={projectDetails.solutionImage[0]} alt={projectDetails.solutionImage[1]} className='h-[600px] float-left object-cover'/>
+                                <img src={projectDetails.solutionImage[0]} alt={projectDetails.solutionImage[1]} className='h-[600px] float-left object-cover object-right'/>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                                 <div className='flex flex-col items-center md:items-start'>

@@ -8,11 +8,14 @@ import ProjectInfos from '../../assets/projectinfo.json'
 import SEO from '../../components/SEO'
 import phoenixv5 from '../../assets/phoenixv5.png'
 
+// TODO: fix hover project effect
+
 const Work = () => {
-    const [hoveredProj, setHoveredProj] = useState('bg-white duration-[20ms]')
+    const [hovered, setHovered] = useState(false)
+    const [hoveredProj, setHoveredProj] = useState('')
     const navigate = useNavigate()
 
-    const miniCardStyle: string = `peer border-2 border-black rounded-lg object-cover h-[200px] min-w-[280px] w-[300px] transition-all ${(hoveredProj != 'bg-white duration-[20ms]') ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4] hover:cursor-pointer`
+    const miniCardStyle: string = `peer border-2 border-black rounded-lg object-cover h-[200px] min-w-[280px] w-[300px] transition-all ${hovered ? 'grayscale' : 'grayscale-0'} hover:grayscale-0 hover:brightness-[1.4] hover:cursor-pointer`
 
     return (
         <>
@@ -35,12 +38,16 @@ const Work = () => {
                     heroPage='Work'
                     heroDescription="Here's a selection of projects I've worked on and roles I've filled."
                 ></PageHeader>
-                <div className={`text-white p-20 flex flex-wrap justify-center gap-10 pt-24 transition-all duration-[2s] ${styles.projects} ${(hoveredProj != 'bg-white') ? hoveredProj : 'bg-white duration-[0.1s]'}`}>
+                <div className={`text-white p-20 flex flex-wrap justify-center gap-10 pt-24 transition-all duration-[2s] ${styles.projects} ${hovered ? 'bg-cover bg-center duration-200 ' + hoveredProj : 'bg-white duration-[20ms]'}`}>
                     {
                         Object.values(ProjectInfos).map((value, idx) => (
                             <ToggleOnScroll key={idx} firstTimeSlide direction='from-bottom'>
                                 <div className='hover:drop-shadow-accent-blue'>
-                                    <img src={value.mainImage[0]} alt={value.mainImage[1]} className={miniCardStyle} onClick={() => navigate('/work/' + value.linkname)} onMouseOver={() => setHoveredProj(`bg-[url(${value.mainImage[0].slice(3)})] bg-cover bg-center duration-200`)} onMouseLeave={() => setHoveredProj('bg-white duration-[20ms]')}/>
+                                    <img src={value.mainImage[0]} alt={value.mainImage[1]} className={miniCardStyle} onClick={() => navigate('/work/' + value.linkname)} onMouseOver={() => {
+                                        setHoveredProj(`bg-[url(${value.mainImage[0].slice(3)})]`)
+                                        setHovered(true)}} onMouseLeave={() => {
+                                            setHoveredProj('')
+                                            setHovered(false)}}/>
                                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-250px] text-center w-[100%] text-3xl bg-slate-800 bg-opacity-95 pb-1 rounded-md'>{value.name}</p>
                                     <p className='transition-all duration-200 opacity-0 select-none peer-hover:opacity-100 relative top-[-38px] text-center mx-auto w-[50%] font-extralight bg-slate-800 pb-1 rounded-md'>Click to learn more</p>
                                 </div>

@@ -7,7 +7,7 @@ import styles from './About.module.css'
 import SEO from '../../components/SEO'
 import profilePicture from '../../assets/profile-formal.jpg'
 
-// TODO: Get testimonials and update testimonial cards
+// TODO (after deployment): Get testimonials and update testimonial cards
 
 const About = () => {
 
@@ -37,7 +37,7 @@ const About = () => {
                     heroDescription="My name is Kyle Rachman. I'm a Full Stack developer and software engineer with a passion for making creative and seamless user experiences!"
                 ></PageHeader>
                 <div className='bg-white py-20 px-16 xs:px-20'>
-                    <img src="src/assets/sidebar.jpg" alt="Open VS Code Editor" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover'/>
+                    <img src="src/assets/sidebar.jpg" alt="Open VS Code Editor" className='hidden md:block float-left h-[80vh] w-[30vw] ml-[-80px] mr-10 object-cover object-right'/>
                     <ToggleOnScroll firstTimeSlide direction='from-bottom' delay={[0]}>
                         <div className='expertise text-black'>
                             <p className="text-2.5xl xs:text-3xl mb-4">

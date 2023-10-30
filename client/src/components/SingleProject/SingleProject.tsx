@@ -7,14 +7,13 @@ import Footer from '../Footer'
 import styles from './SingleProject.module.css'
 import SEO from '../SEO'
 
+// TODO: Update specific project infos
+
 const SingleProject = () => {
     const { project } = useParams<{project: string}>()
     const projectDetails = ProjectInfos[project as keyof typeof ProjectInfos]
     const navigate = useNavigate()
-
-    // TODO: Make responsive
-    // TODO: Update specific project infos
-
+    
     if (!project || !ProjectInfos.hasOwnProperty(project)) {
         return (
             <Error404 />

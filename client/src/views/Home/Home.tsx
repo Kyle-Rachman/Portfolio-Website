@@ -19,16 +19,38 @@ const Home = () => {
     };
 
     const decideLayout = () => {
-        let pages: any = 3.2
-        let contactTop: string = '40vh'
-        if (window.innerWidth <= 768 && window.innerHeight <= 800) {
-            pages = 3.5
-            contactTop = '50vh'
+        let altLayout: boolean = false
+        if (window.innerWidth <= 767 && window.innerHeight <= 800 && window.innerWidth <= window.innerHeight) {
+            altLayout = true
         }
-        return [pages, contactTop]
+        return altLayout
     }
-    
-    // TODO: To help make it responsive, get the Parallax to be based off both window.innerWidth and window.innerHeight
+
+    /*
+    The next section does the following to make ParallaxLayer work properly for this and only this screen.
+    My bad for trying to use react-spring with responsively-heighted windows...
+        1) On window load, checks if the user is using a small mobile device and is in landscape mode. If so,
+        it asks the user to use in portrait mode and refresh the page
+        2) On orientation change (for smartphones), checks if the user is working with a touch-based device like a
+        tablet or a phone.
+            a) If it's a phone, and the user just switched from portrait to landscape, it asks the user
+            to go back to portrait mode.
+            b) If it's a tablet, it just ask the user to refresh the page.
+    */
+
+    window.onload = function () {
+        if (window.matchMedia('(any-hover:none)').matches && window.matchMedia('(orientation: landscape)').matches && window.innerHeight < 768) {
+            alert('Please use this screen in portrait mode and refresh the page to ensure the best user experience. Thank you!')
+        }
+    }
+    window.addEventListener('orientationchange', () => {
+        if (window.matchMedia('(any-hover:none)').matches && window.matchMedia('(orientation: portrait)').matches && window.innerHeight < 768) {
+            alert('Please use this screen in portrait mode to ensure the best user experience. Thank you!')
+        }
+        else if (window.matchMedia('(any-hover:none)').matches && window.innerHeight >= 768) {
+            alert('Please refresh the page to ensure the best user experience. Thank you!')
+        }
+    })
 
     return (
         <>
@@ -40,7 +62,7 @@ const Home = () => {
                 description="Kyle Rachman is a web designer and mathematician with a focus on frontend development and user experiences. Let's work together on a project!"
             ></SEO>
             <div id={styles.container}>
-                <Parallax pages={decideLayout()[0]} ref={parallaxref}>
+                <Parallax pages={decideLayout() ? 3.5 : 3.2} ref={parallaxref}>
                     <ParallaxLayer onClick={() => scrollToPage(0)}>
                         <section className={styles.hero}>
                             <ParallaxLayer
@@ -103,7 +125,7 @@ const Home = () => {
                         </section>
                     </ParallaxLayer>
                     <ParallaxLayer offset={window.innerWidth > 768 ? 2.65 : 2.3} factor={0.1} onClick={() => scrollToPage(2.25)}>
-                        <section className={styles.contact} style={{top: decideLayout()[1]}}>
+                        <section className={styles.contact} style={{top: decideLayout() ? '50vh' : '40vh'}}>
                             <hr className='w-[80vw] mb-[10vh] mx-auto mt-[20px] md:mt-[-60px]'/>
                             <Footer></Footer>
                         </section>

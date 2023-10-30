@@ -18,15 +18,15 @@
         "name" : "Mathematics",
         "linkname" : "math",
         "technologies" : "LaTeX, Linear Algebra, Abstract Algebra, Discrete Mathematics, Probability & Measure Theory, Topology, Analysis",
-        "description" : "Proident elit in id amet anim ipsum occaecat commodo nulla est Lorem labore cupidatat in. Laborum consectetur commodo sint cupidatat minim culpa aliqua aliqua sint ad pariatur laborum duis. Ex mollit in do ad commodo laborum irure sunt voluptate eu.",
+        "description" : "I earned my B.S. and M.S. in Mathematics from California Polytechnic State University, San Luis Obispo. I completed both degrees simultaneously in four years, graduating in 2021.",
         "mainImage" : ["../src/assets/projectphotos/math/triangle-of-triangles.jpg", "A moduli space for triangles, developed in conjunction with the 2018-2019 Simple Group"],
         "mobileMainImage" : ["../src/assets/projectphotos/math/triangle-of-triangles-mobile.jpg", "A moduli space for triangles, developed in conjunction with the 2018-2019 Simple Group"],
         "navlink" : ["https://en.wikipedia.org/wiki/Moduli_space", "Check It Out"],
-        "briefing" : "Voluptate laborum proident exercitation eiusmod consequat ea esse. Duis commodo dolore cupidatat anim eiusmod deserunt Lorem ipsum laboris. Consectetur exercitation et elit voluptate tempor labore. Ex deserunt cillum esse sint.",
+        "briefing" : "As I rapidly progressed through the curriculum, I experienced quite a ride. I wanted to do a teaching concentration for my undergraduate degree and a pure concentration for the master's, which was unheard of to that point. Students who did a teaching concentration for their undergraduate rarely went on to grad school, and the grad students typically had a pure concentration for their undergraduate degree as well.",
         "featureImage1" : ["../src/assets/projectphotos/math/linear-algebra-3.jpg", "Work for a linear algebra project", "A crucial step in developing an algorithm for finding the best circle approximating a data cluster"],
         "featureImage2" : ["../src/assets/projectphotos/math/laplace-method.png", "Work for a problem from my Applied Analysis II class", "Use of the Laplace method for asymptotic analysis of an integral"],
         "bigFeatureImage" : ["../src/assets/projectphotos/math/senior-picture.jpg", "One of my graduation pictures featuring various mathematical jokes", "Some math 'jokes' I featured in one of my college graduation pictures"],
         "solutionImage" : ["../src/assets/projectphotos/math/radical-ideals-prime.png", "Proof that the radical of a primary ideal is prime"],
-        "solution" : "Proident Lorem nostrud magna elit officia est esse magna aliquip minim consequat anim in. Excepteur dolore amet labore consectetur. Cillum eu culpa ea in. Ut culpa veniam non esse non ad non velit id consequat."
+        "solution" : "I worked hard to make sure that I could complete all my goals for my education, including being done with my master's degree in four years. Many of my professors said I was the best student they had seen in their entire careers. Over time, I grew to specialize in abstract and linear algebra, but representation theory and algebraic topology also hold a special place in my heart. As I have moved more into the world of programming and web design, my linear algebra skills have come in handy, as has my training in combinatorial and discrete mathematics! The mathematical prowess has given me a boost on diving into machine learning, data analytics, and algorithms."
     }
 }

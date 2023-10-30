@@ -7,7 +7,7 @@ import Footer from '../Footer'
 import styles from './SingleProject.module.css'
 import SEO from '../SEO'
 
-// TODO: Update specific project infos
+// TODO: Update specific project infos in projectinfo.json
 
 const SingleProject = () => {
     const { project } = useParams<{project: string}>()

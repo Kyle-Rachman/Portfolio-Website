@@ -26,6 +26,8 @@ const About = () => {
                     heroImageAlt='Formal Profile Picture of Kyle Rachman'
                     altImage='../src/assets/profile-casual.jpg'
                     heroAltImageAlt='Casual Profile Picture of Kyle Rachman'
+                    mobileHeroImage='../src/assets/profile-formal.jpg'
+                    mobileHeroImageAlt='Formal Profile Picture of Kyle Rachman'
                     heroTitle={<div className='grid grid-cols-3 grid-rows-3 gap-2 justify-items-start font-bold sm:ml-[10vw] md:ml-[-40px]'>
                                     <p className='col-start-1 row-start-1 col-end-1 row-end-1 max-w-[100%] '>Mathematician<span className='text-accent-blue'>.</span></p>
                                     <p className='col-start-2 row-start-2 col-end-2 row-end-2 max-w-[100%] ml-[2px]'>Developer<span className='text-accent-purple'>.</span></p>

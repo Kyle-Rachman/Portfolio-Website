@@ -8,8 +8,6 @@ import ProjectInfos from '../../assets/projectinfo.json'
 import SEO from '../../components/SEO'
 import phoenixv5 from '../../assets/phoenixv5.png'
 
-// TODO: Figure out new hero image for mobile (srcset for responsive)
-
 const Work = () => {
     const [hoveredProj, setHoveredProj] = useState('bg-white duration-0')
     const navigate = useNavigate()
@@ -31,6 +29,8 @@ const Work = () => {
                     heroImageAlt='Placeholder'
                     altImage='../src/assets/phoenixv5.png'
                     heroAltImageAlt='Placeholder'
+                    mobileHeroImage='../src/assets/dragon.png'
+                    mobileHeroImageAlt='Placeholder'
                     heroTitle={<p className='max-w-[100%] font-bold'>What I've been up to.</p>}
                     heroPage='Work'
                     heroDescription="Here's a selection of projects I've worked on and roles I've filled."

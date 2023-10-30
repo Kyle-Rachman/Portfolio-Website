@@ -10,6 +10,7 @@ import Error404 from './components/404/Error404'
 import { HelmetProvider } from 'react-helmet-async'
 
 // To add/remove projects, simply update the projectinfo.json files
+// TODO: replace all placeholders for images/alts/etc.
 
 function App() {
 

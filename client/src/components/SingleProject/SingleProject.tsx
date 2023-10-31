@@ -29,9 +29,9 @@ const SingleProject = () => {
                     description={"Check out my project: " + projectDetails.name + ", featuring " + projectDetails.technologies}
                 ></SEO>
                 <div id={styles.container}>
-                    <div className='hero flex flex-col md:flex-row justify-center items-center text-4xl gap-20 mb-10 py-2 w-[100%] min-h-[90vh]'>
+                    <div className='hero flex flex-col md:flex-row content-center items-center text-4xl gap-20 mb-10 py-2 w-[100%] min-h-[90vh]'>
                         <ToggleOnScroll firstTimeSlide direction='from-bottom'>
-                            <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0 max-w-[300px] mx-10 md:ml-20'>
+                            <div className='flex flex-col content-start gap-[40px] mb-[-50px] md:mb-0 md:w-[275px] mx-10 md:ml-20'>
                                 <p className='font-bold'>{projectDetails.name}</p>
                                 <p className='text-accent-yellow text-xl font-light'>|| {projectDetails.technologies}</p>
                                 <p className='text-xl'>{projectDetails.description}</p>
@@ -65,7 +65,7 @@ const SingleProject = () => {
                         <ToggleOnScroll>
                             <div className='w-[100vw] mt-[80px] mb-[80px]'>
                                 <div className='flex flex-col content-center justify-center'>
-                                    <img src={projectDetails.bigFeatureImage[0]} alt={projectDetails.bigFeatureImage[1]} className='object-cover w-full h-[90vh]'/>
+                                    <img src={projectDetails.bigFeatureImage[0]} alt={projectDetails.bigFeatureImage[1]} className='object-cover w-full h-[90vh] object-center'/>
                                     <p className='italic ml-[10vw] mt-4 text-xl w-[80vw]'>{projectDetails.bigFeatureImage[2]}</p>
                                 </div>
                             </div>

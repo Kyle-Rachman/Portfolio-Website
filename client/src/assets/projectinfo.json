@@ -2,17 +2,17 @@
     "bingo" : {
         "name" : "Local Bingo",
         "linkname" : "bingo",
-        "technologies" : "React, Express, MongoDB, Mongoose, Node.js, MUI",
+        "technologies" : "React, Express, MongoDB, Mongoose, Node.js, HTML, CSS, Javascript, MUI, JWT",
         "description" : "Host your own Bingo league for events (work, social, or otherwise) using customizable prompts, leaderboards, and user roles.",
         "mainImage" : ["../src/assets/projectphotos/bingo/bingo-lit.png", "The main game screen"],
         "mobileMainImage" : ["../src/assets/projectphotos/bingo/bingo-lit.png", "The main game screen"],
         "navlink" : ["https://github.com/Kyle-Rachman/Local-Bingo", "Check It Out"],
-        "briefing" : "Mollit excepteur incididunt culpa eiusmod mollit Lorem ex minim duis tempor consequat culpa amet. Excepteur ullamco nostrud nostrud consectetur laborum ipsum esse labore ut quis labore aliqua aute et. Dolore eu dolor ea fugiat amet est esse pariatur sit occaecat tempor incididunt aliqua.",
-        "featureImage1" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
-        "featureImage2" : ["../src/assets/wave-haikei (2).svg", "Placeholder", "Placeholder feature"],
+        "briefing" : "People have quirks. It's simply a fact of life. I love my church and all the people there with all of our idiosyncracies, so I decided to make a bingo game to celebrate our unique (and sometimes funny) features that seem to come out at our Sunday gatherings. Of course, this could easily be adapted to play 'meeting bingo' in other instances. The game needed to change every week, be mobile responsive, and feature a way for users to keep score.",
+        "featureImage1" : ["../src/assets/projectphotos/bingo/admin.png", "Admin console", "The game features secure, role-based authentication to give users various privileges."],
+        "featureImage2" : ["../src/assets/projectphotos/bingo/squares.png", "The square list screen", "A screen where prompt managers and admins could add/change squares for the game. Normal users had view access here."],
         "bigFeatureImage" : ["../src/assets/projectphotos/bingo/bingo-unlit.png", "The main game screen", "From the main game screen, a logged in player can view their profile, the list of prompts, or the leaderboad."],
-        "solutionImage" : ["../src/assets/projectphotos/bingo/phone-mockup.png", "The edit profile screen on a phone"],
-        "solution" : "Aliqua ipsum tempor ipsum adipisicing deserunt ea reprehenderit sint deserunt officia. Voluptate ullamco quis aute non culpa laborum commodo duis quis anim non minim adipisicing enim. Officia enim occaecat sunt id ullamco fugiat excepteur. Ad aliqua ex cupidatat consequat officia voluptate incididunt sint exercitation duis aliquip labore."
+        "solutionImage" : ["../src/assets/projectphotos/bingo/phone-mockup.png", "The profile screen on a phone"],
+        "solution" : "I created a MERN app to allow users to synchronously play bingo, with the board layout randomly assigned for each user each week. The app had a sortable leaderboard for users, and also capped them at getting bingo once per week (to prevent spoofing extra wins). It also allowed users to mildly customize their profile for a more social aspect. In the end, my fellow church members loved the app for highlighting some of our fun moments each week!"
     },
     "math" : {
         "name" : "Mathematics",

@@ -7,8 +7,6 @@ import Footer from '../Footer'
 import styles from './SingleProject.module.css'
 import SEO from '../SEO'
 
-// TODO: Update specific project infos in projectinfo.json
-
 const SingleProject = () => {
     const { project } = useParams<{project: string}>()
     const projectDetails = ProjectInfos[project as keyof typeof ProjectInfos]
@@ -48,7 +46,7 @@ const SingleProject = () => {
                                 <p className='text-xl md:w-[40vw] mb-10'>{projectDetails.briefing}</p>
                             </div>
                         </ToggleOnScroll>
-                        <div className='flex flex-wrap justify-between gap-4 mx-auto px-4'>
+                        <div className='px-3 md:px-4 flex flex-wrap justify-between gap-4 mx-auto'>
                             <ToggleOnScroll firstTimeSlide direction='from-left'>
                                 <div className='flex flex-col content-start justify-center w-fit'>
                                     <img src={projectDetails.featureImage1[0]} alt={projectDetails.featureImage1[1]} className='h-[40.65vh] object-cover'/>
@@ -72,7 +70,7 @@ const SingleProject = () => {
                         </ToggleOnScroll>
                         <div className='px-8 md:px-20 min-h-[100vh] flex flex-wrap gap-20 justify-between items-center'>
                             <ToggleOnScroll firstTimeSlide direction='from-left'>
-                                <img src={projectDetails.solutionImage[0]} alt={projectDetails.solutionImage[1]} className='h-[600px] float-left object-cover object-right'/>
+                                <img src={projectDetails.solutionImage[0]} alt={projectDetails.solutionImage[1]} className='xs:h-[600px] float-left object-contain xs:object-cover object-center'/>
                             </ToggleOnScroll>
                             <ToggleOnScroll firstTimeSlide direction='from-bottom'>
                                 <div className='flex flex-col items-center md:items-start'>

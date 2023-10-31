@@ -15,3 +15,16 @@
     background-color: rgb(181, 180, 180);
     background-blend-mode: multiply;
 }
+
+.mobileLabels {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    .mobileLabels {
+        display: block;
+    }
+    .desktopLabels {
+        display: none;
+    }
+}
